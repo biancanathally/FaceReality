@@ -11,8 +11,6 @@
 		A647502A2AA8A1BD00ED0DEC /* FaceRealityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750292AA8A1BD00ED0DEC /* FaceRealityTests.swift */; };
 		A64750342AA8A1BD00ED0DEC /* FaceRealityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750332AA8A1BD00ED0DEC /* FaceRealityUITests.swift */; };
 		A64750362AA8A1BD00ED0DEC /* FaceRealityUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750352AA8A1BD00ED0DEC /* FaceRealityUITestsLaunchTests.swift */; };
-		A647504F2AA8A1E900ED0DEC /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A647504D2AA8A1D400ED0DEC /* UnityFramework.framework */; };
-		A64750502AA8A1E900ED0DEC /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A647504D2AA8A1D400ED0DEC /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A64750552AA8A23500ED0DEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750542AA8A23500ED0DEC /* ContentView.swift */; };
 		A647505A2AA8A2AD00ED0DEC /* FRContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750592AA8A2AD00ED0DEC /* FRContentView.swift */; };
 		A647505C2AA8A2D500ED0DEC /* ARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A647505B2AA8A2D500ED0DEC /* ARModel.swift */; };
@@ -26,6 +24,8 @@
 		A64750712AA8AC3400ED0DEC /* MusclesExpressionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750702AA8AC3400ED0DEC /* MusclesExpressionModel.swift */; };
 		A64750732AA8ACCE00ED0DEC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750722AA8ACCE00ED0DEC /* Color.swift */; };
 		A64750752AA8BD6D00ED0DEC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */; };
+		A6A068C32ABB6B3E005CC2E4 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */; };
+		A6A068C42ABB6B3E005CC2E4 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,23 +43,23 @@
 			remoteGlobalIDString = A647500E2AA8A1BC00ED0DEC;
 			remoteInfo = FaceReality;
 		};
-		A64750482AA8A1D400ED0DEC /* PBXContainerItemProxy */ = {
+		A6A068BD2ABB6B31005CC2E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A64750422AA8A1D400ED0DEC /* Unity-iPhone.xcodeproj */;
+			containerPortal = A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
 			remoteInfo = "Unity-iPhone";
 		};
-		A647504A2AA8A1D400ED0DEC /* PBXContainerItemProxy */ = {
+		A6A068BF2ABB6B31005CC2E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A64750422AA8A1D400ED0DEC /* Unity-iPhone.xcodeproj */;
+			containerPortal = A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5623C57317FDCB0800090B9E;
 			remoteInfo = "Unity-iPhone Tests";
 		};
-		A647504C2AA8A1D400ED0DEC /* PBXContainerItemProxy */ = {
+		A6A068C12ABB6B31005CC2E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A64750422AA8A1D400ED0DEC /* Unity-iPhone.xcodeproj */;
+			containerPortal = A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9D25AB9D213FB47800354C27;
 			remoteInfo = UnityFramework;
@@ -73,7 +73,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A64750502AA8A1E900ED0DEC /* UnityFramework.framework in Embed Frameworks */,
+				A6A068C42ABB6B3E005CC2E4 /* UnityFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +89,6 @@
 		A647502F2AA8A1BD00ED0DEC /* FaceRealityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceRealityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64750332AA8A1BD00ED0DEC /* FaceRealityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityUITests.swift; sourceTree = "<group>"; };
 		A64750352AA8A1BD00ED0DEC /* FaceRealityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A64750422AA8A1D400ED0DEC /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../FaceReality3D/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
 		A64750532AA8A23500ED0DEC /* FaceReality-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceReality-Bridging-Header.h"; sourceTree = "<group>"; };
 		A64750542AA8A23500ED0DEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A64750592AA8A2AD00ED0DEC /* FRContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		A64750702AA8AC3400ED0DEC /* MusclesExpressionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesExpressionModel.swift; sourceTree = "<group>"; };
 		A64750722AA8ACCE00ED0DEC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../FaceReality-3D/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A647504F2AA8A1E900ED0DEC /* UnityFramework.framework in Frameworks */,
+				A6A068C32ABB6B3E005CC2E4 /* UnityFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 		A64750062AA8A1BC00ED0DEC = {
 			isa = PBXGroup;
 			children = (
-				A64750422AA8A1D400ED0DEC /* Unity-iPhone.xcodeproj */,
+				A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */,
 				A64750112AA8A1BC00ED0DEC /* FaceReality */,
 				A64750282AA8A1BD00ED0DEC /* FaceRealityTests */,
 				A64750322AA8A1BD00ED0DEC /* FaceRealityUITests */,
@@ -194,21 +194,21 @@
 			path = FaceRealityUITests;
 			sourceTree = "<group>";
 		};
-		A64750432AA8A1D400ED0DEC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A64750492AA8A1D400ED0DEC /* Unity-Target-New.app */,
-				A647504B2AA8A1D400ED0DEC /* Unity-iPhone Tests.xctest */,
-				A647504D2AA8A1D400ED0DEC /* UnityFramework.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A647504E2AA8A1E900ED0DEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6A068B82ABB6B2C005CC2E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6A068BE2ABB6B31005CC2E4 /* Unity-Target-New.app */,
+				A6A068C02ABB6B31005CC2E4 /* Unity-iPhone Tests.xctest */,
+				A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,8 +305,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A64750432AA8A1D400ED0DEC /* Products */;
-					ProjectRef = A64750422AA8A1D400ED0DEC /* Unity-iPhone.xcodeproj */;
+					ProductGroup = A6A068B82ABB6B2C005CC2E4 /* Products */;
+					ProjectRef = A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -319,25 +319,26 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A64750492AA8A1D400ED0DEC /* Unity-Target-New.app */ = {
+		A6A068BE2ABB6B31005CC2E4 /* Unity-Target-New.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
+			name = "Unity-Target-New.app";
 			path = FaceAR.app;
-			remoteRef = A64750482AA8A1D400ED0DEC /* PBXContainerItemProxy */;
+			remoteRef = A6A068BD2ABB6B31005CC2E4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A647504B2AA8A1D400ED0DEC /* Unity-iPhone Tests.xctest */ = {
+		A6A068C02ABB6B31005CC2E4 /* Unity-iPhone Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Unity-iPhone Tests.xctest";
-			remoteRef = A647504A2AA8A1D400ED0DEC /* PBXContainerItemProxy */;
+			remoteRef = A6A068BF2ABB6B31005CC2E4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A647504D2AA8A1D400ED0DEC /* UnityFramework.framework */ = {
+		A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = UnityFramework.framework;
-			remoteRef = A647504C2AA8A1D400ED0DEC /* PBXContainerItemProxy */;
+			remoteRef = A6A068C12ABB6B31005CC2E4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
