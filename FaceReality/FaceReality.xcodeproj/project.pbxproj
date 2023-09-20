@@ -26,6 +26,8 @@
 		A64750752AA8BD6D00ED0DEC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */; };
 		A6A068C32ABB6B3E005CC2E4 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */; };
 		A6A068C42ABB6B3E005CC2E4 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */; };
+		A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		A64750722AA8ACCE00ED0DEC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../FaceReality-3D/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
+		A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-Italic.ttf"; sourceTree = "<group>"; };
+		A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RedHatDisplay.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,14 +161,12 @@
 		A64750112AA8A1BC00ED0DEC /* FaceReality */ = {
 			isa = PBXGroup;
 			children = (
-				A64750202AA8A1BD00ED0DEC /* Info.plist */,
 				A64750642AA8A44700ED0DEC /* FaceRealityApp.swift */,
 				A64750542AA8A23500ED0DEC /* ContentView.swift */,
 				A647505F2AA8A30100ED0DEC /* Unity.swift */,
 				A647505B2AA8A2D500ED0DEC /* ARModel.swift */,
 				A647505D2AA8A2E700ED0DEC /* ARViewModel.swift */,
 				A64750592AA8A2AD00ED0DEC /* FRContentView.swift */,
-				A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */,
 				A64750672AA8A52C00ED0DEC /* LaunchScreen.storyboard */,
 				A64750532AA8A23500ED0DEC /* FaceReality-Bridging-Header.h */,
 				A647506A2AA8AB8D00ED0DEC /* Emotions.swift */,
@@ -173,6 +175,9 @@
 				A64750702AA8AC3400ED0DEC /* MusclesExpressionModel.swift */,
 				A64750722AA8ACCE00ED0DEC /* Color.swift */,
 				A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */,
+				A64750202AA8A1BD00ED0DEC /* Info.plist */,
+				A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */,
+				A6A068CC2ABB72B9005CC2E4 /* Fonts */,
 			);
 			path = FaceReality;
 			sourceTree = "<group>";
@@ -209,6 +214,15 @@
 				A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A6A068CC2ABB72B9005CC2E4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */,
+				A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,8 +362,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */,
 				A64750682AA8A52C00ED0DEC /* LaunchScreen.storyboard in Resources */,
 				A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */,
+				A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,7 @@ struct ContentView: View {
     @State private var selectedMode: String = ""
     @State private var didTapAR: Bool = false
     @State private var didTap3D: Bool = false
+    @State private var showReferences: Bool = false
     @ObservedObject var arViewModel : ARViewModel = ARViewModel()
     
     var body: some View {
@@ -35,6 +36,18 @@ struct ContentView: View {
             ZStack {
                 ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
                 
+                Button(action: {
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        showReferences = true
+                    }}) {
+                        Image(systemName: "i.circle")
+                            .font(.system(size: 26))
+                            .padding(.all)
+                            .foregroundColor(.projectWhite)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                
+
                 VStack (spacing: 239) {
                     Text("Face Reality")
                         .font(Font.custom("RedHatDisplayItalic-SemiBold", size: 36))
@@ -109,6 +122,17 @@ struct ContentView: View {
                                     .buttonStyle(ButtonStyleSelect())
                             }
                         }
+                    }
+                }
+                
+                if showReferences {
+                    let title = "Referências"
+                    let subtitle = "Face Reality foi baseado em:"
+                    let body = "1. McMINN, R. M. H.. Atlas Colorido de Anatomia Humana. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Anatomia Orientada para a Prática Clínica. 4ed."
+                    VStack(alignment: .leading) {
+                        PopupView(dismissAction: {showReferences = false}, titleText: title, subtitleText: subtitle, bodyText: body, isReference: true, buttonLabel: "Fechar", imageIllustration: "")
+                            .frame(height: UIScreen.main.bounds.height / 2.7)
+                        Spacer()
                     }
                 }
             }

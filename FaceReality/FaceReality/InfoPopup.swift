@@ -13,7 +13,7 @@ struct InfoPopup: View {
     let arrayMuscles: [Muscle]
     
     var body: some View {
-        ZStack{
+        ZStack {
             VStack {
                 Rectangle()
                     .frame(height: 50)
@@ -24,19 +24,18 @@ struct InfoPopup: View {
                     Button(action: {
                         withAnimation(.easeInOut(duration: 0.1)) {
                             dismissAction()
-                            
+                        }}) {
+                            Image(systemName: "x.circle")
+                                .foregroundColor(.iconColor.opacity(0.9))
+                                .font(.system(size: 30))
+                                .padding()
                         }
-                    }) {
-                        Image(systemName: "x.circle")
-                            .foregroundColor(.iconColor.opacity(0.9))
-                            .font(.system(size: 30))
-                            .padding()
-                    }
                 }
+                
                 ScrollView(showsIndicators: false){
                     ForEach(arrayMuscles, id: \.self) { muscle in
                         PopupView(dismissAction: {
-                        }, titleText: muscle.muscleName, bodyText: muscle.muscleDescription, isOnboarding: false, buttonLabel: "Fechar")
+                        }, titleText: muscle.muscleName, subtitleText:"" , bodyText: muscle.muscleDescription, isReference: false, buttonLabel: "Fechar", imageIllustration: muscle.muscleIllustrationName)
                     }
                 }
                 .padding(.bottom, 150)
