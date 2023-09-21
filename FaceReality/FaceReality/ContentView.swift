@@ -36,6 +36,10 @@ struct ContentView: View {
             ZStack {
                 ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
                 
+                HostingWindowFinder { window in
+                    Unity.shared.setHostMainWindow(window)
+                }
+                
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.5)) {
                         showReferences = true
@@ -117,8 +121,9 @@ struct ContentView: View {
                                     .fontWeight(.medium)
                                     .foregroundStyle(.white)
                                 
-                                NavigationLink("Começar", destination: Play3D(mode: selectedMode))
-                                    .disabled(selectedMode.isEmpty)
+                                Button("Começar", action: {
+                                    Unity.shared.show()
+                                })
                                     .buttonStyle(ButtonStyleSelect())
                             }
                         }
@@ -174,22 +179,5 @@ struct PlayAR: View {
     
     var body: some View {
         FRContentView()
-    }
-}
-
-struct Play3D: View {
-    var mode: String
-    
-    var body: some View {
-        VStack {
-            Text("Volte à página inicial").onAppear{
-                Unity.shared.show()
-            }
-        }
-        .background (
-            HostingWindowFinder { window in
-                Unity.shared.setHostMainWindow(window)
-            }
-        )
     }
 }
