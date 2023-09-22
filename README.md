@@ -66,7 +66,7 @@ Como alternativa, consulte a documentação do GitHub em [como criar uma solicit
 
 ## ❖ Developers Face Reality
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+This is the team that developed Face Reality
 
 <table>
   <tr>
