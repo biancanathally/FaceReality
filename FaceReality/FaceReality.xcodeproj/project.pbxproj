@@ -103,9 +103,9 @@
 		A64750702AA8AC3400ED0DEC /* MusclesExpressionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesExpressionModel.swift; sourceTree = "<group>"; };
 		A64750722AA8ACCE00ED0DEC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		A69E12832ABDC1B300479221 /* FaceRealityTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FaceRealityTests; path = FaceRealityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69E12832ABDC1B300479221 /* FaceRealityTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FaceRealityTests; path = ../../../../../../../../Desktop/FaceReality/FaceReality/FaceRealityTests; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69E12852ABDC1B300479221 /* FaceRealityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityTests.swift; sourceTree = "<group>"; };
-		A69E12902ABDC1C100479221 /* FaceRealityUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FaceRealityUITests; path = FaceRealityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69E12902ABDC1C100479221 /* FaceRealityUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FaceRealityUITests; path = ../../../../../../../../Desktop/FaceReality/FaceReality/FaceRealityUITests; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69E12922ABDC1C100479221 /* FaceRealityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityUITests.swift; sourceTree = "<group>"; };
 		A69E12942ABDC1C100479221 /* FaceRealityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../FaceReality-3D/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
