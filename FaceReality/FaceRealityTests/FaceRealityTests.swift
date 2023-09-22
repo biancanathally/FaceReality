@@ -2,11 +2,10 @@
 //  FaceRealityTests.swift
 //  FaceRealityTests
 //
-//  Created by Bianca Nathally Bezerra de Lima on 06/09/23.
+//  Created by Bianca Nathally Bezerra de Lima on 22/09/23.
 //
 
 import XCTest
-@testable import FaceReality
 
 final class FaceRealityTests: XCTestCase {
 
@@ -28,7 +27,7 @@ final class FaceRealityTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
