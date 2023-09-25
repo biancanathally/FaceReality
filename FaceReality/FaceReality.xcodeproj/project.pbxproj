@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2478AD2AC1BF9A0090F9C7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AC2AC1BF9A0090F9C7 /* FirebaseAnalytics */; };
+		5A2478AF2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AE2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		5A2478B12AC1BFE90090F9C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A2478B02AC1BFE90090F9C7 /* GoogleService-Info.plist */; };
 		A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */; };
 		A64750552AA8A23500ED0DEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750542AA8A23500ED0DEC /* ContentView.swift */; };
 		A647505A2AA8A2AD00ED0DEC /* FRContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750592AA8A2AD00ED0DEC /* FRContentView.swift */; };
@@ -83,6 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A2478B02AC1BFE90090F9C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A647500F2AA8A1BC00ED0DEC /* FaceReality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceReality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A64750202AA8A1BD00ED0DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,9 +107,9 @@
 		A64750702AA8AC3400ED0DEC /* MusclesExpressionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesExpressionModel.swift; sourceTree = "<group>"; };
 		A64750722AA8ACCE00ED0DEC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		A69E12832ABDC1B300479221 /* FaceRealityTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FaceRealityTests; path = ../../../../../../../../Desktop/FaceReality/FaceReality/FaceRealityTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69E12832ABDC1B300479221 /* FaceRealityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceRealityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69E12852ABDC1B300479221 /* FaceRealityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityTests.swift; sourceTree = "<group>"; };
-		A69E12902ABDC1C100479221 /* FaceRealityUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FaceRealityUITests; path = ../../../../../../../../Desktop/FaceReality/FaceReality/FaceRealityUITests; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69E12902ABDC1C100479221 /* FaceRealityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceRealityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69E12922ABDC1C100479221 /* FaceRealityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityUITests.swift; sourceTree = "<group>"; };
 		A69E12942ABDC1C100479221 /* FaceRealityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../FaceReality-3D/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2478AD2AC1BF9A0090F9C7 /* FirebaseAnalytics in Frameworks */,
+				5A2478AF2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				A6A068C32ABB6B3E005CC2E4 /* UnityFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +148,7 @@
 		A64750062AA8A1BC00ED0DEC = {
 			isa = PBXGroup;
 			children = (
+				5A2478B02AC1BFE90090F9C7 /* GoogleService-Info.plist */,
 				A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */,
 				A64750112AA8A1BC00ED0DEC /* FaceReality */,
 				A64750282AA8A1BD00ED0DEC /* FaceRealityTests */,
@@ -157,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				A647500F2AA8A1BC00ED0DEC /* FaceReality.app */,
-				A69E12832ABDC1B300479221 /* FaceRealityTests */,
-				A69E12902ABDC1C100479221 /* FaceRealityUITests */,
+				A69E12832ABDC1B300479221 /* FaceRealityTests.xctest */,
+				A69E12902ABDC1C100479221 /* FaceRealityUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +271,10 @@
 			dependencies = (
 			);
 			name = FaceReality;
+			packageProductDependencies = (
+				5A2478AC2AC1BF9A0090F9C7 /* FirebaseAnalytics */,
+				5A2478AE2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport */,
+			);
 			productName = FaceReality;
 			productReference = A647500F2AA8A1BC00ED0DEC /* FaceReality.app */;
 			productType = "com.apple.product-type.application";
@@ -283,7 +294,7 @@
 			);
 			name = FaceRealityTests;
 			productName = FaceRealityTests;
-			productReference = A69E12832ABDC1B300479221 /* FaceRealityTests */;
+			productReference = A69E12832ABDC1B300479221 /* FaceRealityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A69E128F2ABDC1C100479221 /* FaceRealityUITests */ = {
@@ -301,7 +312,7 @@
 			);
 			name = FaceRealityUITests;
 			productName = FaceRealityUITests;
-			productReference = A69E12902ABDC1C100479221 /* FaceRealityUITests */;
+			productReference = A69E12902ABDC1C100479221 /* FaceRealityUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -337,6 +348,9 @@
 				Base,
 			);
 			mainGroup = A64750062AA8A1BC00ED0DEC;
+			packageReferences = (
+				5A2478AB2AC1BF9A0090F9C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A64750102AA8A1BC00ED0DEC /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -386,6 +400,7 @@
 			files = (
 				A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */,
 				A64750682AA8A52C00ED0DEC /* LaunchScreen.storyboard in Resources */,
+				5A2478B12AC1BFE90090F9C7 /* GoogleService-Info.plist in Resources */,
 				A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */,
 				A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */,
 			);
@@ -582,7 +597,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L45GPKVRUG;
+				DEVELOPMENT_TEAM = VNH67NDAE6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
@@ -613,7 +628,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L45GPKVRUG;
+				DEVELOPMENT_TEAM = VNH67NDAE6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
@@ -641,7 +656,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L45GPKVRUG;
+				DEVELOPMENT_TEAM = VNH67NDAE6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityTests;
@@ -659,7 +674,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L45GPKVRUG;
+				DEVELOPMENT_TEAM = VNH67NDAE6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityTests;
@@ -676,7 +691,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L45GPKVRUG;
+				DEVELOPMENT_TEAM = VNH67NDAE6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityUITests;
@@ -694,7 +709,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L45GPKVRUG;
+				DEVELOPMENT_TEAM = VNH67NDAE6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityUITests;
@@ -747,6 +762,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A2478AB2AC1BF9A0090F9C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A2478AC2AC1BF9A0090F9C7 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A2478AB2AC1BF9A0090F9C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		5A2478AE2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A2478AB2AC1BF9A0090F9C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A64750072AA8A1BC00ED0DEC /* Project object */;
 }
