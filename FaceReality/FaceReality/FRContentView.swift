@@ -123,7 +123,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[0] {
-                                Text("Sorriso")
+                                Text("smile-string")
                                     .foregroundColor(.white)
                             }
                         }
@@ -146,7 +146,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[1] {
-                                Text("Tristeza")
+                                Text("sad-string")
                                     .foregroundColor(.white)
                                 
                             }
@@ -169,7 +169,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[3] {
-                                Text("Surpresa")
+                                Text("surprise-string")
                                     .foregroundColor(.white)
                             }
                         }
@@ -192,7 +192,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[2] {
-                                Text("Raiva")
+                                Text("angry-string")
                                     .foregroundColor(.white)
                             }
                         }
