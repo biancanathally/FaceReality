@@ -8,99 +8,128 @@
 import SwiftUI
 import RealityKit
 
+struct HostingWindowFinder: UIViewRepresentable {
+    var callback: (UIWindow?) -> ()
+    
+    func makeUIView (context: Context) -> UIView {
+        let view = UIView()
+        DispatchQueue.main.async { [weak view] in
+            self.callback (view? .window)
+        }
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIView, context: Context) {
+    }
+}
+
 struct FRContentView : View {
     @ObservedObject var arViewModel: ARViewModel = ARViewModel()
     @State private var showInfo = false
     @State private var strokeArray = [true, false, false, false, false]
+    @State private var isShowingContentDestinationView = false
+    @Binding var showContent: Bool
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
             ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
             
+            HostingWindowFinder { window in
+                Unity.shared.setHostMainWindow(window)
+            }
+            
             HStack {
                 VStack(alignment: .center, spacing: 5) {
-                    HStack(alignment: .top) {
+                    HStack(alignment: .top, spacing: 202) {
                         
                         Button(action: {
-                            dismiss()
+                            showContent = false
                         }) {
                             Image(systemName: "house.fill")
-                                .foregroundColor(.iconColor)
-                                .font(.system(size: 26))
-                                .frame(width: 28, height: 28)
-                                .padding(.horizontal, 11)
-                                .padding(.vertical, 6)
+                                .foregroundColor(.projectWhite)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 8.5)
                         }
-                        .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial))
+                        .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
                         .shadow(radius: 4, y: 4)
                         
-                        Spacer()
-                        
-                        VStack {
-                            Rectangle()
-                                .frame(height: 25)
-                                .foregroundColor(.clear)
+                        HStack(spacing: 20) {
                             
-                            switch arViewModel.emotions {
-                            case .Joy:
-                                Text(arViewModel.smileChecker())
-                                    .padding(.horizontal, 15)
-                                    .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isSmiling ? .green : .red)
-                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
-                                    .shadow(radius: 4, y: 4)
-                                
-                            case .Sadness:
-                                Text(arViewModel.sadnessChecker())
-                                    .padding(.horizontal, 15)
-                                    .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isFrowning ? .green : .red)
-                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
-                                    .shadow(radius: 4, y: 4)
-                                
-                            case .Rage:
-                                Text(arViewModel.scowlChecker())
-                                    .padding(.horizontal, 15)
-                                    .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isScowling ? .green : .red)
-                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
-                                    .shadow(radius: 4, y: 4)
-                                
-                            case .Surprise:
-                                Text(arViewModel.surprisedChecker())
-                                    .padding(.horizontal, 15)
-                                    .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isScared ? .green : .red)
-                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
-                                    .shadow(radius: 4, y: 4)
-                                
-                            case .Disgust:
-                                Text(arViewModel.disgustChecker())
-                                    .padding(.horizontal, 15)
-                                    .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isDisgusted ? .green : .red)
-                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
-                                    .shadow(radius: 4, y: 4)
+                            Button(action: {
+//                                Play3D()
+                                Unity.shared.show()
+                            }) {
+                                Image(systemName: "cube.fill")
+                                    .foregroundColor(.projectWhite)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 8.5)
                             }
-                        }
-                        
-                        Button(action: {
-                            withAnimation(.easeInOut(duration: 0.5)) {
-                                showInfo = true
+                            .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
+                            .shadow(radius: 4, y: 4)
+                            
+                            Button(action: {
+                                withAnimation(.easeInOut(duration: 0.5)) {
+                                    showInfo = true
+                                }
+                            }) {
+                                Image(systemName: "book.closed.fill")
+                                    .foregroundColor(.projectWhite)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 8.5)
                             }
-                        }) {
-                            Image(systemName: "book.closed.fill")
-                                .foregroundColor(.iconColor)
-                                .font(.system(size: 26))
-                                .frame(width: 28, height: 28)
-                                .padding(.horizontal, 11)
-                                .padding(.vertical, 6)
+                            .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
+                            .shadow(radius: 4, y: 4)
                         }
-                        .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial))
-                        .shadow(radius: 4, y: 4)
                     }
-                    .padding()
+                    
+                    VStack {
+                        Rectangle()
+                            .frame(height: 25)
+                            .foregroundColor(.clear)
+                        
+                        switch arViewModel.emotions {
+                        case .Joy:
+                            Text(arViewModel.smileChecker())
+                                .padding(.horizontal, 15)
+                                .padding(.vertical, 5)
+                                .foregroundColor(arViewModel.isSmiling ? .green : .red)
+                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .shadow(radius: 4, y: 4)
+                            
+                        case .Sadness:
+                            Text(arViewModel.sadnessChecker())
+                                .padding(.horizontal, 15)
+                                .padding(.vertical, 5)
+                                .foregroundColor(arViewModel.isFrowning ? .green : .red)
+                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .shadow(radius: 4, y: 4)
+                            
+                        case .Rage:
+                            Text(arViewModel.scowlChecker())
+                                .padding(.horizontal, 15)
+                                .padding(.vertical, 5)
+                                .foregroundColor(arViewModel.isScowling ? .green : .red)
+                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .shadow(radius: 4, y: 4)
+                            
+                        case .Surprise:
+                            Text(arViewModel.surprisedChecker())
+                                .padding(.horizontal, 15)
+                                .padding(.vertical, 5)
+                                .foregroundColor(arViewModel.isScared ? .green : .red)
+                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .shadow(radius: 4, y: 4)
+                            
+                        case .Disgust:
+                            Text(arViewModel.disgustChecker())
+                                .padding(.horizontal, 15)
+                                .padding(.vertical, 5)
+                                .foregroundColor(arViewModel.isDisgusted ? .green : .red)
+                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .shadow(radius: 4, y: 4)
+                        }
+                    }
                     
                     Spacer()
                     
@@ -138,7 +167,6 @@ struct FRContentView : View {
                                 } else {
                                     strokeArray[1] = false
                                 }
-                                
                             }) {
                                 Image(strokeArray[1] ? "Sad face": "sad.stroke")
                                     .foregroundColor(.white)
@@ -148,7 +176,6 @@ struct FRContentView : View {
                             if strokeArray[1] {
                                 Text("Tristeza")
                                     .foregroundColor(.white)
-                                
                             }
                         }
                         
@@ -184,7 +211,6 @@ struct FRContentView : View {
                                 } else {
                                     strokeArray[2] = false
                                 }
-                                
                             }) {
                                 Image(strokeArray[2] ? "Angry face": "anger.stroke")
                                     .foregroundColor(.white)
@@ -206,7 +232,6 @@ struct FRContentView : View {
                                 } else {
                                     strokeArray[4] = false
                                 }
-                                
                             }) {
                                 Image(strokeArray[4] ? "Disgust face" : "disgust.stroke")
                                     .foregroundColor(.white)
@@ -255,6 +280,45 @@ struct FRContentView : View {
                     
                 }
             }
+            
+            if isShowingContentDestinationView {
+                IntermadiateViewFromFRToContent()
+            }
+        }
+    }
+}
+
+struct Play3D: View {
+//     var mode: String
+
+     var body: some View {
+         VStack {
+             Text("Volte à página inicial").onAppear{
+                 Unity.shared.show()
+             }
+         }
+         .background (
+             HostingWindowFinder { window in
+                 Unity.shared.setHostMainWindow(window)
+             }
+         )
+     }
+ }
+
+struct IntermadiateViewFromFRToContent: View {
+    @State var shouldShow = false
+    
+    var body: some View {
+        if shouldShow {
+            ContentView()
+        }
+        else {
+            Text("Loading")
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now()){
+                        self.shouldShow = true
+                    }
+                }
         }
     }
 }
@@ -284,11 +348,3 @@ struct ARViewContainer: UIViewRepresentable {
     func updateUIView(_ uiView: ARView, context: Context) {}
     
 }
-
-#if DEBUG
-struct FRContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        FRContentView()
-    }
-}
-#endif

@@ -10,7 +10,6 @@ import SwiftUI
 struct PopupView: View {
     var dismissAction: () -> Void
     let titleText: String
-    let subtitleText: String?
     let bodyText: String
     let isReference: Bool
     let buttonLabel: String
@@ -18,43 +17,17 @@ struct PopupView: View {
     
     var body: some View {
         ZStack {
-            VStack(alignment: .leading, spacing: 2) {
-                HStack {
-                    Text(titleText)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .padding()
-                    
-                    Spacer()
-                    
-                    if isReference {
-                        Button(action: {
-                            withAnimation(.easeInOut(duration: 0.1)) {
-                                dismissAction()}
-                        }) {
-                            Image(systemName: "x.circle")
-                                .foregroundColor(.iconColor.opacity(0.9))
-                                .font(.system(size: 24))
-                                .padding()
-                        }
-                        .padding()
-                    }
-                }
+            VStack(alignment: .center, spacing: 2) {
+                Text(titleText)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .padding()
                 
-                if isReference {
-                    Text(subtitleText ?? "")
+                VStack {
+                    Text(bodyText)
                         .font(.body)
                         .padding()
                         .fixedSize(horizontal: false, vertical: true)
-                }
-                
-                ScrollView {
-                    VStack {
-                        Text(bodyText)
-                            .font(.body)
-                            .padding()
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
                 }
                 .padding(.bottom)
                 
@@ -63,7 +36,7 @@ struct PopupView: View {
                         .padding()
                 }
             }
-            .background(RoundedRectangle(cornerRadius: 15).fill(.regularMaterial).shadow(radius: 4, y: 4))
+            .background(RoundedRectangle(cornerRadius: 15).fill(.regularMaterial).opacity(0.6).shadow(radius: 4, y: 4))
             .padding()
         }
     }
