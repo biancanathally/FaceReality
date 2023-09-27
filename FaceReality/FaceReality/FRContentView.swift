@@ -14,7 +14,7 @@ struct HostingWindowFinder: UIViewRepresentable {
     func makeUIView (context: Context) -> UIView {
         let view = UIView()
         DispatchQueue.main.async { [weak view] in
-            self.callback (view? .window)
+            self.callback (view?.window)
         }
         return view
     }
@@ -23,7 +23,7 @@ struct HostingWindowFinder: UIViewRepresentable {
     }
 }
 
-struct FRContentView : View {
+struct FRContentView: View {
     @ObservedObject var arViewModel: ARViewModel = ARViewModel()
     @State private var showInfo = false
     @State private var strokeArray = [true, false, false, false, false]
@@ -32,12 +32,13 @@ struct FRContentView : View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
+        
+        HostingWindowFinder { window in
+            Unity.shared.setHostMainWindow(window)
+        }
+        
         ZStack {
             ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
-            
-            HostingWindowFinder { window in
-                Unity.shared.setHostMainWindow(window)
-            }
             
             HStack {
                 VStack(alignment: .center, spacing: 5) {
@@ -56,17 +57,22 @@ struct FRContentView : View {
                         
                         HStack(spacing: 20) {
                             
+                            //                            VStack {
                             Button(action: {
-//                                Play3D()
                                 Unity.shared.show()
-                            }) {
+                            }, label: {
                                 Image(systemName: "cube.fill")
                                     .foregroundColor(.projectWhite)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 8.5)
-                            }
-                            .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
-                            .shadow(radius: 4, y: 4)
+                                    .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
+                                    .shadow(radius: 4, y: 4)
+                            })
+                            //                            }.background(
+                            //                                HostingWindowFinder { window in
+                            //                                    Unity.shared.setHostMainWindow(window)
+                            //                                }
+                            //                            )
                             
                             Button(action: {
                                 withAnimation(.easeInOut(duration: 0.5)) {
@@ -288,22 +294,22 @@ struct FRContentView : View {
     }
 }
 
-struct Play3D: View {
-//     var mode: String
-
-     var body: some View {
-         VStack {
-             Text("Volte à página inicial").onAppear{
-                 Unity.shared.show()
-             }
-         }
-         .background (
-             HostingWindowFinder { window in
-                 Unity.shared.setHostMainWindow(window)
-             }
-         )
-     }
- }
+//struct Play3D: View {
+////     var mode: String
+//
+//     var body: some View {
+//         VStack {
+//             Text("Volte à página inicial").onAppear{
+//                 Unity.shared.show()
+//             }
+//         }
+//         .background (
+//             HostingWindowFinder { window in
+//                 Unity.shared.setHostMainWindow(window)
+//             }
+//         )
+//     }
+// }
 
 struct IntermadiateViewFromFRToContent: View {
     @State var shouldShow = false
