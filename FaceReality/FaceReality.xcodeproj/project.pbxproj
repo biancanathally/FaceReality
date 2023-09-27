@@ -28,7 +28,9 @@
 		A6A068C42ABB6B3E005CC2E4 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */; };
 		A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */; };
-		BC9E87E32AC1BB08002BFFE1 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E87E22AC1BAB0002BFFE1 /* LocalNotifications.swift */; };
+		BC83DA9A2AC2F96900109579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83DA992AC2F96900109579 /* AppDelegate.swift */; };
+		BC9E87E32AC1BB08002BFFE1 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */; };
+		BCF0B4512AC3A4FC0005D846 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +114,9 @@
 		A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../FaceReality-3D/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
 		A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-Italic.ttf"; sourceTree = "<group>"; };
 		A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RedHatDisplay.ttf; sourceTree = "<group>"; };
-		BC9E87E22AC1BAB0002BFFE1 /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
+		BC83DA992AC2F96900109579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +172,10 @@
 		A64750112AA8A1BC00ED0DEC /* FaceReality */ = {
 			isa = PBXGroup;
 			children = (
-				BC9E87E22AC1BAB0002BFFE1 /* LocalNotifications.swift */,
+				BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */,
+				BC83DA992AC2F96900109579 /* AppDelegate.swift */,
 				A64750642AA8A44700ED0DEC /* FaceRealityApp.swift */,
+				BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */,
 				A64750542AA8A23500ED0DEC /* ContentView.swift */,
 				A647505F2AA8A30100ED0DEC /* Unity.swift */,
 				A647505B2AA8A2D500ED0DEC /* ARModel.swift */,
@@ -234,7 +240,7 @@
 		A6A068B82ABB6B2C005CC2E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A6A068BE2ABB6B31005CC2E4 /* Unity-Target-New.app */,
+				A6A068BE2ABB6B31005CC2E4 /* FaceAR.app */,
 				A6A068C02ABB6B31005CC2E4 /* Unity-iPhone Tests.xctest */,
 				A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */,
 			);
@@ -358,10 +364,9 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A6A068BE2ABB6B31005CC2E4 /* Unity-Target-New.app */ = {
+		A6A068BE2ABB6B31005CC2E4 /* FaceAR.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			name = "Unity-Target-New.app";
 			path = FaceAR.app;
 			remoteRef = A6A068BD2ABB6B31005CC2E4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -419,10 +424,12 @@
 				A64750732AA8ACCE00ED0DEC /* Color.swift in Sources */,
 				A647506B2AA8AB8D00ED0DEC /* Emotions.swift in Sources */,
 				A647505C2AA8A2D500ED0DEC /* ARModel.swift in Sources */,
+				BCF0B4512AC3A4FC0005D846 /* NotificationType.swift in Sources */,
+				BC83DA9A2AC2F96900109579 /* AppDelegate.swift in Sources */,
 				A647506D2AA8ABB100ED0DEC /* InfoPopup.swift in Sources */,
 				A64750712AA8AC3400ED0DEC /* MusclesExpressionModel.swift in Sources */,
 				A647505A2AA8A2AD00ED0DEC /* FRContentView.swift in Sources */,
-				BC9E87E32AC1BB08002BFFE1 /* LocalNotifications.swift in Sources */,
+				BC9E87E32AC1BB08002BFFE1 /* NotificationsManager.swift in Sources */,
 				A64750552AA8A23500ED0DEC /* ContentView.swift in Sources */,
 				A64750652AA8A44700ED0DEC /* FaceRealityApp.swift in Sources */,
 				A64750752AA8BD6D00ED0DEC /* OnboardingView.swift in Sources */,
