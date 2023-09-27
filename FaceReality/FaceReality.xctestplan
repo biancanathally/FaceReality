@@ -1,0 +1,51 @@
+{
+  "configurations" : [
+    {
+      "id" : "A16FB04D-D5E2-4746-A652-697E3833EDD0",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:FaceReality.xcodeproj",
+          "identifier" : "A64750242AA8A1BD00ED0DEC",
+          "name" : "FaceRealityTests"
+        },
+        {
+          "containerPath" : "container:FaceReality.xcodeproj",
+          "identifier" : "A647500E2AA8A1BC00ED0DEC",
+          "name" : "FaceReality"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FaceReality.xcodeproj",
+      "identifier" : "A647500E2AA8A1BC00ED0DEC",
+      "name" : "FaceReality"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FaceReality.xcodeproj",
+        "identifier" : "A64750242AA8A1BD00ED0DEC",
+        "name" : "FaceRealityTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FaceReality.xcodeproj",
+        "identifier" : "A647502E2AA8A1BD00ED0DEC",
+        "name" : "FaceRealityUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -110,6 +110,7 @@
 		A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-Italic.ttf"; sourceTree = "<group>"; };
 		A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RedHatDisplay.ttf; sourceTree = "<group>"; };
 		BC4DC42F2AC4564D00E856AE /* ARViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModelTests.swift; sourceTree = "<group>"; };
+		BCC915952AC45C50001DB043 /* FaceReality.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FaceReality.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +142,7 @@
 		A64750062AA8A1BC00ED0DEC = {
 			isa = PBXGroup;
 			children = (
+				BCC915952AC45C50001DB043 /* FaceReality.xctestplan */,
 				A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */,
 				A64750112AA8A1BC00ED0DEC /* FaceReality */,
 				A64750282AA8A1BD00ED0DEC /* FaceRealityTests */,
