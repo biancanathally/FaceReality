@@ -214,7 +214,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[4] {
-                                Text("Nojo")
+                                Text("disgust-string")
                                     .foregroundColor(.white)
                             }
                         }

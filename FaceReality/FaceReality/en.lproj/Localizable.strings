@@ -1,4 +1,10 @@
 "smile-string" = "Happy";
 "sad-string" = "Sad";
-"surprise-string" = "Surprise";
+"surprise-string" = "Surprised";
 "angry-string" = "Angry";
+"disgust-string" = "Disgusted";
+"selection-string" = "Select a mode:";
+"artest-string" = "Test the muscles with AR projection";
+"start-string" = "Start";
+"3dtest-string" = "Test the muscles with 3D projection";
+"references-string" = "References"

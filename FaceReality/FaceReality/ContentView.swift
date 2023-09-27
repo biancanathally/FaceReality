@@ -62,7 +62,7 @@ struct ContentView: View {
                         .foregroundStyle(.white)
                     
                     VStack(spacing: 56) {
-                        Text("Selecione um modo:")
+                        Text("selection-string")
                             .font(Font.custom("SF Pro Text", size: 20))
                             .fontWeight(.bold)
                             .foregroundStyle(.white)
@@ -92,7 +92,7 @@ struct ContentView: View {
                         
                         VStack(spacing: 113) {
                             if selectedMode == "" {
-                                Text("Selecione um modo")
+                                Text("selection-string")
                                     .padding()
                                     .font(Font.custom("SF Pro Text", size: 14))
                                     .fontWeight(.medium)
@@ -106,25 +106,25 @@ struct ContentView: View {
                             }
                             
                             if selectedMode == "AR" {
-                                Text("Teste os músculos com projeção AR")
+                                Text("artest-string")
                                     .padding()
                                     .font(Font.custom("SF Pro Text", size: 14))
                                     .fontWeight(.medium)
                                     .foregroundStyle(.white)
                                 
-                                NavigationLink("Começar", destination: PlayAR(mode: selectedMode).navigationBarBackButtonHidden(true))
+                                NavigationLink("start-string", destination: PlayAR(mode: selectedMode).navigationBarBackButtonHidden(true))
                                     .buttonStyle(ButtonStyleSelect())
                                     .disabled(selectedMode.isEmpty)
                             }
                             
                             if selectedMode == "3D" {
-                                Text("Teste os músculos com projeção 3D")
+                                Text("3dtest-string")
                                     .padding()
                                     .font(Font.custom("SF Pro Text", size: 14))
                                     .fontWeight(.medium)
                                     .foregroundStyle(.white)
                                 
-                                Button("Começar", action: {
+                                Button("start-string", action: {
                                     Unity.shared.show()
                                 })
                                     .buttonStyle(ButtonStyleSelect())
@@ -134,7 +134,7 @@ struct ContentView: View {
                 }
                 
                 if showReferences {
-                    let title = "Referências"
+                    let title = "references-string"
                     let subtitle = "Face Reality foi baseado em:"
                     let body = "1. McMINN, R. M. H.. Atlas Colorido de Anatomia Humana. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Anatomia Orientada para a Prática Clínica. 4ed."
                     VStack(alignment: .leading) {
