@@ -44,21 +44,22 @@ struct FRContentView : View {
                             
                             switch arViewModel.emotions {
                             case .Joy:
-                                Text(arViewModel.smileChecker())
+                                Text(arViewModel.smileChecker(isSmiling: arViewModel.isPersonSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight), isGenuineSmiling: arViewModel.isPersonGenuineSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isSmiling ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
+
                                 
                             case .Sadness:
-                                Text(arViewModel.sadnessChecker())
+                                Text(arViewModel.sadnessChecker(isPersonFrowning: arViewModel.isPersonFrowning(browInnerUp: arViewModel.model.browInnerUp, mouthRollUpper: arViewModel.model.mouthRollUpper, frownLeft: arViewModel.model.frownLeft, frownRight: arViewModel.model.frownRight)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isFrowning ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonFrowning(browInnerUp: arViewModel.model.browInnerUp, mouthRollUpper: arViewModel.model.mouthRollUpper, frownLeft: arViewModel.model.frownLeft, frownRight: arViewModel.model.frownRight) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
-                                
+
                             case .Rage:
                                 Text(arViewModel.scowlChecker())
                                     .padding(.horizontal, 15)
@@ -66,6 +67,7 @@ struct FRContentView : View {
                                     .foregroundColor(arViewModel.isScowling ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
+
                                 
                             case .Surprise:
                                 Text(arViewModel.surprisedChecker())
@@ -74,7 +76,7 @@ struct FRContentView : View {
                                     .foregroundColor(arViewModel.isScared ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
-                                
+
                             case .Disgust:
                                 Text(arViewModel.disgustChecker())
                                     .padding(.horizontal, 15)
@@ -82,6 +84,7 @@ struct FRContentView : View {
                                     .foregroundColor(arViewModel.isDisgusted ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
+
                             }
                         }
                         
