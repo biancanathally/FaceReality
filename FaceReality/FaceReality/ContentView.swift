@@ -20,6 +20,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                
                 ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
                 
                 VStack(spacing: 22) {

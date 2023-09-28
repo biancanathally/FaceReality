@@ -33,11 +33,8 @@ struct FRContentView: View {
     
     var body: some View {
         
-        HostingWindowFinder { window in
-            Unity.shared.setHostMainWindow(window)
-        }
-        
         ZStack {
+            
             ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
             
             HStack {
@@ -57,23 +54,6 @@ struct FRContentView: View {
                         
                         HStack(spacing: 20) {
                             
-                            //                            VStack {
-                            Button(action: {
-                                Unity.shared.show()
-                            }, label: {
-                                Image(systemName: "cube.fill")
-                                    .foregroundColor(.projectWhite)
-                                    .padding(.horizontal, 10)
-                                    .padding(.vertical, 8.5)
-                                    .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
-                                    .shadow(radius: 4, y: 4)
-                            })
-                            //                            }.background(
-                            //                                HostingWindowFinder { window in
-                            //                                    Unity.shared.setHostMainWindow(window)
-                            //                                }
-                            //                            )
-                            
                             Button(action: {
                                 withAnimation(.easeInOut(duration: 0.5)) {
                                     showInfo = true
@@ -86,53 +66,68 @@ struct FRContentView: View {
                             }
                             .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
                             .shadow(radius: 4, y: 4)
+                            
+                            VStack {
+                                Button(action: {
+                                    Unity.shared.show()
+                                }, label: {
+                                    Text("3D")
+                                        .foregroundColor(.projectWhite)
+                                        .font(Font.custom("SFProText-Bold", size: 14))
+                                        .padding(.horizontal, 10)
+                                        .padding(.vertical, 8.5)
+                                        .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
+                                        .shadow(radius: 4, y: 4)
+                                })
+                            }.background(
+                                HostingWindowFinder { window in
+                                    Unity.shared.setHostMainWindow(window)
+                                }
+                            )
+                            
                         }
                     }
                     
                     VStack {
-                        Rectangle()
-                            .frame(height: 25)
-                            .foregroundColor(.clear)
-                        
                         switch arViewModel.emotions {
                         case .Joy:
                             Text(arViewModel.smileChecker())
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 5)
-                                .foregroundColor(arViewModel.isSmiling ? .green : .red)
-                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 10)
+                                .foregroundColor(.white/*arViewModel.isSmiling ? .green : .red*/)
+                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                             
                         case .Sadness:
                             Text(arViewModel.sadnessChecker())
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 5)
-                                .foregroundColor(arViewModel.isFrowning ? .green : .red)
-                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 10)
+                                .foregroundColor(.white)
+                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                             
                         case .Rage:
                             Text(arViewModel.scowlChecker())
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 5)
-                                .foregroundColor(arViewModel.isScowling ? .green : .red)
-                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 10)
+                                .foregroundColor(.white)
+                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                             
                         case .Surprise:
                             Text(arViewModel.surprisedChecker())
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 5)
-                                .foregroundColor(arViewModel.isScared ? .green : .red)
-                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 10)
+                                .foregroundColor(.white)
+                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                             
                         case .Disgust:
                             Text(arViewModel.disgustChecker())
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 5)
-                                .foregroundColor(arViewModel.isDisgusted ? .green : .red)
-                                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 10)
+                                .foregroundColor(.white)
+                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                         }
                     }
@@ -152,7 +147,7 @@ struct FRContentView: View {
                                 }
                                 
                             }) {
-                                Image(strokeArray[0] ? "Smiley face" : "smile.stroke")
+                                Image(strokeArray[0] ? "Smiley face": "smile.stroke")
                                     .foregroundColor(.white)
                                     .font(.system(size: 60))
                             }
@@ -160,6 +155,7 @@ struct FRContentView: View {
                             if strokeArray[0] {
                                 Text("Sorriso")
                                     .foregroundColor(.white)
+                                    .font(Font.custom("SFProText-Medium", size: 12))
                             }
                         }
                         
@@ -182,6 +178,7 @@ struct FRContentView: View {
                             if strokeArray[1] {
                                 Text("Tristeza")
                                     .foregroundColor(.white)
+                                    .font(Font.custom("SFProText-Medium", size: 12))
                             }
                         }
                         
@@ -204,6 +201,7 @@ struct FRContentView: View {
                             if strokeArray[3] {
                                 Text("Surpresa")
                                     .foregroundColor(.white)
+                                    .font(Font.custom("SFProText-Medium", size: 12))
                             }
                         }
                         
@@ -226,6 +224,7 @@ struct FRContentView: View {
                             if strokeArray[2] {
                                 Text("Raiva")
                                     .foregroundColor(.white)
+                                    .font(Font.custom("SFProText-Medium", size: 12))
                             }
                         }
                         
@@ -247,6 +246,7 @@ struct FRContentView: View {
                             if strokeArray[4] {
                                 Text("Nojo")
                                     .foregroundColor(.white)
+                                    .font(Font.custom("SFProText-Medium", size: 12))
                             }
                         }
                     }
@@ -294,23 +294,6 @@ struct FRContentView: View {
     }
 }
 
-//struct Play3D: View {
-////     var mode: String
-//
-//     var body: some View {
-//         VStack {
-//             Text("Volte à página inicial").onAppear{
-//                 Unity.shared.show()
-//             }
-//         }
-//         .background (
-//             HostingWindowFinder { window in
-//                 Unity.shared.setHostMainWindow(window)
-//             }
-//         )
-//     }
-// }
-
 struct IntermadiateViewFromFRToContent: View {
     @State var shouldShow = false
     
@@ -351,6 +334,6 @@ struct ARViewContainer: UIViewRepresentable {
         return arViewModel.arView
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
-    
+    func updateUIView(_ uiView: ARView, context: Context) {
+    }
 }

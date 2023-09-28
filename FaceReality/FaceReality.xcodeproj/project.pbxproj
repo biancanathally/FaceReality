@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */; };
+		A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */; };
 		A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */; };
 		A64750552AA8A23500ED0DEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750542AA8A23500ED0DEC /* ContentView.swift */; };
 		A647505A2AA8A2AD00ED0DEC /* FRContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750592AA8A2AD00ED0DEC /* FRContentView.swift */; };
@@ -83,6 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.otf"; sourceTree = "<group>"; };
+		A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
 		A647500F2AA8A1BC00ED0DEC /* FaceReality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceReality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A64750202AA8A1BD00ED0DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 		A6A068CC2ABB72B9005CC2E4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */,
+				A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */,
 				A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */,
 				A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */,
 			);
@@ -385,6 +391,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */,
+				A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */,
+				A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */,
 				A64750682AA8A52C00ED0DEC /* LaunchScreen.storyboard in Resources */,
 				A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */,
 				A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */,

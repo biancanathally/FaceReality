@@ -20,12 +20,8 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
     @Published var surpriseMuscles: SurpriseMuscles = SurpriseMuscles()
     @Published var disgustMuscles: DisgustMuscles = DisgustMuscles()
 
-
-
-    
     func startSessionDelegate() {
         model.arView.session.delegate = self
-        
     }
     
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
