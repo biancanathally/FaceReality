@@ -26,22 +26,22 @@ enum NotificationType {
     var title: String {
         switch self {
         case .twoDays:
-            return "Você não visita há dois dias"
+            return "Está nos evitando?"
         case .oneWeek:
-            return "Já faz uma semana..."
+            return "Tanto tempo se passou 😔"
         case .twoWeeks:
-            return "Vai deixar pra última hora?"
+            return "Você nos deixou? 😭"
         }
     }
     
     var body: String {
         switch self {
         case .twoDays:
-            return "Estudar aqui é fácil!"
+            return "Não quer ver a realidade na sua cara?"
         case .oneWeek:
-            return "Revise os conteúdos agora!"
+            return "Nossos músculos sentem saudades de você."
         case .twoWeeks:
-            return "Não deixe seu aprendizado de lado!"
+            return "Volte, a anatomia facial ainda é incrível!"
         }
     }
     
