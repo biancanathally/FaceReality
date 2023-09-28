@@ -1,10 +1,44 @@
-"smile-string" = "Happy";
+"happy-string" = "Happy";
 "sad-string" = "Sad";
-"surprise-string" = "Surprised";
+"surprised-string" = "Surprised";
 "angry-string" = "Angry";
 "disgust-string" = "Disgusted";
 "selection-string" = "Select a mode:";
 "artest-string" = "Test the muscles with AR projection";
 "start-string" = "Start";
 "3dtest-string" = "Test the muscles with 3D projection";
-"references-string" = "References"
+"referencestitle-string" = "References";
+"referencessubtitle-string" = "Face Reality was based on:";
+"referencesbody-string" = "1. McMINN, R. M. H.. Color Atlas of Human Anatomy. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Clinically Oriented Anatomy. 4ed.";
+//MARK: Feedbacks
+"genuinesmile-string" = "Genuine smile! 🤩";
+"smiling-string" = "Smiling 😊";
+"neutral-string" = "Neutral 😐";
+"sadness-string" = "Sad... 😢";
+"anger-string" = "Angry! 😡";
+"surprise-string" = "Surprise! 😮";
+"disgusted-string" = "Disgusted! 🥴";
+
+//MARK: Muscles
+"orbicularolho-string" = "Orbicularis oculi muscle";
+"levantadorlabioasanariz-string" = "Levator labii superioris alaeque nasi muscle";
+"levantadorlabio-string" = "Levator labii superioris";
+"zigomaticomaior-string" = "Zygomaticus major muscle";
+"zigomaticomenor-string" = "Zygomaticus minor muscle";
+"risorio-string" = "Risorius muscle";
+"levantadoranguloboca-string" = "Levator anguli oris";
+"orbicularboca-string" = "Orbicularis oris muscle";
+"bucinador-string" = "Buccinator muscle";
+"depressoranguloboca-string" = "Depressor anguli oris muscle";
+
+//MARK: Muscle Description
+"orbicularolhodescricao-string" = "This muscle is divided into 3 parts: \n Orbital: closes the eyelids firmly; \n Palpebral: closes the eyelids gently; \n Deep Palpebral: compresses the lacrimal sac.\n It is activated only during a genuine smile.";
+"levantadorlabioasanarizdescricao-string" = "It raises the upper lip, exposes the maxillary teeth.";
+"levantadorlabiodescricao-string" = "It raises the upper lip, exposes the maxillary teeth.";
+"zigomaticomaiordescricao-string" = "It has the function of elevating and eversing the angle of the mouth.";
+"zigomaticomenordescricao-string" = "It has the function of elevating the lip together with the Levator labii superioris alaeque nasi muscle.";
+"risoriodescricao-string" = "It extends the angle of the mouth laterally.";
+"levantadorangulobocadescricao-string" = "It elevates the angle of the mouth and accentuates the nasolabial fold.";
+"orbicularbocadescricao-string" = "It has the function of closing the mouth, compressing and stretching the lips.";
+"bucinadordescricao-string" = "This muscle compresses the cheeks against the molar teeth.";
+"depressorangulobocadescricao-string" = "It depresses the angle of the mouth.";
