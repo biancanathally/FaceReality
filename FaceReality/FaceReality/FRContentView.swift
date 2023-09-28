@@ -61,7 +61,7 @@ struct FRContentView : View {
                                     .shadow(radius: 4, y: 4)
 
                             case .Rage:
-                                Text(arViewModel.scowlChecker())
+                                Text(arViewModel.scowlChecker(isPersonScowling: arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
                                     .foregroundColor(arViewModel.isScowling ? .green : .red)
@@ -70,18 +70,18 @@ struct FRContentView : View {
 
                                 
                             case .Surprise:
-                                Text(arViewModel.surprisedChecker())
+                                Text(arViewModel.surprisedChecker(isPersonScared: arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isScared ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonScared(wideLeft: arViewModel.model.wideLeft, wideRight: arViewModel.model.wideRight) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
 
                             case .Disgust:
-                                Text(arViewModel.disgustChecker())
+                                Text(arViewModel.disgustChecker(isPersonDisgusted: arViewModel.isPersonDisgusted(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isDisgusted ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonDisgusted(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
 

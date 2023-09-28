@@ -36,14 +36,20 @@ final class ARViewModelTest: XCTestCase {
     }
     
     func testSmileChecker() throws {
-        let arViewModel = ARViewModel()
+//        let arViewModel = ARViewModel()
         let isSmiling = arViewModel.isPersonSmiling(smileLeft: 0.4, smileRight: 0.4)
         let isGenuineSmiling = arViewModel.isPersonGenuineSmiling(smileLeft: 0.4, smileRight: 0.4, squintLeft: 0.2, squintRight: 0.2)
+        let isNotGenuineSmiling = arViewModel.isPersonGenuineSmiling(smileLeft: 0.3, smileRight: 0.3, squintLeft: 0.2, squintRight: 0.2)
+        let isNotSmiling = arViewModel.isPersonSmiling(smileLeft: 0.2, smileRight: 0.4)
+
         XCTAssertEqual(arViewModel.smileChecker(isSmiling: isSmiling, isGenuineSmiling: isGenuineSmiling), "Sorriso genuíno! 🤩")
+        XCTAssertEqual(arViewModel.smileChecker(isSmiling: isSmiling, isGenuineSmiling: isNotGenuineSmiling), "Sorrindo 😊")
+        XCTAssertEqual(arViewModel.smileChecker(isSmiling: isNotSmiling, isGenuineSmiling: isNotGenuineSmiling), "Neutro 😐")
+
     }
     
     func testIsPersonSmiling() throws {
-        let arViewModel = ARViewModel()
+//        let arViewModel = ARViewModel()
         XCTAssertEqual(arViewModel.isPersonSmiling(smileLeft: 0.2, smileRight: 0.3), false)
 
     }
@@ -74,4 +80,6 @@ final class ARViewModelTest: XCTestCase {
         XCTAssertEqual(arViewModel.sadnessChecker(isPersonFrowning: arViewModel.isPersonFrowning(browInnerUp: 0.1, mouthRollUpper: 0.1, frownLeft: 0.1, frownRight: 0.1)), "Neutro 😐")
 
     }
+    
+    
 }

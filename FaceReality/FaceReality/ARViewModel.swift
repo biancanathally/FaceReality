@@ -87,15 +87,15 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
         return false
     }
     
-    var isScared: Bool {
-        var scaredHelper = false
-        if model.wideLeft > 0.3 && model.wideRight > 0.3 {
-            
-            scaredHelper = true
-        }
-        
-        return scaredHelper
-    }
+//    var isScared: Bool {
+//        var scaredHelper = false
+//        if model.wideLeft > 0.3 && model.wideRight > 0.3 {
+//
+//            scaredHelper = true
+//        }
+//
+//        return scaredHelper
+//    }
     
     func isPersonScared(wideLeft: Float, wideRight: Float) -> Bool {
         if wideLeft > 0.3 && wideRight > 0.3 {
@@ -105,15 +105,15 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
         return false
     }
     
-    var isDisgusted: Bool {
-        var disgustedHelper = false
-        if model.sneerLeft > 0.2 && model.sneerRight > 0.2 {
-            
-            disgustedHelper = true
-        }
-        
-        return disgustedHelper
-    }
+//    var isDisgusted: Bool {
+//        var disgustedHelper = false
+//        if model.sneerLeft > 0.2 && model.sneerRight > 0.2 {
+//            
+//            disgustedHelper = true
+//        }
+//        
+//        return disgustedHelper
+//    }
     
     func isPersonDisgusted(sneerLeft: Float, sneerRight: Float) -> Bool {
         if sneerLeft > 0.2 && sneerRight > 0.2 {
@@ -166,8 +166,8 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
         }
     }
     
-    func scowlChecker() -> String {
-        if isPersonScowling(sneerLeft: model.sneerLeft, sneerRight: model.sneerRight, squintLeft: model.squintLeft, squintRight: model.squintRight, shrugLower: model.shrugLower) {
+    func scowlChecker(isPersonScowling: Bool) -> String {
+        if isPersonScowling {
             return "Raiva! 😡"
         }
         else {
@@ -176,16 +176,16 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
         }
     }
     
-    func surprisedChecker() -> String {
-        if isPersonScared(wideLeft: model.wideLeft, wideRight: model.wideRight) {
+    func surprisedChecker(isPersonScared: Bool) -> String {
+        if isPersonScared {
             return "Surpresa! 😮"
         }
         return "Neutro 😐"
         
     }
     
-    func disgustChecker() -> String {
-        if isPersonDisgusted(sneerLeft: model.sneerLeft, sneerRight: model.sneerRight) {
+    func disgustChecker(isPersonDisgusted: Bool) -> String {
+        if isPersonDisgusted {
             return "Nojo! 🥴"
         }
         return "Neutro 😐"
