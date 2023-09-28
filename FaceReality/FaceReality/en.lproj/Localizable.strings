@@ -30,6 +30,10 @@
 "orbicularboca-string" = "Orbicularis oris muscle";
 "bucinador-string" = "Buccinator muscle";
 "depressoranguloboca-string" = "Depressor anguli oris muscle";
+"frontal-string" = "Occipitofrontalis muscle";
+"corrugadorsupercilio-string" = "Corrugator supercilii muscle";
+"procero-string" = "Procerus muscle";
+"depressorlabio-string" = "Depressor labii inferioris muscle";
 
 //MARK: Muscle Description
 "orbicularolhodescricao-string" = "This muscle is divided into 3 parts: \n Orbital: closes the eyelids firmly; \n Palpebral: closes the eyelids gently; \n Deep Palpebral: compresses the lacrimal sac.\n It is activated only during a genuine smile.";
@@ -42,3 +46,7 @@
 "orbicularbocadescricao-string" = "It has the function of closing the mouth, compressing and stretching the lips.";
 "bucinadordescricao-string" = "This muscle compresses the cheeks against the molar teeth.";
 "depressorangulobocadescricao-string" = "It depresses the angle of the mouth.";
+"frontaldescricao-string" = "Its function is to raise the eyebrows and wrinkle the skin of the forehead, while that of the occipital part is to retract the scalp.";
+"corrugadorsuperciliodescricao-string" = "Its function is to create vertical wrinkles on the glabella; it is responsible for pulling the eyebrow medially.";
+"procerodescricao-string" = "The muscle has the function of lowering the medial end of the eyebrow and wrinkling the skin of the glabella.";
+"depressorlabiodescricao-string" = "It has the function of lowering the lower lip sideways.";
