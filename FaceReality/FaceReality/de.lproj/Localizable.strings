@@ -27,20 +27,20 @@
 "disgusted-string" = "Angewidert! 🥴";
 
 //MARK: Muscles
-"orbicularolho-string" = "Orbicularis oculi muscle";
-"levantadorlabioasanariz-string" = "Levator labii superioris alaeque nasi muscle";
-"levantadorlabio-string" = "Levator labii superioris";
-"zigomaticomaior-string" = "Zygomaticus major muscle";
-"zigomaticomenor-string" = "Zygomaticus minor muscle";
-"risorio-string" = "Risorius muscle";
-"levantadoranguloboca-string" = "Levator anguli oris";
-"orbicularboca-string" = "Orbicularis oris muscle";
-"bucinador-string" = "Buccinator muscle";
-"depressoranguloboca-string" = "Depressor anguli oris muscle";
-"frontal-string" = "Occipitofrontalis muscle";
-"corrugadorsupercilio-string" = "Corrugator supercilii muscle";
-"procero-string" = "Procerus muscle";
-"depressorlabio-string" = "Depressor labii inferioris muscle";
+"orbicularolho-string" = "Augenringmuskel";
+"levantadorlabioasanariz-string" = "Heber der Oberlippe und des Nasenflügels";
+"levantadorlabio-string" = "Oberlippenheber";
+"zigomaticomaior-string" = "großer Jochbeinmuskel";
+"zigomaticomenor-string" = "kleiner Jochbeinmuskel";
+"risorio-string" = "Lachmuskel";
+"levantadoranguloboca-string" = "Mundwinkelheber";
+"orbicularboca-string" = "Ringmuskel des Mundes";
+"bucinador-string" = "Backenmuskel";
+"depressoranguloboca-string" = "Mundwinkelniederzieher";
+"frontal-string" = "Hinterkopf-Stirn-Muskel";
+"corrugadorsupercilio-string" = "Stirnrunzler";
+"procero-string" = "Schlanker Muskel";
+"depressorlabio-string" = "Niederzieher der Unterlippe";
 
 //MARK: Muscle Description
 "orbicularolhodescricao-string" = "Dieser Muskel ist in 3 Teile unterteilt: \n Orbital: schließt die Augenlider fest; \n Palpebral: schließt die Augenlider sanft; \n Deep Palpebral: drückt den Tränensack zusammen.\n Er wird nur bei einem echten Lächeln aktiviert.";
