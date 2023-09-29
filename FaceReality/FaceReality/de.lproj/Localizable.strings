@@ -1,30 +1,30 @@
 //MARK: Onboarding
-"onboardingtitle-string" = "Welcome!";
-"onboardingbody-string" = "Face Reality is an app that helps you understand muscle function according to facial expressions.";
+"onboardingtitle-string" = "Herzlich willkommen!";
+"onboardingbody-string" = "Face Reality ist eine App, die Ihnen hilft, die Muskelfunktion anhand von Gesichtsausdrücken zu verstehen.";
 "onboardingbutton-string" = "Start";
 
 //MARK: Main
-"happy-string" = "Happy";
-"sad-string" = "Sad";
-"surprised-string" = "Surprised";
-"angry-string" = "Angry";
-"disgust-string" = "Disgusted";
-"selection-string" = "Select a mode:";
-"artest-string" = "Test the muscles with AR projection";
+"happy-string" = "Glücklich";
+"sad-string" = "Traurig";
+"surprised-string" = "Überrascht";
+"angry-string" = "Wütend";
+"disgust-string" = "Angewidert";
+"selection-string" = "Wählen Sie einen Modus:";
+"artest-string" = "Mit AR-Projektion die Muskeln testen";
 "start-string" = "Start";
-"3dtest-string" = "Test the muscles with 3D projection";
-"referencestitle-string" = "References";
-"referencessubtitle-string" = "Face Reality was based on:";
-"referencesbody-string" = "1. McMINN, R. M. H.. Color Atlas of Human Anatomy. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Clinically Oriented Anatomy. 4ed.";
+"3dtest-string" = "Mit 3D-Projektion die Muskeln testen";
+"referencestitle-string" = "Referenzen";
+"referencessubtitle-string" = "Face Reality basiert auf:";
+"referencesbody-string" = "1. McMINN, R. M. H.. Farbatlas der menschlichen Anatomie. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Klinisch orientierte Anatomie. 4ed.";
 
 //MARK: Feedbacks
-"genuinesmile-string" = "Genuine smile! 🤩";
-"smiling-string" = "Smiling 😊";
+"genuinesmile-string" = "Echtes Lächeln! 🤩";
+"smiling-string" = "Lächelnd 😊";
 "neutral-string" = "Neutral 😐";
-"sadness-string" = "Sad... 😢";
-"anger-string" = "Angry! 😡";
-"surprise-string" = "Surprise! 😮";
-"disgusted-string" = "Disgusted! 🥴";
+"sadness-string" = "Traurig... 😢";
+"anger-string" = "Wütend! 😡";
+"surprise-string" = "Überraschung! 😮";
+"disgusted-string" = "Angewidert! 🥴";
 
 //MARK: Muscles
 "orbicularolho-string" = "Orbicularis oculi muscle";
@@ -43,20 +43,20 @@
 "depressorlabio-string" = "Depressor labii inferioris muscle";
 
 //MARK: Muscle Description
-"orbicularolhodescricao-string" = "This muscle is divided into 3 parts: \n Orbital: closes the eyelids firmly; \n Palpebral: closes the eyelids gently; \n Deep Palpebral: compresses the lacrimal sac.\n It is activated only during a genuine smile.";
-"levantadorlabioasanarizdescricao-string" = "It raises the upper lip, exposes the maxillary teeth.";
-"levantadorlabiodescricao-string" = "It raises the upper lip, exposes the maxillary teeth.";
-"zigomaticomaiordescricao-string" = "It has the function of elevating and eversing the angle of the mouth.";
-"zigomaticomenordescricao-string" = "It has the function of elevating the lip together with the Levator labii superioris alaeque nasi muscle.";
-"risoriodescricao-string" = "It extends the angle of the mouth laterally.";
-"levantadorangulobocadescricao-string" = "It elevates the angle of the mouth and accentuates the nasolabial fold.";
-"orbicularbocadescricao-string" = "It has the function of closing the mouth, compressing and stretching the lips.";
-"bucinadordescricao-string" = "This muscle compresses the cheeks against the molar teeth.";
-"depressorangulobocadescricao-string" = "It depresses the angle of the mouth.";
-"frontaldescricao-string" = "Its function is to raise the eyebrows and wrinkle the skin of the forehead, while that of the occipital part is to retract the scalp.";
-"corrugadorsuperciliodescricao-string" = "Its function is to create vertical wrinkles on the glabella; it is responsible for pulling the eyebrow medially.";
-"procerodescricao-string" = "The muscle has the function of lowering the medial end of the eyebrow and wrinkling the skin of the glabella.";
-"depressorlabiodescricao-string" = "It has the function of lowering the lower lip sideways.";
+"orbicularolhodescricao-string" = "Dieser Muskel ist in 3 Teile unterteilt: \n Orbital: schließt die Augenlider fest; \n Palpebral: schließt die Augenlider sanft; \n Deep Palpebral: drückt den Tränensack zusammen.\n Er wird nur bei einem echten Lächeln aktiviert.";
+"levantadorlabioasanarizdescricao-string" = "Er hebt die Oberlippe an und legt die Oberkieferzähne frei.";
+"levantadorlabiodescricao-string" = "Er hebt die Oberlippe an und legt die Kieferzähne frei";
+"zigomaticomaiordescricao-string" = "Er hat die Funktion, den Mundwinkel anzuheben und zu vertiefen.";
+"zigomaticomenordescricao-string" = "Er hat die Funktion, die Lippe zusammen mit dem Musculus Levator labii superioris alaeque nasi anzuheben.";
+"risoriodescricao-string" = "Er erweitert den Mundwinkel seitlich.";
+"levantadorangulobocadescricao-string" = "Er hebt den Mundwinkel an und betont die Nasolabialfalte."; "levantadorangulobocadescricao-string" = "Er hebt den Mundwinkel an und betont die Nasolabialfalte.";
+"orbicularbocadescricao-string" = "Er hat die Funktion, den Mund zu schließen und die Lippen zu komprimieren und zu dehnen.";
+"bucinadordescricao-string" = "Dieser Muskel drückt die Wangen gegen die Backenzähne.";
+"depressorangulobocadescricao-string" = "Er drückt den Mundwinkel zusammen.";
+"frontaldescricao-string" = "Seine Funktion ist es, die Augenbrauen anzuheben und die Haut der Stirn zu falten, während die Funktion des okzipitalen Teils darin besteht, die Kopfhaut zurückzuziehen.";
+"corrugadorsuperciliodescricao-string" = "Seine Funktion ist es, vertikale Falten auf der Glabella zu erzeugen; er ist dafür verantwortlich, die Augenbraue nach medial zu ziehen.";
+"procerodescricao-string" = "Der Muskel hat die Funktion, das mediale Ende der Augenbraue abzusenken und die Haut der Glabella zu falten.";
+"depressorlabiodescricao-string" = "Er hat die Funktion, die Unterlippe seitlich abzusenken.";
 
 //MARK: Notifications
 "twodaynotif-string" = "Are you avoiding us? \n Don't you want to face reality?";
