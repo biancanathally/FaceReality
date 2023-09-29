@@ -514,6 +514,8 @@
 		591C4A1894BD56FCC62AD6E3 /* System_Attr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = System_Attr.cpp; path = Classes/Native/System_Attr.cpp; sourceTree = SOURCE_ROOT; };
 		593C4718A183960DA0DEF324 /* mscorlib__8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mscorlib__8.cpp; path = Classes/Native/mscorlib__8.cpp; sourceTree = SOURCE_ROOT; };
 		59D84173BA606BB23F1C7969 /* Il2CppGenericComDefinitions__48.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppGenericComDefinitions__48.cpp; path = Classes/Native/Il2CppGenericComDefinitions__48.cpp; sourceTree = SOURCE_ROOT; };
+		5A2478BF2AC64FFA0090F9C7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A2478C12AC650020090F9C7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		5AE14750989BBA579A16D77D /* Unity.RenderPipelines.Universal.Runtime.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Unity.RenderPipelines.Universal.Runtime.cpp; path = Classes/Native/Unity.RenderPipelines.Universal.Runtime.cpp; sourceTree = SOURCE_ROOT; };
 		5B2C4AE783CD8462CBC891D9 /* UnityEngine.SpriteShapeModule_Attr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = UnityEngine.SpriteShapeModule_Attr.cpp; path = Classes/Native/UnityEngine.SpriteShapeModule_Attr.cpp; sourceTree = SOURCE_ROOT; };
 		5B8645F1A1A6220AD67BA4D5 /* System.Configuration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = System.Configuration.cpp; path = Classes/Native/System.Configuration.cpp; sourceTree = SOURCE_ROOT; };
@@ -1512,6 +1514,8 @@
 				French,
 				German,
 				en,
+				de,
+				"pt-BR",
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -1914,6 +1918,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				5623C57C17FDCB0900090B9E /* en */,
+				5A2478BF2AC64FFA0090F9C7 /* de */,
+				5A2478C12AC650020090F9C7 /* pt-BR */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

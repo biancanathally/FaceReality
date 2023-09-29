@@ -1,0 +1,64 @@
+//MARK: Onboarding
+"onboardingtitle-string" = "Boas vindas!";
+"onboardingbody-string" = "Face Reality é um app que te ajuda a entender o funcionamento muscular de acordo com as expressões faciais.";
+"onboardingbutton-string" = "Começar";
+
+//MARK: Main
+"happy-string" = "Sorriso";
+"sad-string" = "Tristeza";
+"surprised-string" = "Surpresa";
+"angry-string" = "Raiva";
+"disgust-string" = "Nojo";
+"selection-string" = "Selecione um modo:";
+"artest-string" = "Teste os músculos com a projeção AR.";
+"start-string" = "Começar";
+"3dtest-string" = "Teste os músculos com a projeção 3D.";
+"referencestitle-string" = "Referências";
+"referencessubtitle-string" = "Face Reality foi baseado em:";
+"referencesbody-string" = "1. McMINN, R. M. H.. Atlas Colorido de Anatomia Humana. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Anatomia Orientada para a Clínica. 4ed.";
+
+//MARK: Feedbacks
+"genuinesmile-string" = "Sorriso genuíno! 🤩";
+"smiling-string" = "Sorriso 😊";
+"neutral-string" = "Neutro 😐";
+"sadness-string" = "Triste... 😢";
+"anger-string" = "Raiva! 😡";
+"surprise-string" = "Surpresa! 😮";
+"disgusted-string" = "Nojo! 🥴";
+
+//MARK: Muscles
+"orbicularolho-string" = "Músculo orbicular do olho";
+"levantadorlabioasanariz-string" = "Músculo levantador do lábio superior e da asa do nariz";
+"levantadorlabio-string" = "Músculo elevador do lábio superior";
+"zigomaticomaior-string" = "Músculo zigomático maior";
+"zigomaticomenor-string" = "Músculo zigomático menor";
+"risorio-string" = "Músculo risório";
+"levantadoranguloboca-string" = "Músculo levantador do ângulo da boca";
+"orbicularboca-string" = "Músculo orbicular da boca";
+"bucinador-string" = "Músculo bucinador";
+"depressoranguloboca-string" = "Músculo depressor do ângulo da boca";
+"frontal-string" = "Músculo Occipitofrontal";
+"corrugadorsupercilio-string" = "Músculo corrugador supercílio";
+"procero-string" = "Músculo prócero";
+"depressorlabio-string" = "Músculo depressor do lábio inferior";
+
+//MARK: Muscle Description
+"orbicularolhodescricao-string" = "Este músculo está dividido em 3 partes: \n Orbital: fecha as pálpebras com firmeza; \n Palpebral: fecha as pálpebras suavemente; \n Profunda: comprime o saco lacrimal.\n É ativado apenas durante um sorriso genuíno.";
+"levantadorlabioasanarizdescricao-string" = "Levanta o lábio superior, expondo os dentes maxilares.";
+"levantadorlabiodescricao-string" = "Levanta o lábio superior, expondo os dentes maxilares.";
+"zigomaticomaiordescricao-string" = "Ele tem a função de elevar e realizar a eversão do ângulo da boca.";
+"zigomaticomenordescricao-string" = "Tem a função de elevar o lábio superior juntamente com o músculo levantador do lábio superior e da asa do nariz";
+"risoriodescricao-string" = "Ele estende o ângulo da boca lateralmente.";
+"levantadorangulobocadescricao-string" = "Eleva o ângulo da boca e acentua o sulco nasolabial.";
+"orbicularbocadescricao-string" = "Ele tem a função de fechar a boca, comprimir e esticar os lábios.";
+"bucinadordescricao-string" = "Esse músculo comprime as bochechas contra os dentes molares.";
+"depressorangulobocadescricao-string" = "Ele deprime o ângulo da boca.";
+"frontaldescricao-string" = "Sua função é levantar as sobrancelhas e enrugar a pele da testa, enquanto a da parte occipital é retrair o couro cabeludo.";
+"corrugadorsuperciliodescricao-string" = "Sua função é criar rugas verticais na glabela; ela é responsável por puxar a sobrancelha medialmente.";
+"procerodescricao-string" = "O músculo tem a função de abaixar a extremidade medial da sobrancelha e enrugar a pele da glabela.";
+"depressorlabiodescricao-string" = "Ele tem a função de abaixar o lábio inferior lateralmente.";
+
+//MARK: Notifications
+"twodaynotif-string" = "Está nos evitando? Não quer ver a realidade na sua cara?";
+"oneweeknotif-string" = "Tanto tempo se passou 😔 \n Nossos músculos sentem saudades de você.";
+"twoweeknotif-string" = "Você nos deixou? 😭 \n Volte, a anatomia facial ainda é incrível!";

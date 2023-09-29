@@ -193,6 +193,6 @@ struct SadnessMuscles {
                                     muscleIllustrationName: "levantadorAnguloBoca"),
                              Muscle(expression: "Tristeza",
                                     muscleName: String(localized: "depressorlabio-string"),
-                                    muscleDescription: String(localized: <#T##Foundation.LocalizedStringResource#>),
+                                    muscleDescription: String(localized: "depressorlabiodescricao-string"),
                                     muscleIllustrationName: "depressorLabio")]
 }
