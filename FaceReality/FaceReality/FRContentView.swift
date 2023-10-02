@@ -64,7 +64,7 @@ struct FRContentView : View {
                                 Text(arViewModel.scowlChecker(isPersonScowling: arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isScowling ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
 
