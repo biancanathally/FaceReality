@@ -7,7 +7,11 @@
 		<key>FaceReality.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>0</integer>
+=======
+			<integer>1</integer>
+>>>>>>> feature/notifications
 		</dict>
 	</dict>
 </dict>

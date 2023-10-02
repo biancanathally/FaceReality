@@ -13,10 +13,13 @@ struct FRContentView : View {
     @State private var showInfo = false
     @State private var strokeArray = [true, false, false, false, false]
     @Environment(\.dismiss) private var dismiss
+    @State private var isCameraShowing: Bool = false
     
     var body: some View {
         ZStack {
-            ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
+            if isCameraShowing {
+                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
+            }
             
             HStack {
                 VStack(alignment: .center, spacing: 5) {
@@ -258,6 +261,9 @@ struct FRContentView : View {
                     
                 }
             }
+        }
+        .onAppear {
+            isCameraShowing.toggle()
         }
     }
 }

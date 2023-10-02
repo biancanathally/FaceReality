@@ -2,7 +2,7 @@
 //  FaceRealityUITestsLaunchTests.swift
 //  FaceRealityUITests
 //
-//  Created by Bianca Nathally Bezerra de Lima on 06/09/23.
+//  Created by Bianca Nathally Bezerra de Lima on 22/09/23.
 //
 
 import XCTest
