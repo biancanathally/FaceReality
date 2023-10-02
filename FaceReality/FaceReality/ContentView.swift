@@ -9,6 +9,8 @@ import SwiftUI
 import UIKit
 import AVFoundation
 import Firebase
+import FirebaseAnalytics
+import FirebaseAnalyticsSwift
 
 struct HostingWindowFinder: UIViewRepresentable {
     var callback: (UIWindow?) -> ()
@@ -45,7 +47,7 @@ struct ContentView: View {
                     withAnimation(.easeInOut(duration: 0.5)) {
                         showReferences = true
                     }
-                    Analytics.logEvent("info_tap", parameters: nil)
+                   Analytics.logEvent("info_tap", parameters: nil)
                 }) {
                         Image(systemName: "i.circle")
                             .font(.system(size: 26))

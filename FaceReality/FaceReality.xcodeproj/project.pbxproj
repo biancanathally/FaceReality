@@ -10,6 +10,8 @@
 		5A2478AD2AC1BF9A0090F9C7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AC2AC1BF9A0090F9C7 /* FirebaseAnalytics */; };
 		5A2478AF2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AE2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		5A2478B12AC1BFE90090F9C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A2478B02AC1BFE90090F9C7 /* GoogleService-Info.plist */; };
+		5A2478CA2ACAF2410090F9C7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2478C92ACAF2410090F9C7 /* AdSupport.framework */; };
+		5A2478CC2ACAF2590090F9C7 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478CB2ACAF2590090F9C7 /* FirebaseAnalyticsSwift */; };
 		A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */; };
 		A64750552AA8A23500ED0DEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750542AA8A23500ED0DEC /* ContentView.swift */; };
 		A647505A2AA8A2AD00ED0DEC /* FRContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750592AA8A2AD00ED0DEC /* FRContentView.swift */; };
@@ -87,6 +89,7 @@
 
 /* Begin PBXFileReference section */
 		5A2478B02AC1BFE90090F9C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A2478C92ACAF2410090F9C7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		A647500F2AA8A1BC00ED0DEC /* FaceReality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceReality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A64750202AA8A1BD00ED0DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,8 +126,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2478AD2AC1BF9A0090F9C7 /* FirebaseAnalytics in Frameworks */,
+				5A2478CA2ACAF2410090F9C7 /* AdSupport.framework in Frameworks */,
 				5A2478AF2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				A6A068C32ABB6B3E005CC2E4 /* UnityFramework.framework in Frameworks */,
+				5A2478CC2ACAF2590090F9C7 /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +219,7 @@
 		A647504E2AA8A1E900ED0DEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A2478C92ACAF2410090F9C7 /* AdSupport.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 			packageProductDependencies = (
 				5A2478AC2AC1BF9A0090F9C7 /* FirebaseAnalytics */,
 				5A2478AE2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				5A2478CB2ACAF2590090F9C7 /* FirebaseAnalyticsSwift */,
 			);
 			productName = FaceReality;
 			productReference = A647500F2AA8A1BC00ED0DEC /* FaceReality.app */;
@@ -601,6 +608,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -632,6 +640,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -784,6 +793,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5A2478AB2AC1BF9A0090F9C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		5A2478CB2ACAF2590090F9C7 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A2478AB2AC1BF9A0090F9C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
