@@ -16,18 +16,18 @@ struct FaceRealityApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if !showOnboarding {
-                ContentView()
-                    .onAppear {
-                        let hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
-                        if !hasLaunchedBefore {
-                            showOnboarding = true
-                            UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
-                        }
-                    }
-            } else {
+//            if !showOnboarding {
+//                ContentView()
+//                    .onAppear {
+//                        let hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+//                        if !hasLaunchedBefore {
+//                            showOnboarding = true
+//                            UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
+//                        }
+//                    }
+//            } else {
             OnboardingView()
-            }
+//            }
           
         }.onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {

@@ -28,13 +28,10 @@
 		A6A068C42ABB6B3E005CC2E4 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */; };
 		A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */; };
-<<<<<<< HEAD
 		BC4DC4302AC4564D00E856AE /* ARViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DC42F2AC4564D00E856AE /* ARViewModelTests.swift */; };
-=======
 		BC83DA9A2AC2F96900109579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83DA992AC2F96900109579 /* AppDelegate.swift */; };
 		BC9E87E32AC1BB08002BFFE1 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */; };
 		BCF0B4512AC3A4FC0005D846 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */; };
->>>>>>> feature/notifications
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,14 +115,11 @@
 		A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../FaceReality-3D/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
 		A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-Italic.ttf"; sourceTree = "<group>"; };
 		A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RedHatDisplay.ttf; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		BC4DC42F2AC4564D00E856AE /* ARViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModelTests.swift; sourceTree = "<group>"; };
 		BCC915952AC45C50001DB043 /* FaceReality.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FaceReality.xctestplan; sourceTree = "<group>"; };
-=======
 		BC83DA992AC2F96900109579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
->>>>>>> feature/notifications
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,12 +447,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				A647502A2AA8A1BD00ED0DEC /* FaceRealityTests.swift in Sources */,
 				BC4DC4302AC4564D00E856AE /* ARViewModelTests.swift in Sources */,
-=======
 				A69E12862ABDC1B300479221 /* FaceRealityTests.swift in Sources */,
->>>>>>> feature/notifications
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,10 +663,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
-<<<<<<< HEAD
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-=======
->>>>>>> feature/notifications
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -694,10 +682,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
-<<<<<<< HEAD
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-=======
->>>>>>> feature/notifications
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
