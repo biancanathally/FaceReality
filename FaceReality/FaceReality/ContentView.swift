@@ -20,8 +20,23 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                
                 ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
+                
+                Button(action: {
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        showReferences.toggle()
+                    }
+                }) {
+                    Image(systemName: "info.circle")
+                        .font(.system(size: 26))
+                        .foregroundColor(showReferences ? .navyBlue: .projectWhite)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 8.5)
+                }
+                .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
+                .shadow(radius: 4, y: 4)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .padding(.all)
                 
                 VStack(spacing: 22) {
                     VStack(spacing: 44) {
@@ -39,24 +54,13 @@ struct ContentView: View {
                         }
                         .buttonStyle(ButtonStyleSelect())
                     }
-                    
-                    Button(action: {
-                                    withAnimation(.easeInOut(duration: 0.5)) {
-                                        showReferences.toggle()
-                                    }
-                                }) {
-                                    Image(systemName: "info.circle")
-                                        .font(.system(size: 26))
-                                        .foregroundColor(showReferences ? .navyBlue : .projectWhite)
-                                        .padding(.all)
-                                }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 
                 if showReferences {
                     let title = "Referências"
                     let body = "1. McMINN, R. M. H.. Atlas Colorido de Anatomia Humana. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Anatomia Orientada para a Prática Clínica. 4ed."
-                    VStack {
+                    VStack(alignment: .leading) {
                         PopupView(dismissAction: {
                                 withAnimation(.easeInOut(duration: 0.5)) {
                                     showReferences.toggle()
@@ -66,9 +70,10 @@ struct ContentView: View {
                             bodyText: body,
                             isReference: true,
                             buttonLabel: "Fechar",
-                            imageIllustration: "")
+                            imageIllustration: "").frame(height: UIScreen.main.bounds.height / 2.4)
+                        Spacer()
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 }
                 
                 if isShowingFRDestinationView {

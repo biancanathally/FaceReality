@@ -103,7 +103,7 @@ struct FRContentView: View {
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 10)
                                 .foregroundColor(.white)
-                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
+                                .background(arViewModel.isFrowning ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                             
                         case .Rage:
@@ -111,7 +111,7 @@ struct FRContentView: View {
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 10)
                                 .foregroundColor(.white)
-                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
+                                .background(arViewModel.isScowling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                             
                         case .Surprise:
@@ -119,7 +119,7 @@ struct FRContentView: View {
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 10)
                                 .foregroundColor(.white)
-                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
+                                .background(arViewModel.isScared ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                             
                         case .Disgust:
@@ -127,7 +127,7 @@ struct FRContentView: View {
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 10)
                                 .foregroundColor(.white)
-                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
+                                .background(arViewModel.isDisgusted ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                         }
                     }

@@ -16,12 +16,30 @@ struct PopupView: View {
     let imageIllustration: String?
     
     var body: some View {
+        
         ZStack {
-            VStack(alignment: .center, spacing: 2) {
-                Text(titleText)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .padding()
+            VStack(alignment: .leading, spacing: 2) {
+                HStack {
+                    Text(titleText)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding()
+                    
+                    Spacer()
+                    
+                    if isReference {
+                        Button(action: {
+                            withAnimation(.easeInOut(duration: 0.1)) {
+                                dismissAction()}
+                        }) {
+                            Image(systemName: "x.circle")
+                                .foregroundColor(.iconColor.opacity(0.9))
+                                .font(.system(size: 24))
+                                .padding()
+                        }
+                        .padding()
+                    }
+                }
                 
                 VStack {
                     Text(bodyText)
@@ -36,7 +54,7 @@ struct PopupView: View {
                         .padding()
                 }
             }
-            .background(RoundedRectangle(cornerRadius: 15).fill(.regularMaterial).opacity(0.6).shadow(radius: 4, y: 4))
+            .background(RoundedRectangle(cornerRadius: 15).fill(.regularMaterial).shadow(radius: 4, y: 4))
             .padding()
         }
     }
