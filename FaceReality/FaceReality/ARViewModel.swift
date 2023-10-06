@@ -19,6 +19,7 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
     @Published var angerMuscles: AngerMuscles = AngerMuscles()
     @Published var surpriseMuscles: SurpriseMuscles = SurpriseMuscles()
     @Published var disgustMuscles: DisgustMuscles = DisgustMuscles()
+    let neutralFeedback = String(localized: "neutral-string")
 
     func startSessionDelegate() {
         model.arView.session.delegate = self
@@ -90,50 +91,61 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
     }
     
     func smileChecker() -> String {
+        let genuineSmilingFeedback = String(localized: "genuinesmile-string")
+        let smilingFeedback = String(localized: "smiling-string")
+        
         if self.isSmiling {
             if self.genuineSmiling {
-                return "Sorriso genuíno! 🤩"
+                return genuineSmilingFeedback
             }
             else {
-                return "Sorrindo 😊"
+                return smilingFeedback
             }
         }
         else {
-            return "Neutro 😐"
+            return neutralFeedback
         }
     }
     
     func sadnessChecker() -> String {
+        let sadnessFeedback = String(localized: "sadness-string")
+        
         if self.isFrowning {
-            return "Tristeza 😭"
+            return sadnessFeedback
         }
         else {
-            return "Neutro 😐"
+            return neutralFeedback
         }
     }
     
     func scowlChecker() -> String {
+        let angerFeedback = String(localized: "anger-string")
+        
         if self.isScowling {
-            return "Raiva! 😡"
+            return angerFeedback
         }
         else {
-            return "Neutro 😐"
+            return neutralFeedback
             
         }
     }
     
     func surprisedChecker() -> String {
+        let surpriseFeedback = String(localized: "surprise-string")
+        
         if self.isScared {
-            return "Surpresa! 😮"
+            return surpriseFeedback
         }
-        return "Neutro 😐"
+        return neutralFeedback
         
     }
     
     func disgustChecker() -> String {
+        let disgustedFeedback = String(localized: "disgusted-string")
+        
         if self.isDisgusted {
-            return "Nojo! 🥴"
+            return disgustedFeedback
         }
-        return "Neutro 😐"
+        return neutralFeedback
     }
 }

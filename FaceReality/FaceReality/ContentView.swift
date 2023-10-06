@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 import AVFoundation
+import Firebase
 
 struct ContentView: View {
     @State private var showReferences: Bool = false
@@ -58,8 +59,9 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 
                 if showReferences {
-                    let title = "Referências"
-                    let body = "1. McMINN, R. M. H.. Atlas Colorido de Anatomia Humana. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Anatomia Orientada para a Prática Clínica. 4ed."
+                    let title = String(localized: "referencestitle-string")
+                    let subtitle = String(localized: "referencessubtitle-string")
+                    let body = String(localized: "referencesbody-string")
                     VStack(alignment: .leading) {
                         PopupView(dismissAction: {
                                 withAnimation(.easeInOut(duration: 0.5)) {

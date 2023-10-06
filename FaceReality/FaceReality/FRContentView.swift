@@ -153,7 +153,7 @@ struct FRContentView: View {
                             }
                             
                             if strokeArray[0] {
-                                Text("Sorriso")
+                                Text("happy-string")
                                     .foregroundColor(.white)
                                     .font(Font.custom("SFProText-Medium", size: 12))
                             }
@@ -176,7 +176,7 @@ struct FRContentView: View {
                             }
                             
                             if strokeArray[1] {
-                                Text("Tristeza")
+                                Text("sad-string")
                                     .foregroundColor(.white)
                                     .font(Font.custom("SFProText-Medium", size: 12))
                             }
@@ -199,7 +199,7 @@ struct FRContentView: View {
                             }
                             
                             if strokeArray[3] {
-                                Text("Surpresa")
+                                Text("surprised-string")
                                     .foregroundColor(.white)
                                     .font(Font.custom("SFProText-Medium", size: 12))
                             }
@@ -222,7 +222,7 @@ struct FRContentView: View {
                             }
                             
                             if strokeArray[2] {
-                                Text("Raiva")
+                                Text("angry-string")
                                     .foregroundColor(.white)
                                     .font(Font.custom("SFProText-Medium", size: 12))
                             }
@@ -244,7 +244,7 @@ struct FRContentView: View {
                             }
                             
                             if strokeArray[4] {
-                                Text("Nojo")
+                                Text("disgust-string")
                                     .foregroundColor(.white)
                                     .font(Font.custom("SFProText-Medium", size: 12))
                             }

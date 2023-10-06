@@ -19,12 +19,12 @@ struct OnboardingView: View {
                 
                 VStack(spacing: 24) {
                     VStack(spacing: 24) {
-                        Text("Boas Vindas!")
+                        Text("onboardingtitle-string")
                             .font(.system(size: 18))
                             .foregroundColor(.black)
                             .padding(.top, 16)
                         
-                        Text("Com o Face Reality você entenderá melhor o funcionamento muscular de acordo com as expressões faciais.")
+                        Text("onboardingbody-string")
                             .font(.system(size: 14))
                             .foregroundColor(.black)
                             .padding()
@@ -32,7 +32,7 @@ struct OnboardingView: View {
                             .multilineTextAlignment(.center)
                     }
                     
-                    Button("Começar") {
+                    Button("onboardingbutton-string") {
                         isShowingDestinationView = true
                     }
                     .padding(.horizontal, 50)
