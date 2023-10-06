@@ -10,7 +10,7 @@
 		5A2478AD2AC1BF9A0090F9C7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AC2AC1BF9A0090F9C7 /* FirebaseAnalytics */; };
 		5A2478AF2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AE2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		5A2478BC2AC317990090F9C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A2478BE2AC317990090F9C7 /* Localizable.strings */; };
-		5AAAF6022AD04D7F0029D5FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAAF6012AD04D7F0029D5FD /* GoogleService-Info.plist */; };
+		5AAAF6092AD051310029D5FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAAF6082AD051300029D5FD /* GoogleService-Info.plist */; };
 		A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */; };
 		A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */; };
 		A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */; };
@@ -93,7 +93,7 @@
 		5A2478C02AC64FFA0090F9C7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A2478C22AC650020090F9C7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5A2478C42AC665920090F9C7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5AAAF6012AD04D7F0029D5FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5AAAF6082AD051300029D5FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FaceReality/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.otf"; sourceTree = "<group>"; };
 		A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
 		A647500F2AA8A1BC00ED0DEC /* FaceReality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceReality.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,7 +207,7 @@
 		A64750062AA8A1BC00ED0DEC = {
 			isa = PBXGroup;
 			children = (
-				5AAAF6012AD04D7F0029D5FD /* GoogleService-Info.plist */,
+				5AAAF6082AD051300029D5FD /* GoogleService-Info.plist */,
 				A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */,
 				A64750112AA8A1BC00ED0DEC /* FaceReality */,
 				A64750282AA8A1BD00ED0DEC /* FaceRealityTests */,
@@ -454,8 +454,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */,
+				5AAAF6092AD051310029D5FD /* GoogleService-Info.plist in Resources */,
 				A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */,
-				5AAAF6022AD04D7F0029D5FD /* GoogleService-Info.plist in Resources */,
 				A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */,
 				5A2478BC2AC317990090F9C7 /* Localizable.strings in Resources */,
 				A64750682AA8A52C00ED0DEC /* LaunchScreen.storyboard in Resources */,
