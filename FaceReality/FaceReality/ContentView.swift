@@ -10,160 +10,111 @@ import UIKit
 import AVFoundation
 import Firebase
 
-struct HostingWindowFinder: UIViewRepresentable {
-    var callback: (UIWindow?) -> ()
-    
-    func makeUIView (context: Context) -> UIView {
-        let view = UIView()
-        DispatchQueue.main.async { [weak view] in
-            self.callback (view? .window)
-        }
-        return view
-    }
-    
-    func updateUIView(_ uiView: UIView, context: Context) {
-    }
-}
-
 struct ContentView: View {
-    @State private var selectedMode: String = ""
-    @State private var didTapAR: Bool = false
-    @State private var didTap3D: Bool = false
     @State private var showReferences: Bool = false
+    @State private var isReferencesOpen: Bool = false
+    @State private var isShowingFRDestinationView = false
     @ObservedObject var arViewModel : ARViewModel = ARViewModel()
+    
+    @State private var isOpen = false
     
     var body: some View {
         NavigationStack {
             ZStack {
                 ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
                 
-                HostingWindowFinder { window in
-                    Unity.shared.setHostMainWindow(window)
-                }
-                
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.5)) {
-                        showReferences = true
+                        showReferences.toggle()
                     }
-                    Analytics.logEvent("info_tap", parameters: nil)
                 }) {
-                        Image(systemName: "i.circle")
-                            .font(.system(size: 26))
-                            .padding(.all)
-                            .foregroundColor(.projectWhite)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                    Image(systemName: "info.circle")
+                        .font(.system(size: 26))
+                        .foregroundColor(showReferences ? .navyBlue: .projectWhite)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 8.5)
+                }
+                .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
+                .shadow(radius: 4, y: 4)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .padding(.all)
                 
-
-                VStack (spacing: 239) {
-                    Text("Face Reality")
-                        .font(Font.custom("RedHatDisplayItalic-SemiBold", size: 36))
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.white)
-                    
-                    VStack(spacing: 56) {
-                        Text("selection-string")
-                            .font(Font.custom("SF Pro Text", size: 20))
-                            .fontWeight(.bold)
+                VStack(spacing: 22) {
+                    VStack(spacing: 44) {
+                        Text("Face Reality")
+                            .font(Font.custom("RedHatDisplayItalic-SemiBold", size: 36))
+                            .fontWeight(.semibold)
                             .foregroundStyle(.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color.projectWhite, lineWidth: 2).frame(width: 230, height: 74).opacity(0.22)
+                            )
                         
-                        HStack(alignment: .center, spacing: 48) {
-                            
-                            Button("AR") {
-                                selectedMode = "AR"
-                                self.didTapAR = true
-                                self.didTap3D = false
-                            }
-                            .buttonStyle(ModeButton())
-                            .foregroundStyle(didTapAR ? Color.white : Color.black)
-                            .background(didTapAR ? Color(red: 0, green: 0.2, blue: 0.39) : Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            
-                            Button("3D") {
-                                selectedMode = "3D"
-                                self.didTap3D = true
-                                self.didTapAR = false
-                            }
-                            .buttonStyle(ModeButton())
-                            .foregroundStyle(didTap3D ? Color.white : Color.black)
-                            .background(didTap3D ? Color(red: 0, green: 0.2, blue: 0.39) : Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                        Button("Começar") {
+                            isShowingFRDestinationView = true
                         }
-                        
-                        VStack(spacing: 113) {
-                            if selectedMode == "" {
-                                Text("selection-string")
-                                    .padding()
-                                    .font(Font.custom("SF Pro Text", size: 14))
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(.white)
-                                
-                                Text("")
-                                    .padding(.horizontal, 33)
-                                    .padding(.vertical, 13)
-                                    .font(Font.custom("SF Pro Text", size: 20))
-                                    .fontWeight(.medium)
-                            }
-                            
-                            if selectedMode == "AR" {
-                                Text("artest-string")
-                                    .padding()
-                                    .font(Font.custom("SF Pro Text", size: 14))
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(.white)
-                                
-                                NavigationLink("start-string", destination: PlayAR(mode: selectedMode).navigationBarBackButtonHidden(true))
-                                    .buttonStyle(ButtonStyleSelect())
-                                    .disabled(selectedMode.isEmpty)
-                            }
-                            
-                            if selectedMode == "3D" {
-                                Text("3dtest-string")
-                                    .padding()
-                                    .font(Font.custom("SF Pro Text", size: 14))
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(.white)
-                                
-                                Button("start-string", action: {
-                                    Unity.shared.show()
-                                })
-                                    .buttonStyle(ButtonStyleSelect())
-                            }
-                        }
+                        .buttonStyle(ButtonStyleSelect())
                     }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 
                 if showReferences {
                     let title = String(localized: "referencestitle-string")
                     let subtitle = String(localized: "referencessubtitle-string")
                     let body = String(localized: "referencesbody-string")
                     VStack(alignment: .leading) {
-                        PopupView(dismissAction: {showReferences = false}, titleText: title, subtitleText: subtitle, bodyText: body, isReference: true, buttonLabel: "Fechar", imageIllustration: "")
-                            .frame(height: UIScreen.main.bounds.height / 2.7)
+                        PopupView(dismissAction: {
+                                withAnimation(.easeInOut(duration: 0.5)) {
+                                    showReferences.toggle()
+                                }
+                            },
+                            titleText: title,
+                            bodyText: body,
+                            isReference: true,
+                            buttonLabel: "Fechar",
+                            imageIllustration: "").frame(height: UIScreen.main.bounds.height / 2.4)
                         Spacer()
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                }
+                
+                if isShowingFRDestinationView {
+                    IntermadiateViewToFRContent(showFR: $isShowingFRDestinationView)
                 }
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct IntermadiateViewToFRContent: View {
+    @Binding var showFR: Bool
+    @State var shouldShow = false
+    
+    var body: some View {
+        if shouldShow {
+            FRContentView(showContent: $showFR)
+        }
+        else {
+            Text("Loading")
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now()){
+                        self.shouldShow = true
+                    }
+                }
+        }
     }
 }
 
 struct ButtonStyleSelect: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .padding(.horizontal, 63)
-            .padding(.vertical, 13)
-            .font(Font.custom("SF Pro Text", size: 12))
+            .padding(.horizontal, 15)
+            .padding(.vertical, 15)
+            .font(Font.custom("SF Pro Text", size: 16))
             .fontWeight(.semibold)
-            .foregroundStyle(.black)
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .foregroundStyle(Color.projectWhite)
+            .background(Color.navyBlue)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 
@@ -177,11 +128,8 @@ struct ModeButton: ButtonStyle {
     }
 }
 
-struct PlayAR: View {
-    var mode: String
-    
-    var body: some View {
-        FRContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
-//

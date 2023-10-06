@@ -21,12 +21,8 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
     @Published var disgustMuscles: DisgustMuscles = DisgustMuscles()
     let neutralFeedback = String(localized: "neutral-string")
 
-
-
-    
     func startSessionDelegate() {
         model.arView.session.delegate = self
-        
     }
     
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {

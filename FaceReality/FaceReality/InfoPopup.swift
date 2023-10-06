@@ -35,7 +35,7 @@ struct InfoPopup: View {
                 ScrollView(showsIndicators: false){
                     ForEach(arrayMuscles, id: \.self) { muscle in
                         PopupView(dismissAction: {
-                        }, titleText: muscle.muscleName, subtitleText:"" , bodyText: muscle.muscleDescription, isReference: false, buttonLabel: "Fechar", imageIllustration: muscle.muscleIllustrationName)
+                        }, titleText: muscle.muscleName, bodyText: muscle.muscleDescription, isReference: false, buttonLabel: "Fechar", imageIllustration: muscle.muscleIllustrationName)
                     }
                 }
                 .padding(.bottom, 150)
