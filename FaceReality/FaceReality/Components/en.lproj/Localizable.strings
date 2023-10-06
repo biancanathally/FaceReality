@@ -9,12 +9,10 @@
 "surprised-string" = "Surprised";
 "angry-string" = "Angry";
 "disgust-string" = "Disgusted";
-"selection-string" = "Select a mode:";
 "artest-string" = "Test the muscles with AR projection";
 "start-string" = "Start";
 "3dtest-string" = "Test the muscles with 3D projection";
 "referencestitle-string" = "References";
-"referencessubtitle-string" = "Face Reality was based on:";
 "referencesbody-string" = "1. McMINN, R. M. H.. Color Atlas of Human Anatomy. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Clinically Oriented Anatomy. 4ed.";
 
 //MARK: Feedbacks

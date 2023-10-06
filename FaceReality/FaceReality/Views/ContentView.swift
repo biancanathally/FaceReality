@@ -60,7 +60,6 @@ struct ContentView: View {
                 
                 if showReferences {
                     let title = String(localized: "referencestitle-string")
-                    let subtitle = String(localized: "referencessubtitle-string")
                     let body = String(localized: "referencesbody-string")
                     VStack(alignment: .leading) {
                         PopupView(dismissAction: {
