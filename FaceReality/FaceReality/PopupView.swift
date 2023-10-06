@@ -24,21 +24,6 @@ struct PopupView: View {
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding()
-                    
-                    Spacer()
-                    
-                    if isReference {
-                        Button(action: {
-                            withAnimation(.easeInOut(duration: 0.1)) {
-                                dismissAction()}
-                        }) {
-                            Image(systemName: "x.circle")
-                                .foregroundColor(.iconColor.opacity(0.9))
-                                .font(.system(size: 24))
-                                .padding()
-                        }
-                        .padding()
-                    }
                 }
                 
                 VStack {
