@@ -16,6 +16,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   }
 }
 
+
 @main
 struct FaceRealityApp: App {
     @State private var showOnboarding = false
