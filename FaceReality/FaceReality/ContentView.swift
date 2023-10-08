@@ -9,6 +9,7 @@ import SwiftUI
 import UIKit
 import AVFoundation
 import Firebase
+import FirebaseAnalytics
 
 struct HostingWindowFinder: UIViewRepresentable {
     var callback: (UIWindow?) -> ()
@@ -45,7 +46,10 @@ struct ContentView: View {
                     withAnimation(.easeInOut(duration: 0.5)) {
                         showReferences = true
                     }
-                    Analytics.logEvent("info_tap", parameters: nil)
+                    print("calling analytics")
+                    Analytics.logEvent("info_tap", parameters: ["a": 1])
+                    print("calling analytics2")
+
                 }) {
                         Image(systemName: "i.circle")
                             .font(.system(size: 26))
@@ -125,6 +129,8 @@ struct ContentView: View {
                                     .foregroundStyle(.white)
                                 
                                 Button("start-string", action: {
+                                    Analytics.logEvent("test_start", parameters: ["a": 1])
+
                                     Unity.shared.show()
                                 })
                                     .buttonStyle(ButtonStyleSelect())
