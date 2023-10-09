@@ -7,14 +7,10 @@
 
 import SwiftUI
 import FirebaseCore
+import Firebase
+import FirebaseAnalytics
 
-class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-    return true
-  }
-}
+
 
 
 @main
@@ -28,18 +24,21 @@ struct FaceRealityApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            if !showOnboarding {
-//                ContentView()
-//                    .onAppear {
-//                        let hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
-//                        if !hasLaunchedBefore {
-//                            showOnboarding = true
-//                            UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
-//                        }
-//                    }
-//            } else {
+            if !showOnboarding {
+                ContentView()
+                    .onAppear {
+                        let hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+                        if !hasLaunchedBefore {
+                            showOnboarding = true
+                            UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
+                            Analytics.logEvent("users_visit", parameters: ["is_first_visit": false])
+                        }
+                        Analytics.logEvent("users_visit", parameters: ["is_first_visit": true])
+
+                    }
+            } else {
             OnboardingView()
-//            }
+            }
           
         }.onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {

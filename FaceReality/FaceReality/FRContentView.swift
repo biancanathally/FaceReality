@@ -7,6 +7,8 @@
 
 import SwiftUI
 import RealityKit
+import Firebase
+import FirebaseAnalytics
 
 struct FRContentView : View {
     @ObservedObject var arViewModel: ARViewModel = ARViewModel()

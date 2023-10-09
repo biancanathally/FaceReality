@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import Firebase
+import FirebaseCore
 
 @testable import FaceReality
 final class ARViewModelTest: XCTestCase {
@@ -43,7 +45,7 @@ final class ARViewModelTest: XCTestCase {
         let isNotSmiling = arViewModel.isPersonSmiling(smileLeft: 0.2, smileRight: 0.2)
 
         XCTAssertEqual(arViewModel.smileChecker(isSmiling: isSmiling, isGenuineSmiling: isGenuineSmiling), "Sorriso genuíno! 🤩")
-        XCTAssertEqual(arViewModel.smileChecker(isSmiling: isSmiling, isGenuineSmiling: isNotGenuineSmiling), "Sorrindo 😊")
+        XCTAssertEqual(arViewModel.smileChecker(isSmiling: isSmiling, isGenuineSmiling: isNotGenuineSmiling), "Sorriso 😊")
         XCTAssertEqual(arViewModel.smileChecker(isSmiling: isNotSmiling, isGenuineSmiling: isNotGenuineSmiling), "Neutro 😐")
 
     }
@@ -76,7 +78,7 @@ final class ARViewModelTest: XCTestCase {
     }
 
     func testSadnessChecker() throws {
-        XCTAssertEqual(arViewModel.sadnessChecker(isPersonFrowning: arViewModel.isPersonFrowning(browInnerUp: 0.3, mouthRollUpper: 0.4, frownLeft: 0.3, frownRight: 0.3)), "Tristeza 😭")
+        XCTAssertEqual(arViewModel.sadnessChecker(isPersonFrowning: arViewModel.isPersonFrowning(browInnerUp: 0.3, mouthRollUpper: 0.4, frownLeft: 0.3, frownRight: 0.3)), "Triste... 😢")
         XCTAssertEqual(arViewModel.sadnessChecker(isPersonFrowning: arViewModel.isPersonFrowning(browInnerUp: 0.1, mouthRollUpper: 0.1, frownLeft: 0.1, frownRight: 0.1)), "Neutro 😐")
 
     }

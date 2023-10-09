@@ -48,7 +48,7 @@ enum NotificationType {
     var timeInterval: TimeInterval {
         switch self {
         case .twoDays: //172800
-            return 5
+            return 172800
         case .oneWeek: //604800
             return 604800
         case .twoWeeks: //1209600
