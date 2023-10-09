@@ -7,6 +7,8 @@
 
 import SwiftUI
 import RealityKit
+import UserNotifications
+
 
 struct OnboardingView: View {
 //    @ObservedObject var arViewModel : ARViewModel = ARViewModel()
@@ -23,12 +25,12 @@ struct OnboardingView: View {
                 
                 VStack(spacing: 48) {
                     VStack(spacing: 24) {
-                        Text("Boas vindas!")
+                        Text("onboardingtitle-string")
                             .font(.title)
                             .foregroundColor(Color.navyBlue)
                             .padding(.top, 40)
                         
-                        Text("Face Reality é um app que te ajuda a entender o funcionamento muscular de acordo com as expressões faciais.")
+                        Text("onboardingbody-string")
                             .font(.body)
                             .foregroundColor(Color.navyBlue)
                             .padding()
@@ -38,12 +40,15 @@ struct OnboardingView: View {
                     }
                     
                     NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true), label: {
-                        Text("Começar")
+                        Text("onboardingbutton-string")
                             .padding(.horizontal, 50)
                             .padding(.vertical, 12)
                             .foregroundColor(Color.projectWhite)
                             .background(Color.iconColor)
                             .cornerRadius(20)
+                            .font(.system(size: 500))
+                            .minimumScaleFactor(0.01)
+                            .multilineTextAlignment(.center)
                     })
                     .padding(.horizontal, 50)
                     .padding(.bottom, 40)
@@ -52,6 +57,15 @@ struct OnboardingView: View {
                 .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.9).shadow(radius: 8, y: 8))
                 .padding(.horizontal, 60)
                 .padding(.vertical, 250)
+            }
+            .onAppear {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All set!")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
             }
         }
     }

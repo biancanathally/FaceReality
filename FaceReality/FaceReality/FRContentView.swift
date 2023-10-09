@@ -7,16 +7,21 @@
 
 import SwiftUI
 import RealityKit
+import Firebase
+import FirebaseAnalytics
 
 struct FRContentView : View {
     @ObservedObject var arViewModel: ARViewModel = ARViewModel()
     @State private var showInfo = false
     @State private var strokeArray = [true, false, false, false, false]
     @Environment(\.dismiss) private var dismiss
+    @State private var isCameraShowing: Bool = false
     
     var body: some View {
         ZStack {
-            ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
+            if isCameraShowing {
+                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
+            }
             
             HStack {
                 VStack(alignment: .center, spacing: 5) {
@@ -44,44 +49,47 @@ struct FRContentView : View {
                             
                             switch arViewModel.emotions {
                             case .Joy:
-                                Text(arViewModel.smileChecker())
+                                Text(arViewModel.smileChecker(isSmiling: arViewModel.isPersonSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight), isGenuineSmiling: arViewModel.isPersonGenuineSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isSmiling ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
+
                                 
                             case .Sadness:
-                                Text(arViewModel.sadnessChecker())
+                                Text(arViewModel.sadnessChecker(isPersonFrowning: arViewModel.isPersonFrowning(browInnerUp: arViewModel.model.browInnerUp, mouthRollUpper: arViewModel.model.mouthRollUpper, frownLeft: arViewModel.model.frownLeft, frownRight: arViewModel.model.frownRight)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isFrowning ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonFrowning(browInnerUp: arViewModel.model.browInnerUp, mouthRollUpper: arViewModel.model.mouthRollUpper, frownLeft: arViewModel.model.frownLeft, frownRight: arViewModel.model.frownRight) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
-                                
+
                             case .Rage:
-                                Text(arViewModel.scowlChecker())
+                                Text(arViewModel.scowlChecker(isPersonScowling: arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isScowling ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
+
                                 
                             case .Surprise:
-                                Text(arViewModel.surprisedChecker())
+                                Text(arViewModel.surprisedChecker(isPersonScared: arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isScared ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonScared(wideLeft: arViewModel.model.wideLeft, wideRight: arViewModel.model.wideRight) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
-                                
+
                             case .Disgust:
-                                Text(arViewModel.disgustChecker())
+                                Text(arViewModel.disgustChecker(isPersonDisgusted: arViewModel.isPersonDisgusted(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight)))
                                     .padding(.horizontal, 15)
                                     .padding(.vertical, 5)
-                                    .foregroundColor(arViewModel.isDisgusted ? .green : .red)
+                                    .foregroundColor(arViewModel.isPersonDisgusted(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight) ? .green : .red)
                                     .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
                                     .shadow(radius: 4, y: 4)
+
                             }
                         }
                         
@@ -123,7 +131,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[0] {
-                                Text("Sorriso")
+                                Text("happy-string")
                                     .foregroundColor(.white)
                             }
                         }
@@ -146,7 +154,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[1] {
-                                Text("Tristeza")
+                                Text("sad-string")
                                     .foregroundColor(.white)
                                 
                             }
@@ -169,7 +177,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[3] {
-                                Text("Surpresa")
+                                Text("surprised-string")
                                     .foregroundColor(.white)
                             }
                         }
@@ -192,7 +200,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[2] {
-                                Text("Raiva")
+                                Text("angry-string")
                                     .foregroundColor(.white)
                             }
                         }
@@ -214,7 +222,7 @@ struct FRContentView : View {
                             }
                             
                             if strokeArray[4] {
-                                Text("Nojo")
+                                Text("disgust-string")
                                     .foregroundColor(.white)
                             }
                         }
@@ -255,6 +263,9 @@ struct FRContentView : View {
                     
                 }
             }
+        }
+        .onAppear {
+            isCameraShowing.toggle()
         }
     }
 }
