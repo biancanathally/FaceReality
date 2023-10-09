@@ -7,6 +7,8 @@
 
 import SwiftUI
 import RealityKit
+import UserNotifications
+
 
 struct OnboardingView: View {
     @ObservedObject var arViewModel : ARViewModel = ARViewModel()
@@ -50,6 +52,15 @@ struct OnboardingView: View {
                     IntermadiateViewToContent()
                 }
                 
+            }
+            .onAppear {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All set!")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
             }
         }
     }

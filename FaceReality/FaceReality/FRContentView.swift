@@ -7,6 +7,8 @@
 
 import SwiftUI
 import RealityKit
+import Firebase
+import FirebaseAnalytics
 
 struct HostingWindowFinder: UIViewRepresentable {
     var callback: (UIWindow?) -> ()
@@ -30,6 +32,7 @@ struct FRContentView: View {
     @State private var isShowingContentDestinationView = false
     @Binding var showContent: Bool
     @Environment(\.dismiss) private var dismiss
+    @State private var isCameraShowing: Bool = false
     
     var body: some View {
         
@@ -63,6 +66,49 @@ struct FRContentView: View {
                                     .foregroundColor(.projectWhite)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 8.5)
+                            switch arViewModel.emotions {
+                            case .Joy:
+                                Text(arViewModel.smileChecker(isSmiling: arViewModel.isPersonSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight), isGenuineSmiling: arViewModel.isPersonGenuineSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight)))
+                                    .padding(.horizontal, 15)
+                                    .padding(.vertical, 5)
+                                    .foregroundColor(arViewModel.isPersonSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight) ? .green : .red)
+                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                    .shadow(radius: 4, y: 4)
+
+                                
+                            case .Sadness:
+                                Text(arViewModel.sadnessChecker(isPersonFrowning: arViewModel.isPersonFrowning(browInnerUp: arViewModel.model.browInnerUp, mouthRollUpper: arViewModel.model.mouthRollUpper, frownLeft: arViewModel.model.frownLeft, frownRight: arViewModel.model.frownRight)))
+                                    .padding(.horizontal, 15)
+                                    .padding(.vertical, 5)
+                                    .foregroundColor(arViewModel.isPersonFrowning(browInnerUp: arViewModel.model.browInnerUp, mouthRollUpper: arViewModel.model.mouthRollUpper, frownLeft: arViewModel.model.frownLeft, frownRight: arViewModel.model.frownRight) ? .green : .red)
+                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                    .shadow(radius: 4, y: 4)
+
+                            case .Rage:
+                                Text(arViewModel.scowlChecker(isPersonScowling: arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower)))
+                                    .padding(.horizontal, 15)
+                                    .padding(.vertical, 5)
+                                    .foregroundColor(arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower) ? .green : .red)
+                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                    .shadow(radius: 4, y: 4)
+
+                                
+                            case .Surprise:
+                                Text(arViewModel.surprisedChecker(isPersonScared: arViewModel.isPersonScowling(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight, squintLeft: arViewModel.model.squintLeft, squintRight: arViewModel.model.squintRight, shrugLower: arViewModel.model.shrugLower)))
+                                    .padding(.horizontal, 15)
+                                    .padding(.vertical, 5)
+                                    .foregroundColor(arViewModel.isPersonScared(wideLeft: arViewModel.model.wideLeft, wideRight: arViewModel.model.wideRight) ? .green : .red)
+                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                    .shadow(radius: 4, y: 4)
+
+                            case .Disgust:
+                                Text(arViewModel.disgustChecker(isPersonDisgusted: arViewModel.isPersonDisgusted(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight)))
+                                    .padding(.horizontal, 15)
+                                    .padding(.vertical, 5)
+                                    .foregroundColor(arViewModel.isPersonDisgusted(sneerLeft: arViewModel.model.sneerLeft, sneerRight: arViewModel.model.sneerRight) ? .green : .red)
+                                    .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.5))
+                                    .shadow(radius: 4, y: 4)
+
                             }
                             .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
                             .shadow(radius: 4, y: 4)
@@ -308,6 +354,9 @@ struct IntermadiateViewFromFRToContent: View {
                         self.shouldShow = true
                     }
                 }
+        }
+        .onAppear {
+            isCameraShowing.toggle()
         }
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 import UIKit
 import AVFoundation
 import Firebase
+import FirebaseAnalytics
 
 struct ContentView: View {
     @State private var showReferences: Bool = false
@@ -27,6 +28,10 @@ struct ContentView: View {
                     withAnimation(.easeInOut(duration: 0.5)) {
                         showReferences.toggle()
                     }
+                    print("calling analytics")
+                    Analytics.logEvent("info_tap", parameters: ["a": 1])
+                    print("calling analytics2")
+
                 }) {
                     Image(systemName: "info.circle")
                         .font(.system(size: 26))
