@@ -19,6 +19,7 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
     @Published var angerMuscles: AngerMuscles = AngerMuscles()
     @Published var surpriseMuscles: SurpriseMuscles = SurpriseMuscles()
     @Published var disgustMuscles: DisgustMuscles = DisgustMuscles()
+    let neutralFeedback = String(localized: "neutral-string")
 
 
 
@@ -105,6 +106,7 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
         return false
     }
     
+<<<<<<< HEAD
 //    var isDisgusted: Bool {
 //        var disgustedHelper = false
 //        if model.sneerLeft > 0.2 && model.sneerRight > 0.2 {
@@ -147,47 +149,88 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
         if isSmiling {
             if isGenuineSmiling {
                 return "Sorriso genuíno! 🤩"
+=======
+    func smileChecker() -> String {
+        let genuineSmilingFeedback = String(localized: "genuinesmile-string")
+        let smilingFeedback = String(localized: "smiling-string")
+        
+        if self.isSmiling {
+            if self.genuineSmiling {
+                return genuineSmilingFeedback
+>>>>>>> feature/international
             }
             else {
-                return "Sorrindo 😊"
+                return smilingFeedback
             }
         }
         else {
-            return "Neutro 😐"
+            return neutralFeedback
         }
     }
     
+<<<<<<< HEAD
     func sadnessChecker(isPersonFrowning: Bool) -> String {
         if isPersonFrowning {
             return "Tristeza 😭"
+=======
+    func sadnessChecker() -> String {
+        let sadnessFeedback = String(localized: "sadness-string")
+        
+        if self.isFrowning {
+            return sadnessFeedback
+>>>>>>> feature/international
         }
         else {
-            return "Neutro 😐"
+            return neutralFeedback
         }
     }
     
+<<<<<<< HEAD
     func scowlChecker(isPersonScowling: Bool) -> String {
         if isPersonScowling {
             return "Raiva! 😡"
+=======
+    func scowlChecker() -> String {
+        let angerFeedback = String(localized: "anger-string")
+        
+        if self.isScowling {
+            return angerFeedback
+>>>>>>> feature/international
         }
         else {
-            return "Neutro 😐"
+            return neutralFeedback
             
         }
     }
     
+<<<<<<< HEAD
     func surprisedChecker(isPersonScared: Bool) -> String {
         if isPersonScared {
             return "Surpresa! 😮"
+=======
+    func surprisedChecker() -> String {
+        let surpriseFeedback = String(localized: "surprise-string")
+        
+        if self.isScared {
+            return surpriseFeedback
+>>>>>>> feature/international
         }
-        return "Neutro 😐"
+        return neutralFeedback
         
     }
     
+<<<<<<< HEAD
     func disgustChecker(isPersonDisgusted: Bool) -> String {
         if isPersonDisgusted {
             return "Nojo! 🥴"
+=======
+    func disgustChecker() -> String {
+        let disgustedFeedback = String(localized: "disgusted-string")
+        
+        if self.isDisgusted {
+            return disgustedFeedback
+>>>>>>> feature/international
         }
-        return "Neutro 😐"
+        return neutralFeedback
     }
 }

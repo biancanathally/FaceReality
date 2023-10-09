@@ -25,12 +25,12 @@ struct OnboardingView: View {
                 
                 VStack(spacing: 48) {
                     VStack(spacing: 24) {
-                        Text("Boas vindas!")
+                        Text("onboardingtitle-string")
                             .font(.title)
                             .foregroundColor(Color.navyBlue)
                             .padding(.top, 40)
                         
-                        Text("Face Reality é um app que te ajuda a entender o funcionamento muscular de acordo com as expressões faciais.")
+                        Text("onboardingbody-string")
                             .font(.body)
                             .foregroundColor(Color.navyBlue)
                             .padding()
@@ -40,7 +40,7 @@ struct OnboardingView: View {
                     }
                     
                     NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true), label: {
-                        Text("Começar")
+                        Text("onboardingbutton-string")
                             .padding(.horizontal, 50)
                             .padding(.vertical, 12)
                             .foregroundColor(Color.projectWhite)

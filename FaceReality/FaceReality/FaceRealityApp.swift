@@ -6,6 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseCore
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+    return true
+  }
+}
+
 
 @main
 struct FaceRealityApp: App {
@@ -14,6 +24,8 @@ struct FaceRealityApp: App {
     @Environment(\.scenePhase) private var scenePhase
     @ObservedObject var notificationManager = NotificationManager.shared
 
+
+    
     var body: some Scene {
         WindowGroup {
 //            if !showOnboarding {
@@ -46,3 +58,4 @@ struct FaceRealityApp: App {
         
     }
 }
+
