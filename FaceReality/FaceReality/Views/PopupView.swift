@@ -16,7 +16,6 @@ struct PopupView: View {
     let imageIllustration: String?
     
     var body: some View {
-        
         ZStack {
             VStack(alignment: .leading, spacing: 2) {
                 HStack {
