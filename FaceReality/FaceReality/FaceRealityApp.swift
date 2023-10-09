@@ -9,16 +9,17 @@ import SwiftUI
 import FirebaseCore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
 }
 
 @main
 struct FaceRealityApp: App {
     @State private var showOnboarding = false
+    @AppStorage("openCount") private var openCount = 0
     
     var body: some Scene {
         WindowGroup {
@@ -32,9 +33,14 @@ struct FaceRealityApp: App {
                         }
                     }
             } else {
-                OnboardingView()
+                if openCount >= 3 {
+                    ReviewAppCode()
+                } else {
+                    OnboardingView()
+                }
             }
         }
     }
 }
+
 
