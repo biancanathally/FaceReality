@@ -82,6 +82,9 @@ struct ContentView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            ReviewHandler.requestReview()
+        })
     }
 }
 
