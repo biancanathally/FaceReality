@@ -22,20 +22,14 @@ struct AppOverview: View {
                 ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
                
 
-//                switch appStatus {
-//                case .start:
-//                    ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
-//                case .main:
-//                    ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
-//
-//                }
-
             }
 
 
             switch appStatus {
             case .onboarding:
-                OnboardingView()
+                OnboardingView(dismissAction: {
+                    appStatus = .main
+                })
             case .start:
                 ContentView(dismissAction: {
                     appStatus = .main
@@ -51,7 +45,7 @@ struct AppOverview: View {
         }
 
         .onAppear{
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                 shouldShowCamera = true
             })
             

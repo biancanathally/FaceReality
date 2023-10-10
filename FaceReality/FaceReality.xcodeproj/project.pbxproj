@@ -176,6 +176,7 @@
 		5AAAF6032AD04EF50029D5FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCF555172AD4A79D000C0D0F /* AppOverview.swift */,
 				5AAB28D42AD5948A0068A0C5 /* ContentView.swift */,
 				5AAB28DA2AD594BF0068A0C5 /* FRContentView.swift */,
 				A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */,
@@ -272,7 +273,6 @@
 				5AAAF6042AD04F2F0029D5FD /* View models */,
 				5AAAF6032AD04EF50029D5FD /* Views */,
 				BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */,
-				BCF555172AD4A79D000C0D0F /* AppOverview.swift */,
 				A64750532AA8A23500ED0DEC /* FaceReality-Bridging-Header.h */,
 				A64750202AA8A1BD00ED0DEC /* Info.plist */,
 			);
@@ -717,7 +717,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
@@ -749,7 +749,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
