@@ -18,7 +18,6 @@ struct ContentView: View {
     @ObservedObject var arViewModel = ARViewModel.shared
     var dismissAction: () -> Void
     @State private var appStatus: AppStatus = .start
-    var blurredHostingController = BlurredHostingController()
 
 
 
@@ -115,7 +114,6 @@ struct ContentView: View {
                 })
             }
 //        }
-//        .foregroundColor(.clear.opacity(0.0))
     }
 }
 
