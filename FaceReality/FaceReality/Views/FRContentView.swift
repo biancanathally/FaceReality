@@ -36,7 +36,6 @@ struct FRContentView: View {
 
     
     var body: some View {
-        
         ZStack {
 //                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
 
@@ -44,7 +43,7 @@ struct FRContentView: View {
             
             HStack {
                 VStack(alignment: .center, spacing: 5) {
-                    HStack(alignment: .top, spacing: 202) {
+                    HStack(alignment: .top, spacing: 264.11) {
                         
                         Button(action: {
                             showContent = false
@@ -105,6 +104,8 @@ struct FRContentView: View {
                                 .padding(.vertical, 10)
                                 .foregroundColor(.white/*arViewModel.isSmiling ? .green : .red*/)
                                 .background(arViewModel.isPersonSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight) ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
+                                .foregroundColor(.white)
+                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                             
                         case .Sadness:
@@ -143,125 +144,274 @@ struct FRContentView: View {
                     
                     Spacer()
                     
-                    HStack(spacing: 15) {
-                        VStack {
-                            Button(action: {
-                                arViewModel.emotions = .Joy
-                                
-                                if strokeArray[0] == false {
-                                    strokeArray = [true, false, false, false, false]
+                    VStack(spacing: 6.45) {
+                        HStack(spacing: 65) {
+                            // smile 1
+                            VStack {
+                                if strokeArray[0] == true {
+                                    if showInfo == false {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = true
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.up")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
                                     
-                                } else {
-                                    strokeArray[0] = false
+                                    if showInfo == true {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = false
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.down")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
                                 }
-                                
-                            }) {
-                                Image(strokeArray[0] ? "Smiley face": "smile.stroke")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 60))
                             }
                             
-                            if strokeArray[0] {
-                                Text("happy-string")
-                                    .foregroundColor(.white)
-                                    .font(Font.custom("SFProText-Medium", size: 12))
+                            // sad 2
+                            VStack {
+                                if strokeArray[1] == true {
+                                    if showInfo == false {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = true
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.up")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
+                                    
+                                    if showInfo == true {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = false
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.down")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            // angry 4
+                            VStack {
+                                if strokeArray[3] == true {
+                                    if showInfo == false {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = true
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.up")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
+                                    
+                                    if showInfo == true {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = false
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.down")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            // surprise 3
+                            VStack {
+                                if strokeArray[2] == true {
+                                    if showInfo == false {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = true
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.up")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
+                                    
+                                    if showInfo == true {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = false
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.down")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            // disgust 5
+                            VStack {
+                                if strokeArray[4] == true {
+                                    if showInfo == false {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = true
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.up")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
+                                    
+                                    if showInfo == true {
+                                        Button(action: {
+                                            withAnimation(.easeInOut(duration: 0.2)) {
+                                                showInfo = false
+                                            }
+                                        }) {
+                                            Image(systemName: "chevron.down")
+                                                .foregroundColor(.white)
+                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                        }
+                                    }
+                                }
                             }
                         }
                         
-                        VStack {
-                            Button(action: {
-                                arViewModel.emotions = .Sadness
+                        HStack(spacing: 15) {
+                            VStack {
+                                Button(action: {
+                                    arViewModel.emotions = .Joy
+                                    
+                                    if strokeArray[0] == false {
+                                        strokeArray = [true, false, false, false, false]
+                                        
+                                    } else {
+                                        strokeArray[0] = false
+                                    }
+                                    
+                                }) {
+                                    Image(strokeArray[0] ? "Smiley face" : "smile.stroke")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 60))
+                                }
                                 
-                                if strokeArray[1] == false {
-                                    strokeArray = [false, true, false, false, false]
-                                    
-                                } else {
-                                    strokeArray[1] = false
+                                if strokeArray[0] {
+                                    Text("happy-string")
+                                        .foregroundColor(.white)
+                                        .font(Font.custom("SFProText-Medium", size: 12))
                                 }
-                            }) {
-                                Image(strokeArray[1] ? "Sad face": "sad.stroke")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 60))
                             }
                             
-                            if strokeArray[1] {
-                                Text("sad-string")
-                                    .foregroundColor(.white)
-                                    .font(Font.custom("SFProText-Medium", size: 12))
-                            }
-                        }
-                        
-                        VStack {
-                            Button(action: {
-                                arViewModel.emotions = .Surprise
+                            VStack {
+                                Button(action: {
+                                    arViewModel.emotions = .Sadness
+                                    
+                                    if strokeArray[1] == false {
+                                        strokeArray = [false, true, false, false, false]
+                                        
+                                    } else {
+                                        strokeArray[1] = false
+                                    }
+                                }) {
+                                    Image(strokeArray[1] ? "Sad face": "sad.stroke")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 60))
+                                }
                                 
-                                if strokeArray[3] == false {
-                                    strokeArray = [false, false, false, true, false]
-                                    
-                                } else {
-                                    strokeArray[3] = false
+                                if strokeArray[1] {
+                                    Text("sad-string")
+                                        .foregroundColor(.white)
+                                        .font(Font.custom("SFProText-Medium", size: 12))
                                 }
-                            }) {
-                                Image(strokeArray[3] ? "Surprised face": "surprise.stroke")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 60))
                             }
                             
-                            if strokeArray[3] {
-                                Text("surprised-string")
-                                    .foregroundColor(.white)
-                                    .font(Font.custom("SFProText-Medium", size: 12))
-                            }
-                        }
-                        
-                        VStack {
-                            Button(action: {
-                                arViewModel.emotions = .Rage
+                            VStack {
+                                Button(action: {
+                                    arViewModel.emotions = .Surprise
+                                    
+                                    if strokeArray[3] == false {
+                                        strokeArray = [false, false, false, true, false]
+                                        
+                                    } else {
+                                        strokeArray[3] = false
+                                    }
+                                }) {
+                                    Image(strokeArray[3] ? "Surprised face": "surprise.stroke")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 60))
+                                }
                                 
-                                if strokeArray[2] == false {
-                                    strokeArray = [false, false, true, false, false]
-                                    
-                                } else {
-                                    strokeArray[2] = false
+                                if strokeArray[3] {
+                                    Text("surprised-string")
+                                        .foregroundColor(.white)
+                                        .font(Font.custom("SFProText-Medium", size: 12))
                                 }
-                            }) {
-                                Image(strokeArray[2] ? "Angry face": "anger.stroke")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 60))
                             }
                             
-                            if strokeArray[2] {
-                                Text("angry-string")
-                                    .foregroundColor(.white)
-                                    .font(Font.custom("SFProText-Medium", size: 12))
-                            }
-                        }
-                        
-                        VStack {
-                            Button(action: {
-                                arViewModel.emotions = .Disgust
-                                if strokeArray[4] == false {
-                                    strokeArray = [false, false, false, false, true]
+                            VStack {
+                                Button(action: {
+                                    arViewModel.emotions = .Rage
                                     
-                                } else {
-                                    strokeArray[4] = false
+                                    if strokeArray[2] == false {
+                                        strokeArray = [false, false, true, false, false]
+                                        
+                                    } else {
+                                        strokeArray[2] = false
+                                    }
+                                }) {
+                                    Image(strokeArray[2] ? "Angry face": "anger.stroke")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 60))
                                 }
-                            }) {
-                                Image(strokeArray[4] ? "Disgust face" : "disgust.stroke")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 60))
+                                
+                                if strokeArray[2] {
+                                    Text("angry-string")
+                                        .foregroundColor(.white)
+                                        .font(Font.custom("SFProText-Medium", size: 12))
+                                }
                             }
                             
-                            if strokeArray[4] {
-                                Text("disgust-string")
-                                    .foregroundColor(.white)
-                                    .font(Font.custom("SFProText-Medium", size: 12))
+                            VStack {
+                                Button(action: {
+                                    arViewModel.emotions = .Disgust
+                                    if strokeArray[4] == false {
+                                        strokeArray = [false, false, false, false, true]
+                                        
+                                    } else {
+                                        strokeArray[4] = false
+                                    }
+                                }) {
+                                    Image(strokeArray[4] ? "Disgust face" : "disgust.stroke")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 60))
+                                }
+                                
+                                if strokeArray[4] {
+                                    Text("disgust-string")
+                                        .foregroundColor(.white)
+                                        .font(Font.custom("SFProText-Medium", size: 12))
+                                }
                             }
                         }
+                        .padding(.all)
+                        .shadow(radius: 4, y: 4)
+                        .background(RoundedRectangle(cornerRadius: 20).fill(.regularMaterial).opacity(0.5).shadow(radius: 4, y: 4))
                     }
-                    .padding(.all)
-                    .shadow(radius: 4, y: 4)
-                    .background(RoundedRectangle(cornerRadius: 20).fill(.regularMaterial).opacity(0.5).shadow(radius: 4, y: 4))
                 }
             }
             
