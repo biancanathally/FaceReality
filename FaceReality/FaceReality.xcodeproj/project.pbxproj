@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */; };
-		A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */; };
 		5A2478AD2AC1BF9A0090F9C7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AC2AC1BF9A0090F9C7 /* FirebaseAnalytics */; };
 		5A2478AF2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AE2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		5A2478B12AC1BFE90090F9C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A2478B02AC1BFE90090F9C7 /* GoogleService-Info.plist */; };
 		5A2478BC2AC317990090F9C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A2478BE2AC317990090F9C7 /* Localizable.strings */; };
+		A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */; };
+		A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */; };
 		A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */; };
 		A64750552AA8A23500ED0DEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750542AA8A23500ED0DEC /* ContentView.swift */; };
 		A647505A2AA8A2AD00ED0DEC /* FRContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64750592AA8A2AD00ED0DEC /* FRContentView.swift */; };
@@ -34,6 +33,7 @@
 		A6A068C42ABB6B3E005CC2E4 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */; };
 		A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */; };
+		BCF555122AD47EA8000C0D0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF555112AD47EA8000C0D0F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,13 +89,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.otf"; sourceTree = "<group>"; };
-		A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
-		5A2478B02AC1BFE90090F9C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A2478BD2AC317990090F9C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A2478C02AC64FFA0090F9C7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A2478C22AC650020090F9C7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5A2478C42AC665920090F9C7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.otf"; sourceTree = "<group>"; };
+		A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
 		A647500F2AA8A1BC00ED0DEC /* FaceReality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceReality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A64750202AA8A1BD00ED0DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,9 +115,6 @@
 		A64750702AA8AC3400ED0DEC /* MusclesExpressionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesExpressionModel.swift; sourceTree = "<group>"; };
 		A64750722AA8ACCE00ED0DEC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		A69E12832ABDC1B300479221 /* FaceRealityTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FaceRealityTests; path = FaceRealityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A69E12852ABDC1B300479221 /* FaceRealityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityTests.swift; sourceTree = "<group>"; };
-		A69E12902ABDC1C100479221 /* FaceRealityUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FaceRealityUITests; path = FaceRealityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69E12832ABDC1B300479221 /* FaceRealityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceRealityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69E12852ABDC1B300479221 /* FaceRealityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityTests.swift; sourceTree = "<group>"; };
 		A69E12902ABDC1C100479221 /* FaceRealityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceRealityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +123,7 @@
 		A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../FaceReality-3D/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
 		A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-Italic.ttf"; sourceTree = "<group>"; };
 		A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RedHatDisplay.ttf; sourceTree = "<group>"; };
+		BCF555112AD47EA8000C0D0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FaceReality/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +157,7 @@
 		A64750062AA8A1BC00ED0DEC = {
 			isa = PBXGroup;
 			children = (
-				5A2478B02AC1BFE90090F9C7 /* GoogleService-Info.plist */,
+				BCF555112AD47EA8000C0D0F /* GoogleService-Info.plist */,
 				A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */,
 				A64750112AA8A1BC00ED0DEC /* FaceReality */,
 				A64750282AA8A1BD00ED0DEC /* FaceRealityTests */,
@@ -417,11 +414,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */,
+				BCF555122AD47EA8000C0D0F /* GoogleService-Info.plist in Resources */,
 				A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */,
 				A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */,
 				5A2478BC2AC317990090F9C7 /* Localizable.strings in Resources */,
 				A64750682AA8A52C00ED0DEC /* LaunchScreen.storyboard in Resources */,
-				5A2478B12AC1BFE90090F9C7 /* GoogleService-Info.plist in Resources */,
 				A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */,
 				A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */,
 			);
@@ -634,7 +631,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
@@ -642,6 +639,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -665,7 +663,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
@@ -673,6 +671,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
