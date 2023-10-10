@@ -435,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */,
+				BCF555122AD47EA8000C0D0F /* GoogleService-Info.plist in Resources */,
 				A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */,
 				A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */,
 				5A2478BC2AC317990090F9C7 /* Localizable.strings in Resources */,
