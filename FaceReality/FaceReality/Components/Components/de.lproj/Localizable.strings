@@ -1,7 +1,7 @@
 //MARK: Onboarding
 "onboardingtitle-string" = "Herzlich willkommen!";
 "onboardingbody-string" = "Face Reality ist eine App, die Ihnen hilft, die Muskelfunktion anhand von Gesichtsausdrücken zu verstehen.";
-"onboardingbutton-string" = "Start";
+"onboardingbutton-string" = "Lass uns gehen!";
 
 //MARK: Main
 "happy-string" = "Glücklich";
