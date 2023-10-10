@@ -20,7 +20,7 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
     @Published var surpriseMuscles: SurpriseMuscles = SurpriseMuscles()
     @Published var disgustMuscles: DisgustMuscles = DisgustMuscles()
     let neutralFeedback = String(localized: "neutral-string")
-
+    static let shared: ARViewModel = ARViewModel()
     func startSessionDelegate() {
         model.arView.session.delegate = self
     }

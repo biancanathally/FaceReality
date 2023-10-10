@@ -9,33 +9,47 @@ import SwiftUI
 import UIKit
 import AVFoundation
 import Firebase
-import FirebaseAnalytics
 
 struct ContentView: View {
     @State private var showReferences: Bool = false
     @State private var isReferencesOpen: Bool = false
     @State private var isShowingFRDestinationView = false
-    @ObservedObject var arViewModel : ARViewModel = ARViewModel()
+//    @ObservedObject var arViewModel : ARViewModel = ARViewModel()
+    @ObservedObject var arViewModel = ARViewModel.shared
+    var dismissAction: () -> Void
+    @State private var appStatus: AppStatus = .start
+    var blurredHostingController = BlurredHostingController()
+
+
+
+    @Environment(\.dismiss) private var dismiss
+
     
     @State private var isOpen = false
-    
+    @State private var shouldShowCamera = false
+       
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
             ZStack {
-                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
+//                if shouldShowCamera {
+//                    ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
+//                }
+                Rectangle().edgesIgnoringSafeArea(.all).blur(radius: 60)
+
+//                    .blur(radius: 60)
+                    .foregroundColor(Color.black.opacity(0.5))
+//                    .edgesIgnoringSafeArea(.all)
+//                    .blur(radius: 40)
+                
                 
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.5)) {
                         showReferences.toggle()
                     }
-                    print("calling analytics")
-                    Analytics.logEvent("info_tap", parameters: ["a": 1])
-                    print("calling analytics2")
-
                 }) {
                     Image(systemName: "info.circle")
                         .font(.system(size: 26))
-                        .foregroundColor(showReferences ? .navyBlue: .projectWhite)
+                        .foregroundColor(.iconColor)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 8.5)
                 }
@@ -56,7 +70,12 @@ struct ContentView: View {
                             )
                         
                         Button("Começar") {
-                            isShowingFRDestinationView = true
+                            dismissAction()
+                            appStatus = .main
+//                            dismiss.callAsFunction()
+//                            isShowingFRDestinationView = true
+//                            shouldShowCamera = false
+//                            
                         }
                         .buttonStyle(ButtonStyleSelect())
                     }
@@ -87,7 +106,16 @@ struct ContentView: View {
                     IntermadiateViewToFRContent(showFR: $isShowingFRDestinationView)
                 }
             }
-        }
+            .background(BackgroundBlurView().ignoresSafeArea(.all))
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                    shouldShowCamera = true
+                    
+
+                })
+            }
+//        }
+//        .foregroundColor(.clear.opacity(0.0))
     }
 }
 
@@ -97,12 +125,12 @@ struct IntermadiateViewToFRContent: View {
     
     var body: some View {
         if shouldShow {
-            FRContentView(showContent: $showFR)
+            FRContentView(showContent: $showFR, dismissAction: {})
         }
         else {
             Text("Loading")
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now()){
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
                         self.shouldShow = true
                     }
                 }
@@ -133,8 +161,20 @@ struct ModeButton: ButtonStyle {
     }
 }
 
+struct BackgroundBlurView: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        DispatchQueue.main.async {
+            view.superview?.superview?.backgroundColor = .clear
+        }
+        return view
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {}
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(dismissAction: {})
     }
 }

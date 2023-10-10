@@ -19,25 +19,28 @@ struct FaceRealityApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @Environment(\.scenePhase) private var scenePhase
     @ObservedObject var notificationManager = NotificationManager.shared
+   
 
 
     
     var body: some Scene {
         WindowGroup {
             if !showOnboarding {
-                ContentView()
+                AppOverview(appStatus: .start)
                     .onAppear {
                         let hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+                        Analytics.logEvent("users_visit", parameters: ["is_first_visit": "no"])
+                        
                         if !hasLaunchedBefore {
                             showOnboarding = true
                             UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
-                            Analytics.logEvent("users_visit", parameters: ["is_first_visit": false])
+                            Analytics.logEvent("users_visit", parameters: ["is_first_visit": true])
+
                         }
-                        Analytics.logEvent("users_visit", parameters: ["is_first_visit": true])
 
                     }
             } else {
-            OnboardingView()
+                AppOverview(appStatus: .onboarding)
             }
           
         }.onChange(of: scenePhase) { newScenePhase in
