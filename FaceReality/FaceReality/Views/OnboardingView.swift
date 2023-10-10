@@ -13,7 +13,8 @@ import UserNotifications
 struct OnboardingView: View {
     @ObservedObject var arViewModel : ARViewModel = ARViewModel.shared
     @State private var isShowingDestinationView = false
-    let appStatus: AppStatus = .main
+//    let appStatus: AppStatus = .main
+    var dismissAction: () -> Void
     var body: some View {
 //        NavigationView {
             ZStack {
@@ -37,11 +38,13 @@ struct OnboardingView: View {
                     
                     Button("onboardingbutton-string") {
                         isShowingDestinationView = true
+                        dismissAction()
+
                     }
                     .padding(.horizontal, 50)
                     .padding(.vertical, 12)
                     .foregroundColor(Color.projectWhite)
-                    .background(Color.iconColor)
+                    .background(Color.navyBlue)
                     .cornerRadius(20)
                     .padding(.bottom, 16)
                 }
@@ -50,7 +53,7 @@ struct OnboardingView: View {
                 .padding(.vertical, 250)
                 
                 if isShowingDestinationView {
-                    AppOverview(appStatus: appStatus)
+//                    AppOverview(appStatus: appStatus)
                 }
                 
             }
@@ -89,7 +92,7 @@ struct IntermadiateViewToContent: View {
 #if DEBUG
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView(dismissAction: {})
     }
 }
 #endif

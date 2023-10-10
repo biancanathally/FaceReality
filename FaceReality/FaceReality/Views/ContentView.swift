@@ -17,7 +17,7 @@ struct ContentView: View {
     //    @ObservedObject var arViewModel : ARViewModel = ARViewModel()
     @ObservedObject var arViewModel = ARViewModel.shared
     var dismissAction: () -> Void
-    @State private var appStatus: AppStatus = .start
+//    @State private var appStatus: AppStatus = .start
     
     
     
@@ -70,7 +70,7 @@ struct ContentView: View {
                     
                     Button("Começar") {
                         dismissAction()
-                        appStatus = .main
+//                        appStatus = .main
                         //                            dismiss.callAsFunction()
                         //                            isShowingFRDestinationView = true
                         //                            shouldShowCamera = false

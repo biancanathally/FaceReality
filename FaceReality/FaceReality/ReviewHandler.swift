@@ -10,6 +10,7 @@ import StoreKit
 import SwiftUI
 
 class ReviewHandler {
+    var didShow = false
     
     static func requestReview() {
         var count = UserDefaults.standard.integer(forKey: UserDefaultsKeys.appStartUpsCountKey)
@@ -26,7 +27,9 @@ class ReviewHandler {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
                 if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                     SKStoreReviewController.requestReview(in: scene)
+                    
                 }
+                
             }
         }
     }
