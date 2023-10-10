@@ -10,9 +10,12 @@
 		5A2478AD2AC1BF9A0090F9C7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AC2AC1BF9A0090F9C7 /* FirebaseAnalytics */; };
 		5A2478AF2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2478AE2AC1BF9A0090F9C7 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		5A2478BC2AC317990090F9C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A2478BE2AC317990090F9C7 /* Localizable.strings */; };
+<<<<<<< HEAD
 		5A9701162AD438550085522B /* ReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9701152AD438550085522B /* ReviewHandler.swift */; };
 		5A9701182AD43BD80085522B /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9701172AD43BD80085522B /* UserDefaultsKeys.swift */; };
 		5AAAF6092AD051310029D5FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAAF6082AD051300029D5FD /* GoogleService-Info.plist */; };
+=======
+>>>>>>> feature/redesigned-layout
 		A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */; };
 		A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */; };
 		A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */; };
@@ -36,6 +39,13 @@
 		A6A068C42ABB6B3E005CC2E4 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */; };
 		A6A068CB2ABB72B6005CC2E4 /* RedHatDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */; };
+		BC366C622AD41478006FB3BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC366C612AD41478006FB3BB /* GoogleService-Info.plist */; };
+		BC36B3D92AD430A200F315B6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC36B3D82AD430A200F315B6 /* FirebaseAnalytics */; };
+		BC4DC4302AC4564D00E856AE /* ARViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DC42F2AC4564D00E856AE /* ARViewModelTests.swift */; };
+		BC83DA9A2AC2F96900109579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83DA992AC2F96900109579 /* AppDelegate.swift */; };
+		BC9E87E32AC1BB08002BFFE1 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */; };
+		BCF0B4512AC3A4FC0005D846 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */; };
+		BCF555182AD4A79D000C0D0F /* AppOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF555172AD4A79D000C0D0F /* AppOverview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,9 +105,12 @@
 		5A2478C02AC64FFA0090F9C7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A2478C22AC650020090F9C7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5A2478C42AC665920090F9C7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		5A9701152AD438550085522B /* ReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHandler.swift; sourceTree = "<group>"; };
 		5A9701172AD43BD80085522B /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		5AAAF6082AD051300029D5FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FaceReality/GoogleService-Info.plist"; sourceTree = "<group>"; };
+=======
+>>>>>>> feature/redesigned-layout
 		A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.otf"; sourceTree = "<group>"; };
 		A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
 		A647500F2AA8A1BC00ED0DEC /* FaceReality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceReality.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,12 +135,19 @@
 		A64750742AA8BD6D00ED0DEC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A69E12832ABDC1B300479221 /* FaceRealityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceRealityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69E12852ABDC1B300479221 /* FaceRealityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityTests.swift; sourceTree = "<group>"; };
-		A69E12902ABDC1C100479221 /* FaceRealityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceRealityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69E12902ABDC1C100479221 /* FaceRealityUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FaceRealityUITests; path = FaceRealityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69E12922ABDC1C100479221 /* FaceRealityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityUITests.swift; sourceTree = "<group>"; };
 		A69E12942ABDC1C100479221 /* FaceRealityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRealityUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../FaceReality-3D/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
 		A6A068C82ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-Italic.ttf"; sourceTree = "<group>"; };
 		A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RedHatDisplay.ttf; sourceTree = "<group>"; };
+		BC366C612AD41478006FB3BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FaceReality/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC4DC42F2AC4564D00E856AE /* ARViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModelTests.swift; sourceTree = "<group>"; };
+		BC83DA992AC2F96900109579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		BCC915952AC45C50001DB043 /* FaceReality.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FaceReality.xctestplan; sourceTree = "<group>"; };
+		BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
+		BCF555172AD4A79D000C0D0F /* AppOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOverview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC36B3D92AD430A200F315B6 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +232,12 @@
 		A64750062AA8A1BC00ED0DEC = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				5AAAF6082AD051300029D5FD /* GoogleService-Info.plist */,
+=======
+				BCC915952AC45C50001DB043 /* FaceReality.xctestplan */,
+				BC366C612AD41478006FB3BB /* GoogleService-Info.plist */,
+>>>>>>> feature/redesigned-layout
 				A6A068B72ABB6B2C005CC2E4 /* Unity-iPhone.xcodeproj */,
 				A64750112AA8A1BC00ED0DEC /* FaceReality */,
 				A64750282AA8A1BD00ED0DEC /* FaceRealityTests */,
@@ -228,7 +254,7 @@
 			children = (
 				A647500F2AA8A1BC00ED0DEC /* FaceReality.app */,
 				A69E12832ABDC1B300479221 /* FaceRealityTests.xctest */,
-				A69E12902ABDC1C100479221 /* FaceRealityUITests.xctest */,
+				A69E12902ABDC1C100479221 /* FaceRealityUITests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,7 +262,10 @@
 		A64750112AA8A1BC00ED0DEC /* FaceReality */ = {
 			isa = PBXGroup;
 			children = (
+				BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */,
+				BC83DA992AC2F96900109579 /* AppDelegate.swift */,
 				A64750642AA8A44700ED0DEC /* FaceRealityApp.swift */,
+<<<<<<< HEAD
 				5A9701152AD438550085522B /* ReviewHandler.swift */,
 				5A9701172AD43BD80085522B /* UserDefaultsKeys.swift */,
 				5AAAF6072AD04FFC0029D5FD /* Unity */,
@@ -244,6 +273,17 @@
 				5AAAF6052AD04F570029D5FD /* Models */,
 				5AAAF6042AD04F2F0029D5FD /* View models */,
 				5AAAF6032AD04EF50029D5FD /* Views */,
+=======
+				BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */,
+				A64750542AA8A23500ED0DEC /* ContentView.swift */,
+				5A2478BE2AC317990090F9C7 /* Localizable.strings */,
+				A647505F2AA8A30100ED0DEC /* Unity.swift */,
+				A647505B2AA8A2D500ED0DEC /* ARModel.swift */,
+				A647505D2AA8A2E700ED0DEC /* ARViewModel.swift */,
+				A64750592AA8A2AD00ED0DEC /* FRContentView.swift */,
+				BCF555172AD4A79D000C0D0F /* AppOverview.swift */,
+				A64750672AA8A52C00ED0DEC /* LaunchScreen.storyboard */,
+>>>>>>> feature/redesigned-layout
 				A64750532AA8A23500ED0DEC /* FaceReality-Bridging-Header.h */,
 				A64750202AA8A1BD00ED0DEC /* Info.plist */,
 			);
@@ -254,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				A64750292AA8A1BD00ED0DEC /* FaceRealityTests.swift */,
+				BC4DC42F2AC4564D00E856AE /* ARViewModelTests.swift */,
 			);
 			path = FaceRealityTests;
 			sourceTree = "<group>";
@@ -294,7 +335,7 @@
 		A6A068B82ABB6B2C005CC2E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A6A068BE2ABB6B31005CC2E4 /* Unity-Target-New.app */,
+				A6A068BE2ABB6B31005CC2E4 /* FaceAR.app */,
 				A6A068C02ABB6B31005CC2E4 /* Unity-iPhone Tests.xctest */,
 				A6A068C22ABB6B31005CC2E4 /* UnityFramework.framework */,
 			);
@@ -351,6 +392,9 @@
 				A69E12882ABDC1B300479221 /* PBXTargetDependency */,
 			);
 			name = FaceRealityTests;
+			packageProductDependencies = (
+				BC36B3D82AD430A200F315B6 /* FirebaseAnalytics */,
+			);
 			productName = FaceRealityTests;
 			productReference = A69E12832ABDC1B300479221 /* FaceRealityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -370,7 +414,7 @@
 			);
 			name = FaceRealityUITests;
 			productName = FaceRealityUITests;
-			productReference = A69E12902ABDC1C100479221 /* FaceRealityUITests.xctest */;
+			productReference = A69E12902ABDC1C100479221 /* FaceRealityUITests */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -430,10 +474,9 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A6A068BE2ABB6B31005CC2E4 /* Unity-Target-New.app */ = {
+		A6A068BE2ABB6B31005CC2E4 /* FaceAR.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			name = "Unity-Target-New.app";
 			path = FaceAR.app;
 			remoteRef = A6A068BD2ABB6B31005CC2E4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -467,6 +510,7 @@
 				A64750682AA8A52C00ED0DEC /* LaunchScreen.storyboard in Resources */,
 				A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */,
 				A6A068CA2ABB72B6005CC2E4 /* RedHatDisplay-Italic.ttf in Resources */,
+				BC366C622AD41478006FB3BB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,10 +540,17 @@
 				5A9701162AD438550085522B /* ReviewHandler.swift in Sources */,
 				A647506B2AA8AB8D00ED0DEC /* Emotions.swift in Sources */,
 				A647505C2AA8A2D500ED0DEC /* ARModel.swift in Sources */,
+				BCF0B4512AC3A4FC0005D846 /* NotificationType.swift in Sources */,
+				BCF555182AD4A79D000C0D0F /* AppOverview.swift in Sources */,
+				BC83DA9A2AC2F96900109579 /* AppDelegate.swift in Sources */,
 				A647506D2AA8ABB100ED0DEC /* InfoPopup.swift in Sources */,
 				A64750712AA8AC3400ED0DEC /* MusclesExpressionModel.swift in Sources */,
 				A647505A2AA8A2AD00ED0DEC /* FRContentView.swift in Sources */,
+<<<<<<< HEAD
 				5A9701182AD43BD80085522B /* UserDefaultsKeys.swift in Sources */,
+=======
+				BC9E87E32AC1BB08002BFFE1 /* NotificationsManager.swift in Sources */,
+>>>>>>> feature/redesigned-layout
 				A64750552AA8A23500ED0DEC /* ContentView.swift in Sources */,
 				A64750652AA8A44700ED0DEC /* FaceRealityApp.swift in Sources */,
 				A64750752AA8BD6D00ED0DEC /* OnboardingView.swift in Sources */,
@@ -512,6 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4DC4302AC4564D00E856AE /* ARViewModelTests.swift in Sources */,
 				A69E12862ABDC1B300479221 /* FaceRealityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -661,7 +713,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -678,8 +730,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = VNH67NDAE6;
+=======
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9569K2P89M;
+>>>>>>> feature/redesigned-layout
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
@@ -687,6 +744,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,8 +767,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = VNH67NDAE6;
+=======
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9569K2P89M;
+>>>>>>> feature/redesigned-layout
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
@@ -718,6 +781,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -738,13 +802,16 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceReality.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FaceReality";
 			};
@@ -756,13 +823,16 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceReality.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FaceReality";
 			};
@@ -773,7 +843,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityUITests;
@@ -791,7 +861,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.FaceRealityUITests;
@@ -866,6 +936,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5A2478AB2AC1BF9A0090F9C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		BC36B3D82AD430A200F315B6 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A2478AB2AC1BF9A0090F9C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,15 +7,18 @@
 
 import SwiftUI
 import RealityKit
+import UserNotifications
+
 
 struct OnboardingView: View {
-    @ObservedObject var arViewModel : ARViewModel = ARViewModel()
+    @ObservedObject var arViewModel : ARViewModel = ARViewModel.shared
     @State private var isShowingDestinationView = false
-    
+    let appStatus: AppStatus = .main
     var body: some View {
-        NavigationView {
+//        NavigationView {
             ZStack {
-                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
+//                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
+                Color.black.opacity(0.5).edgesIgnoringSafeArea(.all)
                 
                 VStack(spacing: 24) {
                     VStack(spacing: 24) {
@@ -47,11 +50,21 @@ struct OnboardingView: View {
                 .padding(.vertical, 250)
                 
                 if isShowingDestinationView {
-                    IntermadiateViewToContent()
+                    AppOverview(appStatus: appStatus)
                 }
                 
             }
-        }
+            .background(BackgroundBlurView().ignoresSafeArea(.all))
+            .onAppear {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All set!")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+//        }
     }
 }
 
@@ -60,7 +73,7 @@ struct IntermadiateViewToContent: View {
     
     var body: some View {
         if shouldShow {
-            ContentView()
+            ContentView(dismissAction: {})
         }
         else {
             Text("Loading")
