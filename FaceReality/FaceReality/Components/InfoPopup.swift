@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct InfoPopup: View {
-//    var dismissAction: () -> Void
+    var dismissAction: () -> Void
     let arrayMuscles: [Muscle]
     
     var body: some View {
@@ -25,7 +25,7 @@ struct InfoPopup: View {
                         }, titleText: muscle.muscleName, bodyText: muscle.muscleDescription, isReference: false, buttonLabel: "Fechar", imageIllustration: muscle.muscleIllustrationName)
                     }
                 }
-                .padding(.bottom, 150)
+                .padding(.bottom, 180)
                 .padding(.top, 40)
             }
         }

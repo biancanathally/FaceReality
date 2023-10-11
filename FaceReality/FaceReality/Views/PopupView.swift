@@ -17,13 +17,14 @@ struct PopupView: View {
     
     var body: some View {
         ZStack {
-            VStack(alignment: .leading, spacing: 2) {
-                HStack {
+            VStack(alignment: .leading, spacing: 8) {
+                VStack {
                     Text(titleText)
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding()
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 
                 VStack {
                     Text(bodyText)
@@ -31,15 +32,18 @@ struct PopupView: View {
                         .padding()
                         .fixedSize(horizontal: false, vertical: true)
                 }
-                .padding(.bottom)
                 
-                if isReference == false  {
-                    Image(imageIllustration ?? "")
-                        .padding()
+                VStack {
+                    if isReference == false  {
+                        Image(imageIllustration ?? "")
+                            .padding()
+                            .frame(alignment: .leading)
+                    }
                 }
             }
             .background(RoundedRectangle(cornerRadius: 15).fill(.regularMaterial).shadow(radius: 4, y: 4))
             .padding()
+            .padding(.horizontal, 10)
         }
     }
 }
