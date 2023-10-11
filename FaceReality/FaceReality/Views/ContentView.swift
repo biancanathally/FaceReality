@@ -62,16 +62,14 @@ struct ContentView: View {
                     let title = String(localized: "referencestitle-string")
                     let body = String(localized: "referencesbody-string")
                     VStack(alignment: .leading) {
-                        PopupView(dismissAction: {
+                        InfoPopupView(dismissAction: {
                                 withAnimation(.easeInOut(duration: 0.5)) {
                                     showReferences.toggle()
                                 }
                             },
-                            titleText: title,
-                            bodyText: body,
-                            isReference: true,
-                            buttonLabel: "Fechar",
-                            imageIllustration: "").frame(height: UIScreen.main.bounds.height / 2.4)
+                            titleTextInfo: title,
+                            bodyTextInfo: body,
+                            isReferenceInfo: true).frame(height: UIScreen.main.bounds.height / 2.4)
                         Spacer()
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
