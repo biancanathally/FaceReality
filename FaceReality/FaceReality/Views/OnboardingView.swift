@@ -18,7 +18,7 @@ struct OnboardingView: View {
     var body: some View {
 //        NavigationView {
             ZStack {
-//                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
+//                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radiuqs: 40)
                 Color.black.opacity(0.5).edgesIgnoringSafeArea(.all)
                 
                 VStack(spacing: 24) {
