@@ -36,7 +36,7 @@ struct FRContentView: View {
 
     
     var body: some View {
-        
+
         ZStack {
 //                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all)
 
@@ -51,6 +51,7 @@ struct FRContentView: View {
                             dismissAction()
                             appStatus = .start
 //                            dismiss.callAsFunction()
+                            
                         }) {
                             Image(systemName: "house.fill")
                                 .foregroundColor(.iconColor)

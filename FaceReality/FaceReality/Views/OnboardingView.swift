@@ -13,6 +13,8 @@ import UserNotifications
 struct OnboardingView: View {
     @ObservedObject var arViewModel : ARViewModel = ARViewModel.shared
     @State private var isShowingDestinationView = false
+    var dismissAction: () -> Void
+
     let appStatus: AppStatus = .main
     var body: some View {
 //        NavigationView {
@@ -36,7 +38,8 @@ struct OnboardingView: View {
                     }
                     
                     Button("onboardingbutton-string") {
-                        isShowingDestinationView = true
+//                        isShowingDestinationView = true
+                        dismissAction()
                     }
                     .padding(.horizontal, 50)
                     .padding(.vertical, 12)
@@ -89,7 +92,7 @@ struct IntermadiateViewToContent: View {
 #if DEBUG
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView( dismissAction: {})
     }
 }
 #endif
