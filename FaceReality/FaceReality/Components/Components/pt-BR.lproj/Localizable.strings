@@ -59,6 +59,9 @@
 "depressorlabiodescricao-string" = "Ele tem a função de abaixar o lábio inferior lateralmente.";
 
 //MARK: Notifications
-"twodaynotif-string" = "Está nos evitando? Não quer ver a realidade na sua cara?";
-"oneweeknotif-string" = "Tanto tempo se passou 😔 \n Nossos músculos sentem saudades de você.";
-"twoweeknotif-string" = "Você nos deixou? 😭 \n Volte, a anatomia facial ainda é incrível!";
+"twodaynotiftitle-string" = "Está nos evitando?";
+"twodaynotifbody-string" = "Não quer ver a realidade na sua cara?";
+"oneweeknotiftitle-string" = "Tanto tempo se passou 😔";
+"oneweeknotifbody-string" = "Nossos músculos sentem saudades de você.";
+"twoweeknotiftitle-string" = "Você nos deixou? 😭";
+"twoweeknotifbody-string" = "Volte, a anatomia facial ainda é incrível!";

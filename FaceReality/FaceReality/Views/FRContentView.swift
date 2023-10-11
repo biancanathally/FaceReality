@@ -35,6 +35,7 @@ struct FRContentView: View {
     @State private var appStatus: AppStatus = .main
     @State private var showStepByStep = UserDefaults.standard.bool(forKey: UserDefaultsKeys.showStepByStep)
     @State private var stepTwo = false
+    @State private var stepThree = false
 
     
     var body: some View {
@@ -462,9 +463,22 @@ struct FRContentView: View {
                         .frame(width: 50, height: 40)
                         .foregroundColor(.blue)
                         .onTapGesture {
-                            stepTwo = false 
+                            stepTwo = false
+                            stepThree = true
                         }
                 }
+            }
+            if stepThree {
+                HStack {
+                    Spacer()
+                    Rectangle()
+                        .frame(width: 50, height: 40)
+                        .foregroundColor(.cyan)
+                        .onTapGesture {
+                            stepThree = false
+                        }
+                }
+                
             }
         }
         .onAppear {

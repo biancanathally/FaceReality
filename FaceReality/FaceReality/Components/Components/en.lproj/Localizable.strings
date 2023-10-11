@@ -57,6 +57,9 @@
 "depressorlabiodescricao-string" = "It has the function of lowering the lower lip sideways.";
 
 //MARK: Notifications
-"twodaynotif-string" = "Are you avoiding us? \n Don't you want to face reality?";
-"oneweeknotif-string" = "So much time has passed 😔 \n Our muscles miss you.";
-"twoweeknotif-string" = "Did you leave us? 😭 \n Come back, facial anatomy is still amazing!";
+"twodaynotiftitle-string" = "Are you avoiding us?";
+"twodaynotifbody-string" = "Don't you want to face reality?";
+"oneweeknotiftitle-string" = "So much time has passed 😔";
+"oneweeknotifbody-string" = "Our muscles miss you.";
+"twoweeknotiftitle-string" = "Did you leave us? 😭";
+"twoweeknotifbody-string" = "Come back, facial anatomy is still amazing!";

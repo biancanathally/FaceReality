@@ -59,6 +59,9 @@
 "depressorlabiodescricao-string" = "Er hat die Funktion, die Unterlippe seitlich abzusenken.";
 
 //MARK: Notifications
-"twodaynotif-string" = "Are you avoiding us? \n Don't you want to face reality?";
-"oneweeknotif-string" = "Es ist so viel Zeit vergangen 😔 \n Unsere Muskeln vermissen dich.";
-"twoweeknotif-string" = "Hast du uns verlassen? 😭 \n Komm zurück, die Gesichtsanatomie ist immer noch erstaunlich!";
+"twodaynotiftitle-string" = "Gehst du uns aus dem Weg?";
+"twodaynotifbody-string" = "Wollt ihr euch nicht der Realität stellen?";
+"oneweeknotiftitle-string" = "Es ist so viel Zeit vergangen 😔";
+"oneweeknotifbody-string" = "Unsere Muskeln vermissen dich.";
+"twoweeknotiftitle-string" = "Hast du uns verlassen? 😭";
+"twoweeknotifbody-string" = "Komm zurück, die Gesichtsanatomie ist immer noch erstaunlich!";
