@@ -13,6 +13,8 @@ import UserNotifications
 struct OnboardingView: View {
     @ObservedObject var arViewModel : ARViewModel = ARViewModel.shared
     @State private var isShowingDestinationView = false
+//    var showStepByStep = UserDefaults.standard.set(true, forKey: UserDefaultsKeys.showStepByStep)
+    
 //    let appStatus: AppStatus = .main
     var dismissAction: () -> Void
     var body: some View {
@@ -59,13 +61,7 @@ struct OnboardingView: View {
             }
             .background(BackgroundBlurView().ignoresSafeArea(.all))
             .onAppear {
-                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                    if success {
-                        print("All set!")
-                    } else if let error = error {
-                        print(error.localizedDescription)
-                    }
-                }
+                UserDefaults.standard.set(true, forKey: UserDefaultsKeys.showStepByStep)
             }
 //        }
     }

@@ -10,5 +10,6 @@ import Foundation
 struct UserDefaultsKeys {
     static let appStartUpsCountKey = "appStartUpsCountKey"
     static let lastVersionPromptedForReviewKey = "lastVersionPromptedForReviewKey"
+    static let showStepByStep = "showStepByStep"
 
 }
