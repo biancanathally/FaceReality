@@ -27,7 +27,7 @@ class ReviewHandler {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
                 if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                     SKStoreReviewController.requestReview(in: scene)
-                    
+                    UserDefaults.standard.set(currentVersion, forKey: UserDefaultsKeys.lastVersionPromptedForReviewKey)
                 }
                 
             }

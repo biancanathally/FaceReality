@@ -39,7 +39,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A64750242AA8A1BD00ED0DEC"
+               BlueprintIdentifier = "A69E12822ABDC1B300479221"
                BuildableName = "FaceRealityTests.xctest"
                BlueprintName = "FaceRealityTests"
                ReferencedContainer = "container:FaceReality.xcodeproj">
@@ -50,7 +50,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A647502E2AA8A1BD00ED0DEC"
+               BlueprintIdentifier = "A69E128F2ABDC1C100479221"
                BuildableName = "FaceRealityUITests.xctest"
                BlueprintName = "FaceRealityUITests"
                ReferencedContainer = "container:FaceReality.xcodeproj">
@@ -85,6 +85,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-FIRDebugEnabled"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-FIRAnalyticsDebugEnabled"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

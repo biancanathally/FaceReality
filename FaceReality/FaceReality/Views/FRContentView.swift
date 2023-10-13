@@ -61,18 +61,18 @@ struct FRContentView: View {
                         
                         HStack(spacing: 20) {
                             
-                            Button(action: {
-                                withAnimation(.easeInOut(duration: 0.5)) {
-                                    showInfo = true
-                                }
-                            }) {
-                                Image(systemName: "book.closed.fill")
-                                    .foregroundColor(.iconColor)
-                                    .padding(.horizontal, 10)
-                                    .padding(.vertical, 8.5)
-                            }
-                            .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
-                            .shadow(radius: 4, y: 4)
+//                            Button(action: {
+//                                withAnimation(.easeInOut(duration: 0.5)) {
+//                                    showInfo = true
+//                                }
+//                            }) {
+//                                Image(systemName: "book.closed.fill")
+//                                    .foregroundColor(.iconColor)
+//                                    .padding(.horizontal, 10)
+//                                    .padding(.vertical, 8.5)
+//                            }
+//                            .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
+//                            .shadow(radius: 4, y: 4)
                             
                             VStack {
                                 Button(action: {
@@ -105,7 +105,7 @@ struct FRContentView: View {
                                 .foregroundColor(.white/*arViewModel.isSmiling ? .green : .red*/)
                                 .background(arViewModel.isPersonSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight) ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .foregroundColor(.white)
-                                .background(arViewModel.isSmiling ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
+                                .background(arViewModel.isPersonSmiling(smileLeft: arViewModel.model.smileLeft, smileRight: arViewModel.model.smileRight) ? RoundedRectangle(cornerRadius: 12).fill(.green).opacity(0.3) : RoundedRectangle(cornerRadius: 12).fill(.white).opacity(0.3))
                                 .shadow(radius: 4, y: 4)
                             
                         case .Sadness:

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct InfoPopup: View {
-//    var dismissAction: () -> Void
+    var dismissAction: () -> Void
     let arrayMuscles: [Muscle]
     
     var body: some View {
