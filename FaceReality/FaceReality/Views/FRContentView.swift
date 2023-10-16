@@ -468,7 +468,7 @@ struct FRContentView: View {
             
             if showStepByStep {
                 VStack {
-                    PopupView(dismissAction: {}, titleText: "", bodyText: "", isReference: false, buttonLabel: "", imageIllustration: "", isOnboardingSteps: true)
+                    PopupView(dismissAction: {}, titleText: String(localized: "steponetitle-string"), bodyText: String(localized: "steponebody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepOne", isOnboardingSteps: true)
                         .padding(.top, 88)
 
                         .onTapGesture {
@@ -489,8 +489,8 @@ struct FRContentView: View {
             
             if stepTwo {
                 VStack {
-                    PopupView(dismissAction: {}, titleText: "", bodyText: "", isReference: false, buttonLabel: "", imageIllustration: "", isOnboardingSteps: true)
-                        .padding(.bottom, 139)
+                    PopupView(dismissAction: {}, titleText: String(localized: "steptwotitle-string"), bodyText: String(localized: "steptwobody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepTwo", isOnboardingSteps: true)
+                        .padding(.top, 372)
                     
                         .onTapGesture {
                             stepTwo = false
@@ -499,11 +499,10 @@ struct FRContentView: View {
                 }
             }
             if stepThree {
-                HStack {
-                    Spacer()
-                    Rectangle()
-                        .frame(width: 50, height: 40)
-                        .foregroundColor(.cyan)
+                VStack {
+                    PopupView(dismissAction: {}, titleText: String(localized: "stepthreetitle-string"), bodyText: String(localized: "stepthreebody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepThree", isOnboardingSteps: true)
+                        .padding(.top, 372)
+                    
                         .onTapGesture {
                             stepThree = false
                         }

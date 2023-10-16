@@ -2,6 +2,12 @@
 "onboardingtitle-string" = "¡Bienvenido!";
 "onboardingbody-string" = "Face Reality es una app que te ayuda a entender la función muscular según las expresiones faciales";
 "onboardingbutton-string" = "Empezar";
+"steponetitle-string" = "Haga clic para visualizar";
+"steptwotitle-string" = "Haga clic en la expresión";
+"stepthreetitle-string" = "Haga clic en la flecha";
+"steponebody-string" = "los músculos en tiempo real en 3D en su propia cara.";
+"steptwobody-string" = "que desee estudiar en las opciones siguientes.";
+"stepthreebody-string" = "para obtener información sobre los músculos utilizados.";
 
 //MARK: Main
 "happy-string" = "Feliz";

@@ -13,9 +13,9 @@ import UserNotifications
 struct OnboardingView: View {
     @ObservedObject var arViewModel : ARViewModel = ARViewModel.shared
     @State private var isShowingDestinationView = false
-//    var showStepByStep = UserDefaults.standard.set(true, forKey: UserDefaultsKeys.showStepByStep)
+    var showStepByStep = UserDefaults.standard.set(true, forKey: UserDefaultsKeys.showStepByStep)
     
-//    let appStatus: AppStatus = .main
+    let appStatus: AppStatus = .main
     var dismissAction: () -> Void
     var body: some View {
 //        NavigationView {
