@@ -94,7 +94,7 @@ struct ContentView: View {
                               bodyText: body,
                               isReference: true,
                               buttonLabel: "Fechar",
-                              imageIllustration: "").frame(height: UIScreen.main.bounds.height / 2.4)
+                              imageIllustration: "", isOnboardingSteps: false).frame(height: UIScreen.main.bounds.height / 2.4)
                     Spacer()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)

@@ -76,8 +76,8 @@ class ARViewModel: UIViewController, ObservableObject, ARSessionDelegate {
 //        return scowlHelper
 //    }
     
-    func isPersonScowling(sneerLeft: Float, sneerRight: Float, squintLeft: Float, squintRight: Float, shrugLower: Float) -> Bool {
-        if sneerLeft > 0.17 && sneerRight > 0.17 && squintLeft > 0.05 && squintRight > 0.05 || shrugLower > 0.3 {
+    func isPersonScowling(sneerLeft: Float, sneerRight: Float, squintLeft: Float, squintRight: Float, shrugLower: Float, smileLeft: Float, smileRight: Float) -> Bool {
+        if sneerLeft > 0.17 && sneerRight > 0.17 && squintLeft > 0.2 && squintRight > 0.2 || shrugLower > 0.3 && smileLeft == 0.0 && smileRight == 0.0 {
 
             return true
         }
