@@ -34,7 +34,7 @@ struct FaceRealityApp: App {
                         if !hasLaunchedBefore {
                             showOnboarding = true
                             UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
-                            Analytics.logEvent("users_visit", parameters: ["is_first_visit": true])
+                            Analytics.logEvent("users_visit", parameters: ["is_first_visit": "yes"])
 
                         }
 

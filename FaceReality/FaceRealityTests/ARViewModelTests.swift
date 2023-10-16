@@ -51,7 +51,6 @@ final class ARViewModelTest: XCTestCase {
     }
     
     func testIsPersonSmiling() throws {
-//        let arViewModel = ARViewModel()
         XCTAssertEqual(arViewModel.isPersonSmiling(smileLeft: 0.2, smileRight: 0.3), false)
 
     }
@@ -83,5 +82,19 @@ final class ARViewModelTest: XCTestCase {
 
     }
     
+    func testScowlChecker() throws {
+        XCTAssertEqual(arViewModel.scowlChecker(isPersonScowling: arViewModel.isPersonScowling(sneerLeft: 0.0, sneerRight: 0.0, squintLeft: 0.0, squintRight: 0.0, shrugLower: 0.0)), "Neutro 😐")
+        XCTAssertEqual(arViewModel.scowlChecker(isPersonScowling: arViewModel.isPersonScowling(sneerLeft: 0.5, sneerRight: 0.5, squintLeft: 0.5, squintRight: 0.5, shrugLower: 0.5)), "Raiva! 😡")
+    }
+    
+    func testSurprisedChecker() throws {
+        XCTAssertEqual(arViewModel.surprisedChecker(isPersonScared: arViewModel.isPersonScared(wideLeft: 0.0, wideRight: 0.5)), "Neutro 😐")
+        XCTAssertEqual(arViewModel.surprisedChecker(isPersonScared: arViewModel.isPersonScared(wideLeft: 0.5, wideRight: 0.5)), "Surpresa! 😮")
+    }
+    
+    func testDisgustChecker() {
+        XCTAssertEqual(arViewModel.disgustChecker(isPersonDisgusted: arViewModel.isPersonDisgusted(sneerLeft: 0.0, sneerRight: 0.0)), "Neutro 😐")
+        XCTAssertEqual(arViewModel.disgustChecker(isPersonDisgusted: arViewModel.isPersonDisgusted(sneerLeft: 0.5, sneerRight: 0.5)), "Nojo! 🥴")
+    }
     
 }
