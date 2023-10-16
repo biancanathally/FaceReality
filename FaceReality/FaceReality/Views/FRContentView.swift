@@ -34,6 +34,7 @@ struct FRContentView: View {
     var dismissAction: () -> Void
     @State private var appStatus: AppStatus = .main
     @State private var showStepByStep = UserDefaults.standard.bool(forKey: UserDefaultsKeys.showStepByStep)
+    @State private var stepOne = false
     @State private var stepTwo = false
     @State private var stepThree = false
     
@@ -52,7 +53,6 @@ struct FRContentView: View {
                             showContent = false
                             dismissAction()
                             appStatus = .start
-                            //                            dismiss.callAsFunction()
                         }) {
                             Image(systemName: "house.fill")
                                 .foregroundColor(.iconColor)
@@ -61,8 +61,9 @@ struct FRContentView: View {
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 8.5)
                         }
-                        .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
-                        .shadow(radius: 4, y: 4)
+                        .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3).shadow(radius: 4, y: 4))
+//                        .shadow(radius: 4, y: 4)
+
                         
                         Spacer()
                         
@@ -123,24 +124,26 @@ struct FRContentView: View {
                                     Unity.shared.show()
                                 }, label: {
                                     
-                                    VStack(spacing: 0) {
-                                        Image(systemName: "cube.fill")
-                                            .font(Font.custom("SFProText-Bold", size: 20))
-                                            .foregroundColor(.iconColor)
-                                            .shadow(radius: 4, y: 4)
-                                        
-                                            .padding(.horizontal, 10)
-                                            .padding(.vertical, 8.5)
-                                        Text("3D")
-                                            .foregroundColor(.iconColor)
-                                            .font(Font.custom("SFProText-Bold", size: 14))
-                                            .padding(.horizontal, 10)
-                                            .padding(.vertical, 8.5)
+//                                    VStack(spacing: 0) {
+                                        Image("icon3d")
+                                            .resizable()
+                                            .frame(width: 50, height: 86)
+//                                            .font(Font.custom("SFProText-Bold", size: 20))
+//                                            .foregroundColor(.iconColor)
+                                            .shadow(radius: 6, y: 4)
+//
+//                                            .padding(.horizontal, 10)
+//                                            .padding(.vertical, 8.5)
+//                                        Text("3D")
+//                                            .foregroundColor(.iconColor)
+//                                            .font(Font.custom("SFProText-Bold", size: 14))
+//                                            .padding(.horizontal, 10)
+//                                            .padding(.vertical, 8.5)
 //                                            .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
-                                            .shadow(radius: 4, y: 4)
-                                    }
-                                    .padding(.bottom, 5)
-                                    .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
+//                                            .shadow(radius: 4, y: 4)
+//                                    }
+//                                    .padding(.bottom, 5)
+//                                    .background(RoundedRectangle(cornerRadius: 12).fill(.regularMaterial).opacity(0.3))
                                     
                                     
                                 })
@@ -313,12 +316,13 @@ struct FRContentView: View {
                                 Button(action: {
                                     arViewModel.emotions = .Joy
                                     
-                                    if strokeArray[0] == false {
+//                                    if strokeArray[0] == false {
                                         strokeArray = [true, false, false, false, false]
                                         
-                                    } else {
-                                        strokeArray[0] = false
-                                    }
+//                                    }
+//                                    else {
+//                                        strokeArray[0] = false
+//                                    }
                                     
                                 }) {
                                     Image(strokeArray[0] ? "Smiley face" : "smile.stroke")
@@ -337,12 +341,12 @@ struct FRContentView: View {
                                 Button(action: {
                                     arViewModel.emotions = .Sadness
                                     
-                                    if strokeArray[1] == false {
+//                                    if strokeArray[1] == false {
                                         strokeArray = [false, true, false, false, false]
                                         
-                                    } else {
-                                        strokeArray[1] = false
-                                    }
+//                                    } else {
+//                                        strokeArray[1] = false
+//                                    }
                                 }) {
                                     Image(strokeArray[1] ? "Sad face": "sad.stroke")
                                         .foregroundColor(.white)
@@ -360,12 +364,12 @@ struct FRContentView: View {
                                 Button(action: {
                                     arViewModel.emotions = .Surprise
                                     
-                                    if strokeArray[3] == false {
+//                                    if strokeArray[3] == false {
                                         strokeArray = [false, false, false, true, false]
                                         
-                                    } else {
-                                        strokeArray[3] = false
-                                    }
+//                                    } else {
+//                                        strokeArray[3] = false
+//                                    }
                                 }) {
                                     Image(strokeArray[3] ? "Surprised face": "surprise.stroke")
                                         .foregroundColor(.white)
@@ -383,12 +387,12 @@ struct FRContentView: View {
                                 Button(action: {
                                     arViewModel.emotions = .Rage
                                     
-                                    if strokeArray[2] == false {
+//                                    if strokeArray[2] == false {
                                         strokeArray = [false, false, true, false, false]
                                         
-                                    } else {
-                                        strokeArray[2] = false
-                                    }
+//                                    } else {
+//                                        strokeArray[2] = false
+//                                    }
                                 }) {
                                     Image(strokeArray[2] ? "Angry face": "anger.stroke")
                                         .foregroundColor(.white)
@@ -405,12 +409,12 @@ struct FRContentView: View {
                             VStack {
                                 Button(action: {
                                     arViewModel.emotions = .Disgust
-                                    if strokeArray[4] == false {
+//                                    if strokeArray[4] == false {
                                         strokeArray = [false, false, false, false, true]
                                         
-                                    } else {
-                                        strokeArray[4] = false
-                                    }
+//                                    } else {
+//                                        strokeArray[4] = false
+//                                    }
                                 }) {
                                     Image(strokeArray[4] ? "Disgust face" : "disgust.stroke")
                                         .foregroundColor(.white)
@@ -430,6 +434,7 @@ struct FRContentView: View {
                     }
                 }
             }
+
             
             if showInfo {
                 switch arViewModel.emotions {
@@ -467,48 +472,77 @@ struct FRContentView: View {
             }
             
             if showStepByStep {
-                VStack {
-                    PopupView(dismissAction: {}, titleText: String(localized: "steponetitle-string"), bodyText: String(localized: "steponebody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepOne", isOnboardingSteps: true)
-                        .padding(.top, 88)
-
-                        .onTapGesture {
-                            UserDefaults.standard.set(false, forKey: UserDefaultsKeys.showStepByStep)
-                            showStepByStep = false
-                            stepTwo = true
-                            
-                }
-                    Spacer()
-
                 
+                Color.black.ignoresSafeArea(.all).opacity(0.3)
+                    .onAppear {
+                        stepOne = true
                     }
-                //                    .padding(.top, 137)
-                //                    .frame(width: 352, height: 100)
+                        .onTapGesture {
+                            if stepOne {
+                                UserDefaults.standard.set(false, forKey: UserDefaultsKeys.showStepByStep)
+                                stepOne = false
+                                stepTwo = true
+                                print("tocou 1")
+                            } else
+                            
+                            if stepTwo {
+                                stepTwo = false
+                                stepThree = true
+                            } else
+                            if stepThree {
+                                stepThree = false
+                                showStepByStep = false
+
+                            }
+                        }
+
+                    
+                VStack {
+                    
+                    if stepOne {
+                        PopupView(dismissAction: {}, titleText: String(localized: "steponetitle-string"), bodyText: String(localized: "steponebody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepOne", isOnboardingSteps: true)
+                            .padding(.top, 88)
+
+                            .onTapGesture {
+                                UserDefaults.standard.set(false, forKey: UserDefaultsKeys.showStepByStep)
+                                stepOne = false
+                                stepTwo = true
+                                
+                    }
+                        Spacer()
+                    }
+                    
+                    if stepTwo {
+                        VStack {
+                            PopupView(dismissAction: {}, titleText: String(localized: "steptwotitle-string"), bodyText: String(localized: "steptwobody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepTwo", isOnboardingSteps: true)
+                                .padding(.top, 372)
+                            
+                                .onTapGesture {
+                                    stepTwo = false
+                                    stepThree = true
+                                }
+                        }
+                    }
+
+                    if stepThree {
+                        VStack {
+                            PopupView(dismissAction: {}, titleText: String(localized: "stepthreetitle-string"), bodyText: String(localized: "stepthreebody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepThree", isOnboardingSteps: true)
+                                .padding(.top, 372)
+                            
+                                .onTapGesture {
+                                    stepThree = false
+                                    showStepByStep = false
+                                }
+                        }
+                        
+                    }
+
+
+                    }
+           
                 
             }
-            //            }
             
-            if stepTwo {
-                VStack {
-                    PopupView(dismissAction: {}, titleText: String(localized: "steptwotitle-string"), bodyText: String(localized: "steptwobody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepTwo", isOnboardingSteps: true)
-                        .padding(.top, 372)
-                    
-                        .onTapGesture {
-                            stepTwo = false
-                            stepThree = true
-                        }
-                }
-            }
-            if stepThree {
-                VStack {
-                    PopupView(dismissAction: {}, titleText: String(localized: "stepthreetitle-string"), bodyText: String(localized: "stepthreebody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepThree", isOnboardingSteps: true)
-                        .padding(.top, 372)
-                    
-                        .onTapGesture {
-                            stepThree = false
-                        }
-                }
-                
-            }
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {

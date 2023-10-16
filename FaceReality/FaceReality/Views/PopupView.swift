@@ -15,6 +15,7 @@ struct PopupView: View {
     let buttonLabel: String
     let imageIllustration: String?
     let isOnboardingSteps: Bool
+    @State private var offsetAnimation = false
     
     var body: some View {
         ZStack {
@@ -43,7 +44,7 @@ struct PopupView: View {
                 }
                 
                 if isOnboardingSteps == true {
-                    HStack {
+                    HStack(spacing: 30) {
                         VStack(alignment: .leading) {
                             Text(titleText)
                                 .fontWeight(.bold)
@@ -53,14 +54,23 @@ struct PopupView: View {
                                 .padding(.bottom, 17)
                         }
                         .padding(.leading, 21)
-                        Image(imageIllustration ?? "")
-                            .resizable()
-                            .padding(.all, 10)
-                            .frame(width: 102, height: 102)
-//                            .font(Font.custom("SFProText-Bold", size: 30))
+                        ZStack {
+                            Image(imageIllustration ?? "")
+                                .resizable()
+                                .padding(.all, 10)
+                                .frame(width: 102, height: 102)
 
-//                            .foregroundColor(.iconColor)
-//                            .padding()
+                            Image("pointingFinger")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                                .offset(x: offsetAnimation ? -40 : -20, y: offsetAnimation ? 20 : -0)
+                                .animation(Animation.easeInOut(duration: 1.0).repeatForever(autoreverses: true))
+                                .onAppear() {
+                                    self.offsetAnimation.toggle()
+                                }
+                                    
+                            
+                        }
                         
                     }
 
