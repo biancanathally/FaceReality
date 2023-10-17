@@ -4,6 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>SFProText-Medium.otf</string>
+		<string>SFProText-Bold.otf</string>
 		<string>RedHatDisplay-Italic.ttf</string>
 		<string>RedHatDisplay.ttf</string>
 	</array>

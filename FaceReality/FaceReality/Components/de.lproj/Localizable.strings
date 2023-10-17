@@ -1,0 +1,64 @@
+//MARK: Onboarding
+"onboardingtitle-string" = "Herzlich willkommen!";
+"onboardingbody-string" = "Face Reality ist eine App, die Ihnen hilft, die Muskelfunktion anhand von Gesichtsausdrücken zu verstehen.";
+"onboardingbutton-string" = "Start";
+
+//MARK: Main
+"happy-string" = "Glücklich";
+"sad-string" = "Traurig";
+"surprised-string" = "Überrascht";
+"angry-string" = "Wütend";
+"disgust-string" = "Angewidert";
+"selection-string" = "Wählen Sie einen Modus:";
+"artest-string" = "Mit AR-Projektion die Muskeln testen";
+"start-string" = "Start";
+"3dtest-string" = "Mit 3D-Projektion die Muskeln testen";
+"referencestitle-string" = "Referenzen";
+"referencessubtitle-string" = "Face Reality basiert auf:";
+"referencesbody-string" = "1. McMINN, R. M. H.. Farbatlas der menschlichen Anatomie. São Paulo: Manole, 1990. \n 2. MOORE, Keith L.. Klinisch orientierte Anatomie. 4ed.";
+
+//MARK: Feedbacks
+"genuinesmile-string" = "Echtes Lächeln! 🤩";
+"smiling-string" = "Lächelnd 😊";
+"neutral-string" = "Neutral 😐";
+"sadness-string" = "Traurig... 😢";
+"anger-string" = "Wütend! 😡";
+"surprise-string" = "Überraschung! 😮";
+"disgusted-string" = "Angewidert! 🥴";
+
+//MARK: Muscles
+"orbicularolho-string" = "Augenringmuskel";
+"levantadorlabioasanariz-string" = "Heber der Oberlippe und des Nasenflügels";
+"levantadorlabio-string" = "Oberlippenheber";
+"zigomaticomaior-string" = "großer Jochbeinmuskel";
+"zigomaticomenor-string" = "kleiner Jochbeinmuskel";
+"risorio-string" = "Lachmuskel";
+"levantadoranguloboca-string" = "Mundwinkelheber";
+"orbicularboca-string" = "Ringmuskel des Mundes";
+"bucinador-string" = "Backenmuskel";
+"depressoranguloboca-string" = "Mundwinkelniederzieher";
+"frontal-string" = "Hinterkopf-Stirn-Muskel";
+"corrugadorsupercilio-string" = "Stirnrunzler";
+"procero-string" = "Schlanker Muskel";
+"depressorlabio-string" = "Niederzieher der Unterlippe";
+
+//MARK: Muscle Description
+"orbicularolhodescricao-string" = "Dieser Muskel ist in 3 Teile unterteilt: \n Orbital: schließt die Augenlider fest; \n Palpebral: schließt die Augenlider sanft; \n Deep Palpebral: drückt den Tränensack zusammen.\n Er wird nur bei einem echten Lächeln aktiviert.";
+"levantadorlabioasanarizdescricao-string" = "Er hebt die Oberlippe an und legt die Oberkieferzähne frei.";
+"levantadorlabiodescricao-string" = "Er hebt die Oberlippe an und legt die Kieferzähne frei";
+"zigomaticomaiordescricao-string" = "Er hat die Funktion, den Mundwinkel anzuheben und zu vertiefen.";
+"zigomaticomenordescricao-string" = "Er hat die Funktion, die Lippe zusammen mit dem Musculus Levator labii superioris alaeque nasi anzuheben.";
+"risoriodescricao-string" = "Er erweitert den Mundwinkel seitlich.";
+"levantadorangulobocadescricao-string" = "Er hebt den Mundwinkel an und betont die Nasolabialfalte."; "levantadorangulobocadescricao-string" = "Er hebt den Mundwinkel an und betont die Nasolabialfalte.";
+"orbicularbocadescricao-string" = "Er hat die Funktion, den Mund zu schließen und die Lippen zu komprimieren und zu dehnen.";
+"bucinadordescricao-string" = "Dieser Muskel drückt die Wangen gegen die Backenzähne.";
+"depressorangulobocadescricao-string" = "Er drückt den Mundwinkel zusammen.";
+"frontaldescricao-string" = "Seine Funktion ist es, die Augenbrauen anzuheben und die Haut der Stirn zu falten, während die Funktion des okzipitalen Teils darin besteht, die Kopfhaut zurückzuziehen.";
+"corrugadorsuperciliodescricao-string" = "Seine Funktion ist es, vertikale Falten auf der Glabella zu erzeugen; er ist dafür verantwortlich, die Augenbraue nach medial zu ziehen.";
+"procerodescricao-string" = "Der Muskel hat die Funktion, das mediale Ende der Augenbraue abzusenken und die Haut der Glabella zu falten.";
+"depressorlabiodescricao-string" = "Er hat die Funktion, die Unterlippe seitlich abzusenken.";
+
+//MARK: Notifications
+"twodaynotif-string" = "Are you avoiding us? \n Don't you want to face reality?";
+"oneweeknotif-string" = "Es ist so viel Zeit vergangen 😔 \n Unsere Muskeln vermissen dich.";
+"twoweeknotif-string" = "Hast du uns verlassen? 😭 \n Komm zurück, die Gesichtsanatomie ist immer noch erstaunlich!";

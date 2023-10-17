@@ -19,26 +19,14 @@ struct InfoPopup: View {
                     .frame(height: 50)
                     .foregroundColor(.clear)
                 
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        withAnimation(.easeInOut(duration: 0.1)) {
-                            dismissAction()
-                        }}) {
-                            Image(systemName: "x.circle")
-                                .foregroundColor(.iconColor.opacity(0.9))
-                                .font(.system(size: 30))
-                                .padding()
-                        }
-                }
-                
                 ScrollView(showsIndicators: false){
                     ForEach(arrayMuscles, id: \.self) { muscle in
                         PopupView(dismissAction: {
-                        }, titleText: muscle.muscleName, subtitleText:"" , bodyText: muscle.muscleDescription, isReference: false, buttonLabel: "Fechar", imageIllustration: muscle.muscleIllustrationName)
+                        }, titleText: muscle.muscleName, bodyText: muscle.muscleDescription, isReference: false, buttonLabel: "Fechar", imageIllustration: muscle.muscleIllustrationName)
                     }
                 }
-                .padding(.bottom, 150)
+                .padding(.bottom, 180)
+                .padding(.top, 40)
             }
         }
         .mask(LinearGradient(gradient: Gradient(colors: [.black, .black, .black, .black, .clear, .clear]), startPoint: .top, endPoint: .bottom))
