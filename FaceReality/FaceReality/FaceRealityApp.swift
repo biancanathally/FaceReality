@@ -41,6 +41,7 @@ struct FaceRealityApp: App {
                     }
             } else {
                 AppOverview(appStatus: .onboarding)
+
             }
           
         }.onChange(of: scenePhase) { newScenePhase in

@@ -21,34 +21,49 @@ struct PopupView: View {
         ZStack {
             VStack(alignment: .leading, spacing: 8) {
                 VStack {
-                    Text(titleText)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .padding()
+//                    Text(titleText)
+//                        .font(.title2)
+//                        .fontWeight(.bold)
+//                        .padding()
                     VStack(alignment: .leading, spacing: 2) {
                         
                         if isOnboardingSteps == false {
-                            HStack {
-                                Text(titleText)
-                                    .font(.title2)
-                                    .fontWeight(.bold)
-                                    .padding()
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text(titleText)
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                        .padding(.top, 16)
+                                        .padding(.bottom, 8)
+                                        .padding(.horizontal, 16)
+                                }
+                                
+                                VStack {
+                                    Text(bodyText)
+                                        .font(.body)
+                                        .padding(.bottom, 8)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                        .padding(.horizontal, 16)
+                                    
+                                }
+                                .padding(.bottom)
+                                
+                                if isReference == false  {
+                                    Image(imageIllustration ?? "")
+                                        .padding(.bottom, 16)
+                                        .padding(.horizontal, 16)
+
+                                    
+                                }
                             }
-                            
-                            VStack {
-                                Text(bodyText)
-                                    .font(.body)
-                                    .padding()
-                                    .fixedSize(horizontal: false, vertical: true)
-                            }
-                            .padding(.bottom)
-                            
-                            if isReference == false  {
-                                Image(imageIllustration ?? "")
-                                    .padding()
-                            }
-                        }
 //                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+//                            .padding(.horizontal, 50)
+                            .frame(width: UIScreen.main.bounds.width/8 * 7, alignment: .leading)
+
+                            
+                            
+                            
+                        }
                         
                         if isOnboardingSteps == true {
                             HStack(spacing: 30) {
@@ -83,17 +98,18 @@ struct PopupView: View {
                             
                         }
                         
-                        VStack {
-                            if isReference == false  {
-                                Image(imageIllustration ?? "")
-                                    .padding()
-                                    .frame(alignment: .leading)
-                            }
-                        }
+//                        VStack {
+//                            if isReference == false  {
+//                                Image(imageIllustration ?? "")
+//                                    .padding()
+//                                    .frame(alignment: .leading)
+//                            }
+//                        }
                     }
                     .background(RoundedRectangle(cornerRadius: 15).fill(.regularMaterial).shadow(radius: 4, y: 4))
                     .padding()
                     .padding(.horizontal, 10)
+                    
                 }
             }
         }

@@ -26,16 +26,16 @@ struct OnboardingView: View {
                 VStack(spacing: 24) {
                     VStack(spacing: 24) {
                         Text("onboardingtitle-string")
-                            .font(.system(size: 18))
+                            .font(.title2)
                             .foregroundColor(.black)
                             .padding(.top, 16)
                         
                         Text("onboardingbody-string")
-                            .font(.system(size: 14))
+                            .font(.body)
                             .foregroundColor(.black)
-                            .padding()
-                            .minimumScaleFactor(0.01)
-                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 16)
+//                            .minimumScaleFactor(0.01)
+                            .multilineTextAlignment(.leading)
                     }
                     
                     Button("onboardingbutton-string") {
@@ -43,15 +43,16 @@ struct OnboardingView: View {
                         dismissAction()
 
                     }
-                    .padding(.horizontal, 50)
+                    .padding(.horizontal, 16)
                     .padding(.vertical, 12)
                     .foregroundColor(Color.projectWhite)
                     .background(Color.navyBlue)
-                    .cornerRadius(20)
+                    .cornerRadius(12)
                     .padding(.bottom, 16)
                 }
-                .background(RoundedRectangle(cornerRadius: 8).fill(.regularMaterial).opacity(0.25).shadow(radius: 8, y: 8))
-                .padding(.horizontal, 60)
+                .background(RoundedRectangle(cornerRadius: 8).foregroundColor(.white).opacity(0.4).shadow(radius: 8, y: 8))
+//                .background(.white.opacity(0.4))
+                .padding(.horizontal, 45)
                 .padding(.vertical, 250)
                 
                 if isShowingDestinationView {

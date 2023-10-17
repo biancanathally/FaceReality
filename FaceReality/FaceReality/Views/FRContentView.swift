@@ -191,7 +191,7 @@ struct FRContentView: View {
                                         }) {
                                             Image(systemName: "chevron.up")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                     
@@ -203,7 +203,7 @@ struct FRContentView: View {
                                         }) {
                                             Image(systemName: "chevron.down")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                 }
@@ -221,7 +221,7 @@ struct FRContentView: View {
                                             
                                             Image(systemName: "chevron.up")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                     
@@ -233,7 +233,7 @@ struct FRContentView: View {
                                         }) {
                                             Image(systemName: "chevron.down")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                 }
@@ -250,7 +250,7 @@ struct FRContentView: View {
                                         }) {
                                             Image(systemName: "chevron.up")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                     
@@ -262,7 +262,7 @@ struct FRContentView: View {
                                         }) {
                                             Image(systemName: "chevron.down")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                 }
@@ -279,7 +279,7 @@ struct FRContentView: View {
                                         }) {
                                             Image(systemName: "chevron.up")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                     
@@ -291,7 +291,7 @@ struct FRContentView: View {
                                         }) {
                                             Image(systemName: "chevron.down")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                 }
@@ -308,7 +308,7 @@ struct FRContentView: View {
                                         }) {
                                             Image(systemName: "chevron.up")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                     
@@ -320,12 +320,13 @@ struct FRContentView: View {
                                         }) {
                                             Image(systemName: "chevron.down")
                                                 .foregroundColor(.white)
-                                                .font(Font.custom("SFProText-Bold", size: 30))
+                                                .font(Font.custom("SFProText-Bold", size: 40))
                                         }
                                     }
                                 }
                             }
                         }
+                        
                         
                         HStack(spacing: 15) {
                             VStack {
@@ -444,7 +445,7 @@ struct FRContentView: View {
                                 }
                             }
                         }
-                        .padding(.all)
+                        .padding(.all, 16)
                         .shadow(radius: 4, y: 4)
                         .background(RoundedRectangle(cornerRadius: 20).fill(.regularMaterial).opacity(0.5).shadow(radius: 4, y: 4))
                     }
@@ -513,25 +514,30 @@ struct FRContentView: View {
                         }
 
                     
-                VStack {
                     
                     if stepOne {
-                        PopupView(dismissAction: {}, titleText: String(localized: "steponetitle-string"), bodyText: String(localized: "steponebody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepOne", isOnboardingSteps: true)
-                            .padding(.top, 88)
+                        VStack {
+                            PopupView(dismissAction: {}, titleText: String(localized: "steponetitle-string"), bodyText: String(localized: "steponebody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepOne", isOnboardingSteps: true)
+                                .padding(.top, 88)
 
-                            .onTapGesture {
-                                UserDefaults.standard.set(false, forKey: UserDefaultsKeys.showStepByStep)
-                                stepOne = false
-                                stepTwo = true
-                                
-                    }
-                        Spacer()
-                    }
+                                .onTapGesture {
+                                    UserDefaults.standard.set(false, forKey: UserDefaultsKeys.showStepByStep)
+                                    stepOne = false
+                                    stepTwo = true
+                                    
+                        }
+                            Spacer()
+                        }
+                        }
+                        
                     
                     if stepTwo {
                         VStack {
+                            Spacer()
+                            
                             PopupView(dismissAction: {}, titleText: String(localized: "steptwotitle-string"), bodyText: String(localized: "steptwobody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepTwo", isOnboardingSteps: true)
-                                .padding(.top, 372)
+//                                .padding(.top, 372)
+                                .padding(.bottom, 130).ignoresSafeArea(.all)
                             
                                 .onTapGesture {
                                     stepTwo = false
@@ -542,9 +548,10 @@ struct FRContentView: View {
 
                     if stepThree {
                         VStack {
+                            Spacer()
                             PopupView(dismissAction: {}, titleText: String(localized: "stepthreetitle-string"), bodyText: String(localized: "stepthreebody-string"), isReference: false, buttonLabel: "", imageIllustration: "stepThree", isOnboardingSteps: true)
-                                .padding(.top, 372)
-                            
+                                .padding(.bottom, 130).ignoresSafeArea(.all)
+
                                 .onTapGesture {
                                     stepThree = false
                                     showStepByStep = false
@@ -554,7 +561,7 @@ struct FRContentView: View {
                     }
 
 
-                    }
+                    
            
                 
             }

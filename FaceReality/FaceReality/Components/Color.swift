@@ -11,4 +11,5 @@ extension Color {
     static let iconColor = Color("IconColor")
     static let navyBlue = Color("NavyBlue")
     static let projectWhite = Color("ProjectWhite")
+    static let launchScreen = Color("launchScreen")
 }

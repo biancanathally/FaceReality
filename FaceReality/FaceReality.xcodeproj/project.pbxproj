@@ -40,6 +40,7 @@
 		BC366C622AD41478006FB3BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC366C612AD41478006FB3BB /* GoogleService-Info.plist */; };
 		BC36B3D92AD430A200F315B6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC36B3D82AD430A200F315B6 /* FirebaseAnalytics */; };
 		BC4DC4302AC4564D00E856AE /* ARViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DC42F2AC4564D00E856AE /* ARViewModelTests.swift */; };
+		BC5910E52ADEF1A400B10958 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5910E42ADEF1A400B10958 /* File.swift */; };
 		BC83DA9A2AC2F96900109579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83DA992AC2F96900109579 /* AppDelegate.swift */; };
 		BC9E87E32AC1BB08002BFFE1 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */; };
 		BCF0B4512AC3A4FC0005D846 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */; };
@@ -139,6 +140,7 @@
 		A6A068C92ABB72B6005CC2E4 /* RedHatDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RedHatDisplay.ttf; sourceTree = "<group>"; };
 		BC366C612AD41478006FB3BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FaceReality/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC4DC42F2AC4564D00E856AE /* ARViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModelTests.swift; sourceTree = "<group>"; };
+		BC5910E42ADEF1A400B10958 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		BC83DA992AC2F96900109579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC9E87E22AC1BAB0002BFFE1 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		BCC915952AC45C50001DB043 /* FaceReality.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FaceReality.xctestplan; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				BCF0B4502AC3A4FC0005D846 /* NotificationType.swift */,
 				A64750532AA8A23500ED0DEC /* FaceReality-Bridging-Header.h */,
 				A64750202AA8A1BD00ED0DEC /* Info.plist */,
+				BC5910E42ADEF1A400B10958 /* File.swift */,
 			);
 			path = FaceReality;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				5AAB28DB2AD594BF0068A0C5 /* FRContentView.swift in Sources */,
 				5A9701162AD438550085522B /* ReviewHandler.swift in Sources */,
 				5AAB28D72AD5949D0068A0C5 /* ARModel.swift in Sources */,
+				BC5910E52ADEF1A400B10958 /* File.swift in Sources */,
 				5AAB28D92AD594B10068A0C5 /* ARViewModel.swift in Sources */,
 				A647506B2AA8AB8D00ED0DEC /* Emotions.swift in Sources */,
 				5AAB28D32AD594670068A0C5 /* Unity.swift in Sources */,
@@ -718,15 +722,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -750,15 +755,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = VNH67NDAE6;
+				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

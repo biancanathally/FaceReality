@@ -24,11 +24,16 @@ struct InfoPopup: View {
                         PopupView(dismissAction: {
                         }, titleText: muscle.muscleName, bodyText: muscle.muscleDescription, isReference: false, buttonLabel: "Fechar", imageIllustration: muscle.muscleIllustrationName, isOnboardingSteps: false)
                     }
+                    
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 50, height: 130)
                 }
-                .padding(.bottom, 180)
-                .padding(.top, 40)
+              
             }
         }
+        .padding(.bottom, 180)
+        .padding(.top, 60)
         .mask(LinearGradient(gradient: Gradient(colors: [.black, .black, .black, .black, .clear, .clear]), startPoint: .top, endPoint: .bottom))
     }
 }
