@@ -720,7 +720,7 @@
 				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -752,7 +752,7 @@
 				DEVELOPMENT_TEAM = 9569K2P89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceReality/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "FaceReality camera use";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

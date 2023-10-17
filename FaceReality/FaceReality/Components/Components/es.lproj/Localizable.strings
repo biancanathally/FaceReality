@@ -2,6 +2,12 @@
 "onboardingtitle-string" = "¡Bienvenido!";
 "onboardingbody-string" = "Face Reality es una app que te ayuda a entender la función muscular según las expresiones faciales";
 "onboardingbutton-string" = "Empezar";
+"steponetitle-string" = "Haga clic para visualizar";
+"steptwotitle-string" = "Haga clic en la expresión";
+"stepthreetitle-string" = "Haga clic en la flecha";
+"steponebody-string" = "los músculos en tiempo real en 3D en su propia cara.";
+"steptwobody-string" = "que desee estudiar en las opciones siguientes.";
+"stepthreebody-string" = "para obtener información sobre los músculos utilizados.";
 
 //MARK: Main
 "happy-string" = "Feliz";
@@ -59,6 +65,9 @@
 "depressorlabiodescricao-string" = "Tiene la función de bajar el labio inferior lateralmente";
 
 //MARK: Notifications
-"twodaynotif-string" = "¿Nos estás evitando? \n ¿No quieres enfrentarte a la realidad?";
-"oneweeknotif-string" = "Ha pasado tanto tiempo 😔 \n Nuestros músculos te extrañan";
-"twoweeknotif-string" = "¿Nos dejaste? 😭 \n ¡Vuelve, la anatomía facial sigue siendo increíble!";
+"twodaynotiftitle-string" = "¿Nos estás evitando?";
+"twodaynotifbody-string" = "¿No quieres enfrentarte a la realidad?";
+"oneweeknotiftitle-string" = "Ha pasado tanto tiempo 😔";
+"oneweeknotifbody-string" = "Nuestros músculos te extrañan.";
+"twoweeknotiftitle-string" = "¿Nos dejaste? 😭";
+"twoweeknotifbody-string" = "¡Vuelve, la anatomía facial sigue siendo increíble!";
