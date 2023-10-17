@@ -1,7 +1,13 @@
 //MARK: Onboarding
 "onboardingtitle-string" = "Herzlich willkommen!";
 "onboardingbody-string" = "Face Reality ist eine App, die Ihnen hilft, die Muskelfunktion anhand von Gesichtsausdrücken zu verstehen.";
-"onboardingbutton-string" = "Start";
+"onboardingbutton-string" = "Lass uns gehen!";
+"steponetitle-string" = "Klicken Sie,";
+"steptwotitle-string" = "Klicken Sie";
+"stepthreetitle-string" = "Klicken Sie auf den Pfeil,";
+"steponebody-string" = "um die Muskeln in Echtzeit in 3D auf Ihrem eigenen Gesicht zu visualisieren.";
+"steptwobody-string" = "in den unten stehenden Optionen auf den Ausdruck, den Sie untersuchen möchten.";
+"stepthreebody-string" = "um Informationen über die verwendeten Muskeln zu erhalten.";
 
 //MARK: Main
 "happy-string" = "Glücklich";
@@ -59,6 +65,9 @@
 "depressorlabiodescricao-string" = "Er hat die Funktion, die Unterlippe seitlich abzusenken.";
 
 //MARK: Notifications
-"twodaynotif-string" = "Are you avoiding us? \n Don't you want to face reality?";
-"oneweeknotif-string" = "Es ist so viel Zeit vergangen 😔 \n Unsere Muskeln vermissen dich.";
-"twoweeknotif-string" = "Hast du uns verlassen? 😭 \n Komm zurück, die Gesichtsanatomie ist immer noch erstaunlich!";
+"twodaynotiftitle-string" = "Gehst du uns aus dem Weg?";
+"twodaynotifbody-string" = "Wollt ihr euch nicht der Realität stellen?";
+"oneweeknotiftitle-string" = "Es ist so viel Zeit vergangen 😔";
+"oneweeknotifbody-string" = "Unsere Muskeln vermissen dich.";
+"twoweeknotiftitle-string" = "Hast du uns verlassen? 😭";
+"twoweeknotifbody-string" = "Komm zurück, die Gesichtsanatomie ist immer noch erstaunlich!";

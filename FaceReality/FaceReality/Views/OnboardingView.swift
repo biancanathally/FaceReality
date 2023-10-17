@@ -7,15 +7,21 @@
 
 import SwiftUI
 import RealityKit
+import UserNotifications
+
 
 struct OnboardingView: View {
-    @ObservedObject var arViewModel : ARViewModel = ARViewModel()
+    @ObservedObject var arViewModel : ARViewModel = ARViewModel.shared
     @State private var isShowingDestinationView = false
+    var showStepByStep = UserDefaults.standard.set(true, forKey: UserDefaultsKeys.showStepByStep)
     
+    let appStatus: AppStatus = .main
+    var dismissAction: () -> Void
     var body: some View {
-        NavigationView {
+//        NavigationView {
             ZStack {
-                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radius: 40)
+//                ARViewContainer(arViewModel: arViewModel).edgesIgnoringSafeArea(.all).blur(radiuqs: 40)
+                Color.black.opacity(0.5).edgesIgnoringSafeArea(.all)
                 
                 VStack(spacing: 24) {
                     VStack(spacing: 24) {
@@ -34,11 +40,13 @@ struct OnboardingView: View {
                     
                     Button("onboardingbutton-string") {
                         isShowingDestinationView = true
+                        dismissAction()
+
                     }
                     .padding(.horizontal, 50)
                     .padding(.vertical, 12)
                     .foregroundColor(Color.projectWhite)
-                    .background(Color.iconColor)
+                    .background(Color.navyBlue)
                     .cornerRadius(20)
                     .padding(.bottom, 16)
                 }
@@ -47,11 +55,15 @@ struct OnboardingView: View {
                 .padding(.vertical, 250)
                 
                 if isShowingDestinationView {
-                    IntermadiateViewToContent()
+//                    AppOverview(appStatus: appStatus)
                 }
                 
             }
-        }
+            .background(BackgroundBlurView().ignoresSafeArea(.all))
+            .onAppear {
+                UserDefaults.standard.set(true, forKey: UserDefaultsKeys.showStepByStep)
+            }
+//        }
     }
 }
 
@@ -60,7 +72,7 @@ struct IntermadiateViewToContent: View {
     
     var body: some View {
         if shouldShow {
-            ContentView()
+            ContentView(dismissAction: {})
         }
         else {
             Text("Loading")
@@ -76,7 +88,7 @@ struct IntermadiateViewToContent: View {
 #if DEBUG
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView(dismissAction: {})
     }
 }
 #endif

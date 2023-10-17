@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5868FFB2-B4C3-43FB-8E14-5A6FB2475AFE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC5B8ABC-7EC4-4AE1-A0C8-2EE5CA8A5099"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FaceReality/Unity/Unity.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "unloadWindow()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BC5B8ABC-7EC4-4AE1-A0C8-2EE5CA8A5099 - 2d6732c67f2b3cb0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FaceReality.Unity.unloadWindow() -&gt; ()"
+                  moduleName = "FaceReality"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/FaceReality%20unity%203/FaceReality/FaceReality/FaceReality/Unity/Unity.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "BC5B8ABC-7EC4-4AE1-A0C8-2EE5CA8A5099 - c964a2658bbf7ffe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in FaceReality.Unity.unloadWindow() -&gt; ()"
+                  moduleName = "FaceReality"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/FaceReality%20unity%203/FaceReality/FaceReality/FaceReality/Unity/Unity.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
