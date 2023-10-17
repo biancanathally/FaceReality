@@ -12,7 +12,6 @@
 		5A9701162AD438550085522B /* ReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9701152AD438550085522B /* ReviewHandler.swift */; };
 		5A9701182AD43BD80085522B /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9701172AD43BD80085522B /* UserDefaultsKeys.swift */; };
 		5AAAF6092AD051310029D5FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAAF6082AD051300029D5FD /* GoogleService-Info.plist */; };
-		A601E0722AD6E8CB0069B8D0 /* InfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601E0712AD6E8CB0069B8D0 /* InfoPopupView.swift */; };
 		5AAB28D32AD594670068A0C5 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB28D22AD594670068A0C5 /* Unity.swift */; };
 		5AAB28D52AD5948A0068A0C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB28D42AD5948A0068A0C5 /* ContentView.swift */; };
 		5AAB28D72AD5949D0068A0C5 /* ARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB28D62AD5949D0068A0C5 /* ARModel.swift */; };
@@ -20,6 +19,7 @@
 		5AAB28DB2AD594BF0068A0C5 /* FRContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB28DA2AD594BF0068A0C5 /* FRContentView.swift */; };
 		5AAB28DD2AD594CE0068A0C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AAB28DC2AD594CE0068A0C5 /* LaunchScreen.storyboard */; };
 		5AAB28E02AD5952A0068A0C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AAB28DE2AD5952A0068A0C5 /* Localizable.strings */; };
+		A601E0722AD6E8CB0069B8D0 /* InfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601E0712AD6E8CB0069B8D0 /* InfoPopupView.swift */; };
 		A60E2E422AC5BC09003AF9F7 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */; };
 		A60E2E442AC5BC87003AF9F7 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */; };
 		A647501C2AA8A1BD00ED0DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A647501B2AA8A1BD00ED0DEC /* Assets.xcassets */; };
@@ -102,7 +102,6 @@
 		5A9701152AD438550085522B /* ReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHandler.swift; sourceTree = "<group>"; };
 		5A9701172AD43BD80085522B /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		5AAAF6082AD051300029D5FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FaceReality/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A601E0712AD6E8CB0069B8D0 /* InfoPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPopupView.swift; sourceTree = "<group>"; };
 		5AAB28D22AD594670068A0C5 /* Unity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
 		5AAB28D42AD5948A0068A0C5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5AAB28D62AD5949D0068A0C5 /* ARModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARModel.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		5AAB28E12AD595340068A0C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Components/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5AAB28E22AD595440068A0C5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Components/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5AAB28E32AD5954C0068A0C5 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "Components/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A601E0712AD6E8CB0069B8D0 /* InfoPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPopupView.swift; sourceTree = "<group>"; };
 		A60E2E3E2AC5BC09003AF9F7 /* SFProText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.otf"; sourceTree = "<group>"; };
 		A60E2E432AC5BC87003AF9F7 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
 		A647500F2AA8A1BC00ED0DEC /* FaceReality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceReality.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -546,8 +546,6 @@
 				A64750652AA8A44700ED0DEC /* FaceRealityApp.swift in Sources */,
 				A64750752AA8BD6D00ED0DEC /* OnboardingView.swift in Sources */,
 				A601E0722AD6E8CB0069B8D0 /* InfoPopupView.swift in Sources */,
-				A647505E2AA8A2E700ED0DEC /* ARViewModel.swift in Sources */,
-				A64750602AA8A30100ED0DEC /* Unity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
