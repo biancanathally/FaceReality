@@ -15,8 +15,8 @@
 The project is still under development and the next updates will focus on the following tasks:
 
 - [ ] Improve layout
-- [ ] Notifications
-- [ ] Internationalization
+- [X] Notifications
+- [X] Internationalization
 
 ## ❖ Prerequisites
 
