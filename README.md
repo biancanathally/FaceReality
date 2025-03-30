@@ -10,13 +10,13 @@
 
 > Face Reality is an educational iOS app that uses augmented reality to study facial muscles through facial expressions.
 
-### Adjustments and improvements
+<!--### Adjustments and improvements
 
 The project is still under development and the next updates will focus on the following tasks:
 
 - [ ] Improve layout
 - [X] Notifications
-- [X] Internationalization
+- [X] Internationalization-->
 
 ## ❖ Prerequisites
 
@@ -68,7 +68,7 @@ Como alternativa, consulte a documentação do GitHub em [como criar uma solicit
 
 ## ❖ Developers Face Reality
 
-This is the team that developed Face Reality
+This is the team that developed Face Reality:
 
 <table>
   <tr>
@@ -98,11 +98,3 @@ This is the team that developed Face Reality
     </td>
   </tr>
 </table>
-
-<!-- ## 😄 Seja um dos contribuidores
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir. -->
-
-## ❖ License
-
-This project is under license. <!-- Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes. -->
