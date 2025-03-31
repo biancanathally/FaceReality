@@ -1,11 +1,5 @@
 # FaceReality
 
-![GitHub repo size](https://img.shields.io/github/repo-size/hibianca/FaceReality?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/hibianca/FaceReality?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/hibianca/FaceReality?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/hibianca/FaceReality?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/hibianca/FaceReality?style=for-the-badge)
-
 <img src="https://github.com/hibianca/FaceReality/assets/103222620/d76ad9a7-6a14-4c21-8bbf-0d58a5a8a994" alt="Banner" width="800">
 
 > Face Reality is an educational iOS app that uses augmented reality to study facial muscles through facial expressions.
